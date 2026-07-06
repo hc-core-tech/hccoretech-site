@@ -179,6 +179,40 @@ button {
   }
 }
 
+/* Prevent any horizontal overflow at document level — final safety net */
+html, body {
+  overflow-x: hidden !important;
+  max-width: 100vw !important;
+}
+
+/* --- Selected Work cards on mobile: force long strings to wrap ---
+   26px serif headings like "JS Zorg en Advies | Seraph Zorg" would
+   otherwise overflow 375px viewports. Force wrap for h3 within the
+   Selected Work section on mobile. */
+@media (max-width: 720px) {
+  /* All h3 headings inside project cards get smaller + wrap */
+  h3[style*="fontSize: '26px'"],
+  h3[style*="font-size: 26px"],
+  h3[style*="font-size:26px"] {
+    font-size: 20px !important;
+    line-height: 1.2 !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    hyphens: auto !important;
+  }
+  /* Long URL labels in project card browser mockups get ellipsis */
+  span[style*="whiteSpace: 'nowrap'"],
+  span[style*="white-space: nowrap"] {
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+  /* Force description text and any other card text to wrap cleanly */
+  h3, h2, p {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+}
+
 /* Ambient orb drift animations — shared by homepage + SharedLayout */
 @keyframes drift1 {
   0%, 100% { transform: translate(0, 0) scale(1); }
