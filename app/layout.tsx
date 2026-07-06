@@ -1,0 +1,54 @@
+﻿import type { Metadata } from 'next'
+import { Cormorant_Garamond, Inter, JetBrains_Mono } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/react'
+import './globals.css'
+
+const cormorant = Cormorant_Garamond({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600'],
+  style: ['normal', 'italic'],
+  display: 'swap',
+  variable: '--font-serif',
+})
+
+const inter = Inter({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+  display: 'swap',
+  variable: '--font-sans',
+})
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  weight: ['400', '500'],
+  display: 'swap',
+  variable: '--font-mono',
+})
+
+export const metadata: Metadata = {
+  title: 'HC Core Tech . Production AI, real governance, websites that ship',
+  description: 'Engineering-grade AI, mapped to EU frameworks, delivered by one accountable engineer-founder. Independent Dutch practice.',
+  metadataBase: new URL('https://hccoretech.com'),
+  openGraph: {
+    title: 'HC Core Tech',
+    description: 'AI Engineering . AI Governance . Web Development. Built and operated by Hilary Azimoh, Amsterdam.',
+    url: 'https://hccoretech.com',
+    siteName: 'HC Core Tech',
+    locale: 'en_US',
+    type: 'website',
+  },
+  robots: { index: true, follow: true },
+}
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="en" className={`${cormorant.variable} ${inter.variable} ${jetbrainsMono.variable}`}>
+      <body>
+        {children}
+        {/* Vercel Analytics: cookieless, EU-safe, no consent banner needed.
+            Does nothing in local dev — only reports when deployed to Vercel. */}
+        <Analytics />
+      </body>
+    </html>
+  )
+}
