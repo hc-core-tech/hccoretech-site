@@ -186,30 +186,54 @@ html, body {
 }
 
 /* --- Selected Work cards on mobile: force long strings to wrap ---
-   26px serif headings like "JS Zorg en Advies | Seraph Zorg" would
-   otherwise overflow 375px viewports. Force wrap for h3 within the
-   Selected Work section on mobile. */
+   The homepage's Selected Work section (id="work") contains cards
+   with 26px serif h3 headings that would otherwise blow past 375px
+   viewports. This block forces them to shrink AND wrap. */
 @media (max-width: 720px) {
-  /* All h3 headings inside project cards get smaller + wrap */
-  h3[style*="fontSize: '26px'"],
-  h3[style*="font-size: 26px"],
-  h3[style*="font-size:26px"] {
-    font-size: 20px !important;
-    line-height: 1.2 !important;
-    word-wrap: break-word !important;
-    overflow-wrap: break-word !important;
-    hyphens: auto !important;
-  }
-  /* Long URL labels in project card browser mockups get ellipsis */
-  span[style*="whiteSpace: 'nowrap'"],
-  span[style*="white-space: nowrap"] {
+  /* Grid + flex items default to min-width: auto — allow them to shrink
+     to fit their container instead of being sized by their content. */
+  #work div,
+  #work section,
+  #work article {
     min-width: 0 !important;
     max-width: 100% !important;
   }
-  /* Force description text and any other card text to wrap cleanly */
-  h3, h2, p {
-    word-wrap: break-word;
+
+  /* h3 headings in the Selected Work section — shrink and force wrap */
+  #work h3 {
+    font-size: 20px !important;
+    line-height: 1.2 !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  /* h2 for reviews / other sections */
+  #work h2, #reviews h2 {
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  /* All text elements in the section should wrap cleanly */
+  #work p, #work span, #work a {
+    word-break: break-word;
     overflow-wrap: break-word;
+  }
+
+  /* Long URL labels in the browser mockup header at top of each card */
+  #work span[style*="ellipsis"] {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    flex: 1 1 auto !important;
+  }
+}
+
+/* Backup safety net — no element anywhere should force horizontal scroll */
+@media (max-width: 720px) {
+  * {
+    max-width: 100vw !important;
+  }
+  body {
+    overflow-x: hidden !important;
   }
 }
 
