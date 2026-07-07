@@ -168,10 +168,10 @@ export default function AboutPage() {
                 color: T.platinum, marginBottom: '18px',
               }}>
                 I grew up being told I could do anything I set my mind to. My first
-                pull was engineering, but my parents thought medicine was the wiser
-                path for a girl. I trusted them enough to try, so I went to Ukraine to
-                study. And I thrived. If the war hadn&apos;t happened, I&apos;d probably
-                be a doctor today.
+                pull was engineering, but my family thought medicine was the wiser
+                path for a girl. I knew I could thrive in any field I chose, so I
+                went to Ukraine to study medicine. And I thrived. If the war
+                hadn&apos;t happened, I&apos;d probably be a doctor today.
               </p>
               <p style={{
                 fontFamily: FONTS.ui, fontSize: '17px', lineHeight: 1.75,
