@@ -319,12 +319,15 @@ function StatusPill({ status }: { status: 'live' | 'in-build' }) {
       border: `1px solid ${color}55`,
       background: `${color}0F`,
       borderRadius: R.pill,
+      whiteSpace: 'nowrap',
+      flexShrink: 0,
     }}>
-      <span style={{
+      <span data-pulse="true" style={{
         width: '6px', height: '6px', borderRadius: '50%',
         background: color, boxShadow: `0 0 6px ${color}`,
+        flexShrink: 0,
       }} />
-      {isLive ? 'Live' : 'In build'}
+      <span style={{ whiteSpace: 'nowrap' }}>{isLive ? 'Live' : 'In build'}</span>
     </span>
   );
 }
