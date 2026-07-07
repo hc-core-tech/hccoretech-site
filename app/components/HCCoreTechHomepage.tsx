@@ -611,7 +611,7 @@ function Hero() {
                 marginBottom: '36px',
                 display: 'inline-flex', alignItems: 'center', gap: '10px',
               }}>
-                <span style={{
+                <span data-pulse="true" style={{
                   width: '7px', height: '7px', borderRadius: '50%',
                   background: T.ok, boxShadow: `0 0 8px ${T.ok}`,
                 }} />
@@ -667,7 +667,7 @@ function Hero() {
               }}>
                 <span style={{ color: T.muted, letterSpacing: '0.18em', textTransform: 'uppercase' }}>Operator</span>
                 <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', color: T.ok }}>
-                  <span style={{
+                  <span data-pulse="true" style={{
                     width: '7px', height: '7px', borderRadius: '50%',
                     background: T.ok, boxShadow: `0 0 8px ${T.ok}`,
                   }} />
@@ -1036,7 +1036,7 @@ function CoreDeskCallout() {
                   letterSpacing: '0.2em', textTransform: 'uppercase',
                   color: T.ok,
                 }}>
-                  <span style={{
+                  <span data-pulse="true" style={{
                     width: '6px', height: '6px', borderRadius: '50%',
                     background: T.ok, boxShadow: `0 0 8px ${T.ok}88`,
                   }} />
@@ -2007,7 +2007,7 @@ function QuoteSection() {
               }}>
                 <span style={{ color: T.muted, letterSpacing: '0.18em', textTransform: 'uppercase' }}>Availability</span>
                 <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', color: T.ok }}>
-                  <span style={{
+                  <span data-pulse="true" style={{
                     width: '7px', height: '7px', borderRadius: '50%',
                     background: T.ok, boxShadow: `0 0 8px ${T.ok}`,
                   }} />
