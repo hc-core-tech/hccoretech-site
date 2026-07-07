@@ -82,10 +82,10 @@ button {
 
 /* Update palette variables to match navy + amber bronze palette */
 :root {
-  --bg: #0C0E1E;
-  --deep: #14172E;
-  --midnight: #22264A;
-  --hairline: #161832;
+  --bg: #14172E;
+  --deep: #1B1F3D;
+  --midnight: #26294F;
+  --hairline: #1B1D3A;
   --text: #E2E2E6;
   --soft: #9CA3AF;
   --muted: #6B7280;
@@ -114,7 +114,7 @@ button {
 [data-btn="primary"]:hover {
   background: #D4A85E !important;
   border-color: #D4A85E !important;
-  color: #0C0E1E !important;
+  color: #14172E !important;
   transform: translateY(-1px);
   box-shadow: 0 10px 24px -8px rgba(212, 168, 94, 0.4);
 }

@@ -14,9 +14,9 @@ import { usePathname } from 'next/navigation'
 import { ArrowUpRight, Menu, X } from 'lucide-react'
 
 const T = {
-  obsidian:  '#0C0E1E',
-  deep:      '#14172E',
-  midnight:  '#22264A',
+  obsidian:  '#14172E',
+  deep:      '#1B1F3D',
+  midnight:  '#26294F',
   hairline:  '#161832',
   platinum:  '#E2E2E6',
   softText:  '#9CA3AF',
