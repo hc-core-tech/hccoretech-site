@@ -541,7 +541,7 @@ function Hero() {
     ['stack',      'Python · TypeScript · Postgres'],
     ['frameworks', 'EU AI Act · ISO/IEC 42001'],
     ['building',   'CoreDesk v1'],
-    ['status',     'booking Q4 2026'],
+    ['status',     'Booking Q4 2026'],
   ];
 
   useEffect(() => {
@@ -617,7 +617,7 @@ function Hero() {
                 }} />
                 <span style={{ color: T.platinum }}>3 of 4 seats open</span>
                 <span style={{ color: T.hairline }}>·</span>
-                <span>booking Q4 2026</span>
+                <span>Booking Q4 2026</span>
               </div>
             </Reveal>
             <Reveal delay={300}>
@@ -732,20 +732,27 @@ function FrameworkStrip() {
       <Container>
         <Reveal>
           <div style={{
-            display: 'flex', flexWrap: 'wrap',
-            justifyContent: 'space-between', alignItems: 'center',
-            gap: '20px',
+            display: 'flex', flexDirection: 'column',
+            alignItems: 'center', gap: '14px',
             fontFamily: FONTS.mono, fontSize: '11px',
             letterSpacing: '0.14em', color: T.muted,
             textTransform: 'uppercase',
+            textAlign: 'center',
           }}>
             <span style={{ color: T.sapphire }}>Frameworks covered</span>
-            {items.map((it, i) => (
-              <span key={it} style={{ display: 'inline-flex', alignItems: 'center', gap: '20px' }}>
-                <span style={{ color: T.platinum }}>{it}</span>
-                {i < items.length - 1 && !isMobile && <span style={{ color: T.midnight }}>·</span>}
-              </span>
-            ))}
+            <div style={{
+              display: 'flex', flexWrap: 'wrap',
+              justifyContent: 'center', alignItems: 'center',
+              gap: isMobile ? '12px' : '20px',
+              rowGap: '10px',
+            }}>
+              {items.map((it, i) => (
+                <span key={it} style={{ display: 'inline-flex', alignItems: 'center', gap: isMobile ? '12px' : '20px' }}>
+                  <span style={{ color: T.platinum }}>{it}</span>
+                  {i < items.length - 1 && <span style={{ color: T.midnight }}>·</span>}
+                </span>
+              ))}
+            </div>
           </div>
         </Reveal>
       </Container>
@@ -762,9 +769,9 @@ function Services() {
     { icon: Brain, title: 'AI Engineering',
       body: 'Custom agents, RAG pipelines, multi-agent orchestration, integrations with existing tooling. Production-grade Python/FastAPI backends and Next.js frontends.' },
     { icon: Shield, title: 'AI Governance',
-      body: 'EU AI Act, NIST AI RMF, ISO/IEC 42001, GDPR and OECD AI. Risk classification, documentation packs, monitoring, audits. Built for SMEs and vendors scaling into enterprise.' },
+      body: 'Risk classification, documentation packs, monitoring, and audits. Built for SMEs and vendors scaling into enterprise. Aligned to EU AI Act, NIST AI RMF, ISO/IEC 42001, GDPR, and OECD AI.' },
     { icon: Globe, title: 'Web Development',
-      body: 'Landing pages, full sites, refurbishes, premium builds, and strategic brand-and-site engagements. Mobile-responsive, SEO-configured, deployed.' },
+      body: 'Landing pages, full sites, refurbishes, premium builds, and strategic brand-and-site engagements. Mobile-responsive, SEO-configured and deployed site.' },
     { icon: MessageSquare, title: 'Advisory & Consulting',
       body: 'Hourly sessions: AI strategy, technical review, governance consultation, and combined AI + governance calls for vendor onboarding and due diligence.' },
   ];
@@ -791,7 +798,7 @@ function Services() {
             fontSize: '16px', lineHeight: 1.6, color: T.softText,
             maxWidth: '620px', marginBottom: '60px',
           }}>
-            The practice offers engineering, governance, web, and advisory. All of it delivered
+            The practice offers engineering, governance, web, and advisory services. All of it delivered
             by the same hand that scoped it. Every project quoted individually.
           </p>
         </Reveal>
@@ -895,7 +902,7 @@ function CoreDeskCallout() {
   const forItems = [
     'Independent practitioners',
     "ZZP'ers (Dutch sole prop.)",
-    'Small teams, up to ~20',
+    'Small teams, up to ~20 people',
     'Care practices, consultancies, coaches',
   ];
   const notForItems = [
@@ -1598,7 +1605,7 @@ function Reviews() {
     { quote: "Hilary is remarkably careful, reliable, and substantively strong. She thinks with me, delivers quality, and honors her commitments. For my practice, where vulnerable clients and sensitive data are at stake, that is no small thing. I choose my collaborators with care, and Hilary is someone I trust.",
       author: 'Jiska',
       role: 'Founder, JS Zorg en Advies | Seraph Zorg', draft: false },
-    { quote: "Hilary took a project I could barely describe and turned it into a brand system, a website, and a launch plan inside a month. The rigour she brings is more than most paid agencies deliver.",
+    { quote: "Hilary took a project I barely described and turned it into a brand system, a website, and a launch plan inside a month. The rigour she brings is more than most paid agencies deliver.",
       author: 'Tolu',
       role: "Founder, Magnifying Children's Horizons", draft: false },
   ];

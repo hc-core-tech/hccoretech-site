@@ -85,7 +85,7 @@ export default function LegalPage() {
         <SubHead>1. Engagements are contract-based</SubHead>
         <Paragraph>
           Every engagement begins with a written scoping document that
-          defines: the work in scope, the work out of scope, the fixed price
+          defines; the work in scope, the work out of scope, the fixed price
           or hourly rate, the timeline, the milestones, the deliverables, and
           the payment schedule. Nothing is agreed by chat or verbal
           understanding. If it is not in the written scope, it is not in the
