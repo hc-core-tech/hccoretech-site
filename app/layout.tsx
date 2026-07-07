@@ -26,9 +26,32 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'HC Core Tech . Production AI, real governance, websites that ship',
-  description: 'Engineering-grade AI, mapped to EU frameworks, delivered by one accountable engineer-founder. Independent Dutch practice.',
+  title: {
+    default: 'HC Core Tech . Production AI, real governance, websites that ship',
+    template: '%s . HC Core Tech',
+  },
+  description: 'Engineering-grade AI, mapped to EU frameworks, delivered by one accountable engineer-founder. Independent Dutch practice building websites, AI systems, and AI governance programmes.',
   metadataBase: new URL('https://hccoretech.com'),
+  authors: [{ name: 'Hilary Azimoh', url: 'https://hccoretech.com/about' }],
+  creator: 'Hilary Azimoh',
+  publisher: 'HC Core Tech',
+  keywords: [
+    'AI engineering',
+    'AI governance',
+    'EU AI Act',
+    'NIST AI RMF',
+    'ISO/IEC 42001',
+    'GDPR compliance',
+    'web development Netherlands',
+    'Next.js development',
+    'WordPress development',
+    'multi-agent systems',
+    'RAG pipelines',
+    'Applied AI Engineer',
+    'Amsterdam AI consultant',
+    'CoreDesk',
+    'Hilary Azimoh',
+  ],
   openGraph: {
     title: 'HC Core Tech',
     description: 'AI Engineering . AI Governance . Web Development. Built and operated by Hilary Azimoh, Amsterdam.',
@@ -37,7 +60,26 @@ export const metadata: Metadata = {
     locale: 'en_US',
     type: 'website',
   },
-  robots: { index: true, follow: true },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'HC Core Tech',
+    description: 'AI Engineering . AI Governance . Web Development. One accountable engineer.',
+    creator: '@hccoretech',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  alternates: {
+    canonical: 'https://hccoretech.com',
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
