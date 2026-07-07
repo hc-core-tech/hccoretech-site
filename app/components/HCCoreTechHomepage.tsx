@@ -11,9 +11,9 @@ import {
 // DESIGN TOKENS: dark obsidian, champagne gold, sapphire
 // ══════════════════════════════════════════════════════════════
 const T = {
-  obsidian:  '#14172E',
-  deep:      '#1B1F3D',
-  midnight:  '#26294F',
+  obsidian:  '#1E223C',
+  deep:      '#262A4A',
+  midnight:  '#30345C',
   hairline:  '#161832',
   platinum:  '#E2E2E6',
   softText:  '#9CA3AF',
