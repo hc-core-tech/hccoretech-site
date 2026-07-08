@@ -46,7 +46,7 @@ const R = {
 // ══════════════════════════════════════════════════════════════
 // HOOKS
 // ══════════════════════════════════════════════════════════════
-function useReveal(threshold: number = 0.2) {
+function useReveal(threshold: number = 0) {
   const ref = useRef<HTMLDivElement | null>(null);
   const [visible, setVisible] = useState(false);
   useEffect(() => {
@@ -54,7 +54,7 @@ function useReveal(threshold: number = 0.2) {
     if (!el) return;
     const obs = new IntersectionObserver(([e]) => {
       if (e.isIntersecting) { setVisible(true); obs.disconnect(); }
-    }, { threshold, rootMargin: '0px 0px -80px 0px' });
+    }, { threshold, rootMargin: '0px 0px -100px 0px' });
     obs.observe(el);
     return () => obs.disconnect();
   }, [threshold]);
@@ -2154,10 +2154,7 @@ function Footer() {
                     <a key={it.label} href={it.href} style={{
                       fontFamily: FONTS.ui, fontSize: '13px',
                       color: T.softText, fontWeight: 400,
-                      transition: 'color 200ms',
                     }}
-                    onMouseEnter={e => e.currentTarget.style.color = T.platinum}
-                    onMouseLeave={e => e.currentTarget.style.color = T.softText}
                     >{it.label}</a>
                   ) : (
                     <span key={it.label} style={{

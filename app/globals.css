@@ -166,6 +166,14 @@ button {
   z-index: 3;
 }
 
+/* Footer link hover — gold accent on hover, matching the site's link pattern */
+footer a {
+  transition: color 200ms ease;
+}
+footer a:hover {
+  color: #D4A85E !important;
+}
+
 /* Global button hover — data-btn="primary" for solid gold CTAs,
    data-btn="secondary" for outlined ghost buttons. */
 [data-btn] {
