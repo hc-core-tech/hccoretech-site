@@ -167,7 +167,7 @@ function Nav() {
           gap: '48px',
         }}>
           <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '18px', textDecoration: 'none', flexShrink: 0 }}>
-            <HCCTMonogram size={isMobile ? 20 : 24} hoverTurn />
+            <HCCTMonogram size={isMobile ? 20 : 24} animated />
             {!isMobile && (
               <span style={{
                 paddingLeft: '18px', borderLeft: `1px solid ${T.hairline}`,
