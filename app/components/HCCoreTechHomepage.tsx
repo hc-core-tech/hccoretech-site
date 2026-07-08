@@ -106,7 +106,7 @@ function useIsMobile(bp: number = 1200) {
 // ══════════════════════════════════════════════════════════════
 // HCCT MONOGRAM
 // ══════════════════════════════════════════════════════════════
-function HCCTMonogram({ size = 32, variant = 'compact' }: { size?: number; variant?: 'compact' | 'mark' | 'full' }) {
+function HCCTMonogram({ size = 32, variant = 'compact', animated = false, hoverTurn = false }: { size?: number; variant?: 'compact' | 'mark' | 'full'; animated?: boolean; hoverTurn?: boolean }) {
   // Rule width tuned narrower for the tighter interlocked mark
   const ruleWidth = size * 3.6;
 
@@ -117,26 +117,56 @@ function HCCTMonogram({ size = 32, variant = 'compact' }: { size?: number; varia
       alignItems: 'center',
       lineHeight: 1,
     }}>
+      {(animated || hoverTurn) && (
+        <style>{`
+          @keyframes hcct-mirrored-c-turn {
+            from { transform: scaleX(-1) rotateY(0deg); }
+            to   { transform: scaleX(-1) rotateY(360deg); }
+          }
+          .hcct-hover-turn:hover .hcct-mirrored-c-target {
+            animation: hcct-mirrored-c-turn 1.6s cubic-bezier(0.4, 0, 0.2, 1);
+          }
+          @media (prefers-reduced-motion: reduce) {
+            .hcct-mirrored-c-turn,
+            .hcct-hover-turn:hover .hcct-mirrored-c-target { animation: none !important; }
+          }
+        `}</style>
+      )}
       {/* Interlocking mark: H + C + mirrored-C + T. The scaleX(-1) on the
-          middle C creates the vesica shape between the two Cs. */}
-      <div style={{
-        display: 'inline-flex',
-        alignItems: 'baseline',
-        fontFamily: FONTS.serif,
-        fontStyle: 'italic',
-        fontWeight: 500,
-        fontSize: `${size}px`,
-        color: T.gold,
-        letterSpacing: '-0.01em',
-        lineHeight: 1,
-      }}>
+          middle C creates the vesica shape between the two Cs. Two motion
+          modes available: `animated` runs a continuous 12s turn on the
+          mirrored C (used in the footer); `hoverTurn` runs a single 1.6s
+          turn each time the mark is hovered (used in the nav). Because
+          scaleX(-1) and rotateY(180deg) cancel, the mirrored C briefly
+          appears as a normal C mid-turn — the mark reveals itself. */}
+      <div
+        className={hoverTurn ? 'hcct-hover-turn' : undefined}
+        style={{
+          display: 'inline-flex',
+          alignItems: 'baseline',
+          fontFamily: FONTS.serif,
+          fontStyle: 'italic',
+          fontWeight: 500,
+          fontSize: `${size}px`,
+          color: T.gold,
+          letterSpacing: '-0.01em',
+          lineHeight: 1,
+          perspective: (animated || hoverTurn) ? '600px' : 'none',
+        }}
+      >
         <span>H</span>
         <span style={{ marginLeft: '-0.04em' }}>C</span>
-        <span style={{
-          display: 'inline-block',
-          transform: 'scaleX(-1)',
-          marginLeft: '-0.38em',
-        }}>C</span>
+        <span
+          className={hoverTurn ? 'hcct-mirrored-c-target' : (animated ? 'hcct-mirrored-c-turn' : undefined)}
+          style={{
+            display: 'inline-block',
+            transform: 'scaleX(-1)',
+            marginLeft: '-0.38em',
+            transformOrigin: 'center center',
+            transformStyle: (animated || hoverTurn) ? 'preserve-3d' : undefined,
+            animation: animated ? 'hcct-mirrored-c-turn 12s linear infinite' : undefined,
+          }}
+        >C</span>
         <span style={{ marginLeft: '-0.14em' }}>T</span>
       </div>
 
@@ -383,7 +413,7 @@ function Nav() {
           <a href="/#top" style={{
             display: 'flex', alignItems: 'center', gap: '18px',
           }}>
-            <HCCTMonogram size={isMobile ? 20 : 24} variant="compact" />
+            <HCCTMonogram size={isMobile ? 20 : 24} variant="compact" hoverTurn />
             {!isMobile && (
               <span style={{
                 paddingLeft: '18px',
@@ -2116,7 +2146,7 @@ function Footer() {
           borderBottom: `1px solid ${T.hairline}`,
           marginBottom: isMobile ? '48px' : '64px',
         }}>
-          <HCCTMonogram size={isMobile ? 38 : 56} variant="full" />
+          <HCCTMonogram size={isMobile ? 38 : 56} variant="full" animated />
         </div>
 
         <div style={{

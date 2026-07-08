@@ -84,16 +84,45 @@ export function Reveal({ children, delay = 0, y = 20 }: { children: React.ReactN
   )
 }
 
-function HCCTMonogram({ size = 24 }: { size?: number }) {
+function HCCTMonogram({ size = 24, animated = false, hoverTurn = false }: { size?: number; animated?: boolean; hoverTurn?: boolean }) {
   return (
-    <div style={{
-      display: 'inline-flex', alignItems: 'baseline', lineHeight: 1,
-      fontFamily: FONTS.serif, fontStyle: 'italic', fontWeight: 500,
-      fontSize: `${size}px`, color: T.gold, letterSpacing: '-0.01em',
-    }}>
+    <div
+      className={hoverTurn ? 'hcct-hover-turn-shared' : undefined}
+      style={{
+        display: 'inline-flex', alignItems: 'baseline', lineHeight: 1,
+        fontFamily: FONTS.serif, fontStyle: 'italic', fontWeight: 500,
+        fontSize: `${size}px`, color: T.gold, letterSpacing: '-0.01em',
+        perspective: (animated || hoverTurn) ? '600px' : 'none',
+      }}
+    >
+      {(animated || hoverTurn) && (
+        <style>{`
+          @keyframes hcct-mirrored-c-turn-shared {
+            from { transform: scaleX(-1) rotateY(0deg); }
+            to   { transform: scaleX(-1) rotateY(360deg); }
+          }
+          .hcct-hover-turn-shared:hover .hcct-mirrored-c-target-shared {
+            animation: hcct-mirrored-c-turn-shared 1.6s cubic-bezier(0.4, 0, 0.2, 1);
+          }
+          @media (prefers-reduced-motion: reduce) {
+            .hcct-mirrored-c-turn-shared,
+            .hcct-hover-turn-shared:hover .hcct-mirrored-c-target-shared { animation: none !important; }
+          }
+        `}</style>
+      )}
       <span>H</span>
       <span style={{ marginLeft: '-0.04em' }}>C</span>
-      <span style={{ display: 'inline-block', transform: 'scaleX(-1)', marginLeft: '-0.38em' }}>C</span>
+      <span
+        className={hoverTurn ? 'hcct-mirrored-c-target-shared' : (animated ? 'hcct-mirrored-c-turn-shared' : undefined)}
+        style={{
+          display: 'inline-block',
+          transform: 'scaleX(-1)',
+          marginLeft: '-0.38em',
+          transformOrigin: 'center center',
+          transformStyle: (animated || hoverTurn) ? 'preserve-3d' : undefined,
+          animation: animated ? 'hcct-mirrored-c-turn-shared 12s linear infinite' : undefined,
+        }}
+      >C</span>
       <span style={{ marginLeft: '-0.14em' }}>T</span>
     </div>
   )
@@ -138,7 +167,7 @@ function Nav() {
           gap: '48px',
         }}>
           <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '18px', textDecoration: 'none', flexShrink: 0 }}>
-            <HCCTMonogram size={isMobile ? 20 : 24} />
+            <HCCTMonogram size={isMobile ? 20 : 24} hoverTurn />
             {!isMobile && (
               <span style={{
                 paddingLeft: '18px', borderLeft: `1px solid ${T.hairline}`,
@@ -292,7 +321,7 @@ function Footer() {
           marginBottom: '48px',
         }}>
           <div style={{ display: 'inline-flex', flexDirection: 'column', alignItems: 'center' }}>
-            <HCCTMonogram size={40} />
+            <HCCTMonogram size={40} animated />
             <div style={{
               width: '160px', height: '1px',
               background: `linear-gradient(90deg, transparent, ${T.gold}9C, transparent)`,
