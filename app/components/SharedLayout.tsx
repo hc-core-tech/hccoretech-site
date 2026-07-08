@@ -124,7 +124,7 @@ function Nav() {
       <nav style={{
         position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100,
         padding: isMobile ? '14px 20px' : '20px 32px',
-        background: scrolled ? 'rgba(12, 14, 30, 0.85)' : 'rgba(12, 14, 30, 0.6)',
+        background: scrolled ? 'rgba(30, 34, 60, 0.85)' : 'rgba(30, 34, 60, 0.6)',
         backdropFilter: 'blur(14px)',
         WebkitBackdropFilter: 'blur(14px)',
         borderBottom: `1px solid ${scrolled ? T.hairline : 'transparent'}`,
@@ -207,15 +207,15 @@ function Nav() {
         </div>
       </nav>
 
-      {/* Scroll progress bar. Appears once you scroll past the nav-visible threshold. */}
+      {/* Scroll progress bar. Sits at the very top of the page, above the nav. */}
       <div style={{
         position: 'fixed',
-        top: '58px',
+        top: 0,
         left: 0,
         right: 0,
         height: '2px',
         background: `${T.hairline}80`,
-        zIndex: 99,
+        zIndex: 101,
         opacity: scrolled ? 1 : 0,
         transition: 'opacity 260ms ease',
         pointerEvents: 'none',
@@ -231,7 +231,7 @@ function Nav() {
       {isMobile && open && (
         <div style={{
           position: 'fixed', top: '58px', left: 0, right: 0, zIndex: 99,
-          background: 'rgba(12, 14, 30, 0.98)',
+          background: 'rgba(30, 34, 60, 0.98)',
           backdropFilter: 'blur(14px)',
           borderBottom: `1px solid ${T.hairline}`,
           padding: '20px',
@@ -504,10 +504,31 @@ function AmbientBackground() {
   )
 }
 
+/* --- Card mouse tracker ---
+   Adds --mouse-x / --mouse-y CSS variables to any [data-card] element
+   on mouse move, powering the radial spotlight glow in globals.css. */
+function CardMouseTracker() {
+  useEffect(() => {
+    const handleMove = (e: MouseEvent) => {
+      const target = (e.target as HTMLElement)?.closest('[data-card]') as HTMLElement | null
+      if (!target) return
+      const rect = target.getBoundingClientRect()
+      const x = ((e.clientX - rect.left) / rect.width) * 100
+      const y = ((e.clientY - rect.top) / rect.height) * 100
+      target.style.setProperty('--mouse-x', `${x}%`)
+      target.style.setProperty('--mouse-y', `${y}%`)
+    }
+    window.addEventListener('mousemove', handleMove)
+    return () => window.removeEventListener('mousemove', handleMove)
+  }, [])
+  return null
+}
+
 export default function SharedLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <AmbientBackground />
+      <CardMouseTracker />
       <div style={{
         color: T.platinum,
         minHeight: '100vh',

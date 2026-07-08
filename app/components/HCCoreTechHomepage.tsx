@@ -370,7 +370,7 @@ function Nav() {
       <nav style={{
         position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100,
         padding: isMobile ? '14px 20px' : '20px 32px',
-        background: scrolled ? 'rgba(8, 10, 18, 0.82)' : 'transparent',
+        background: scrolled ? 'rgba(30, 34, 60, 0.82)' : 'transparent',
         backdropFilter: scrolled ? 'blur(14px)' : 'none',
         WebkitBackdropFilter: scrolled ? 'blur(14px)' : 'none',
         borderBottom: scrolled ? `1px solid ${T.hairline}` : '1px solid transparent',
@@ -460,15 +460,15 @@ function Nav() {
         </div>
       </nav>
 
-      {/* Scroll progress bar . appears just below nav once scrolling begins */}
+      {/* Scroll progress bar . sits at the very top of the page, above the nav */}
       <div style={{
         position: 'fixed',
-        top: '58px',
+        top: 0,
         left: 0,
         right: 0,
         height: '2px',
         background: `${T.hairline}80`,
-        zIndex: 99,
+        zIndex: 101,
         opacity: scrolled ? 1 : 0,
         transition: 'opacity 260ms ease',
         pointerEvents: 'none',
@@ -484,7 +484,7 @@ function Nav() {
       {isMobile && open && (
         <div style={{
           position: 'fixed', top: '58px', left: 0, right: 0, zIndex: 99,
-          background: 'rgba(8, 10, 18, 0.98)',
+          background: 'rgba(30, 34, 60, 0.98)',
           backdropFilter: 'blur(14px)',
           borderBottom: `1px solid ${T.hairline}`,
           padding: '20px',
@@ -2190,6 +2190,27 @@ function Footer() {
 // ══════════════════════════════════════════════════════════════
 // ROOT
 // ══════════════════════════════════════════════════════════════
+
+/* --- Card mouse tracker ---
+   Adds --mouse-x / --mouse-y CSS vars to any [data-card] element
+   on mouse move, powering the radial spotlight glow in globals.css. */
+function CardMouseTracker() {
+  useEffect(() => {
+    const handleMove = (e: MouseEvent) => {
+      const target = (e.target as HTMLElement)?.closest('[data-card]') as HTMLElement | null
+      if (!target) return
+      const rect = target.getBoundingClientRect()
+      const x = ((e.clientX - rect.left) / rect.width) * 100
+      const y = ((e.clientY - rect.top) / rect.height) * 100
+      target.style.setProperty('--mouse-x', `${x}%`)
+      target.style.setProperty('--mouse-y', `${y}%`)
+    }
+    window.addEventListener('mousemove', handleMove)
+    return () => window.removeEventListener('mousemove', handleMove)
+  }, [])
+  return null
+}
+
 export default function HCCoreTechHomepage() {
   return (
     <div style={{
@@ -2228,6 +2249,7 @@ export default function HCCoreTechHomepage() {
       `}</style>
 
       <AmbientBackground />
+      <CardMouseTracker />
 
       <div style={{ position: 'relative', zIndex: 1 }}>
         <Nav />
