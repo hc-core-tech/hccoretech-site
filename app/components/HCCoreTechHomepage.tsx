@@ -536,6 +536,7 @@ function Hero() {
   const isMobile = useIsMobile();
   const [cursorOn, setCursorOn] = useState(true);
   const [typedRows, setTypedRows] = useState(0);
+  const { ref: operatorRef, visible: operatorVisible } = useReveal();
 
   const operatorRows: [string, string][] = [
     ['name',       'Hilary Azimoh'],
@@ -553,10 +554,11 @@ function Hero() {
   }, []);
 
   useEffect(() => {
+    if (!operatorVisible) return;
     if (typedRows >= operatorRows.length) return;
     const t = setTimeout(() => setTypedRows(n => n + 1), typedRows === 0 ? 600 : 260);
     return () => clearTimeout(t);
-  }, [typedRows, operatorRows.length]);
+  }, [typedRows, operatorRows.length, operatorVisible]);
 
   const typingDone = typedRows >= operatorRows.length;
 
@@ -653,7 +655,7 @@ function Hero() {
           </div>
 
           <Reveal delay={400}>
-            <div style={{
+            <div ref={operatorRef} style={{
               background: `${T.deep}CC`,
               backdropFilter: 'blur(8px)',
               WebkitBackdropFilter: 'blur(8px)',
@@ -1721,6 +1723,22 @@ function QuoteSection() {
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
   const [honeypot, setHoneypot] = useState(''); // invisible field, bots fill this
 
+  // Availability card row-by-row reveal, gated on in-view detection
+  const { ref: availRef, visible: availVisible } = useReveal();
+  const [availTypedRows, setAvailTypedRows] = useState(0);
+  const availRows: [string, string][] = [
+    ['seats',     '3 of 4 open'],
+    ['booking',   'Q4 2026'],
+    ['response',  'within 48 hours'],
+    ['min scope', 'discovery call'],
+  ];
+  useEffect(() => {
+    if (!availVisible) return;
+    if (availTypedRows >= availRows.length) return;
+    const t = setTimeout(() => setAvailTypedRows(n => n + 1), availTypedRows === 0 ? 400 : 220);
+    return () => clearTimeout(t);
+  }, [availTypedRows, availRows.length, availVisible]);
+
   function update(k: string, v: any) { setForm(f => ({ ...f, [k]: v })); }
   function toggleService(s: string) {
     setForm(f => ({
@@ -2000,7 +2018,7 @@ function QuoteSection() {
           </Reveal>
 
           <Reveal delay={260}>
-            <div style={{
+            <div ref={availRef} style={{
               background: `${T.deep}E6`,
               backdropFilter: 'blur(6px)',
               WebkitBackdropFilter: 'blur(6px)',
@@ -2025,21 +2043,22 @@ function QuoteSection() {
                 </span>
               </div>
 
-              {[
-                ['seats',     '3 of 4 open'],
-                ['booking',   'Q4 2026'],
-                ['response',  'within 48 hours'],
-                ['min scope', 'discovery call'],
-              ].map(([k, v]) => (
-                <div key={k} style={{
-                  display: 'flex', justifyContent: 'space-between',
-                  gap: '16px', padding: '7px 0',
-                  borderBottom: `1px dashed ${T.hairline}`,
-                }}>
-                  <span style={{ color: T.sapphire }}>{k}</span>
-                  <span style={{ color: T.platinum, textAlign: 'right' }}>{v}</span>
-                </div>
-              ))}
+              {availRows.map(([k, v], i) => {
+                const visible = i < availTypedRows;
+                return (
+                  <div key={k} style={{
+                    display: 'flex', justifyContent: 'space-between',
+                    gap: '16px', padding: '7px 0',
+                    borderBottom: `1px dashed ${T.hairline}`,
+                    opacity: visible ? 1 : 0,
+                    transform: visible ? 'translateY(0)' : 'translateY(-3px)',
+                    transition: 'opacity 200ms ease, transform 200ms ease',
+                  }}>
+                    <span style={{ color: T.sapphire }}>{k}</span>
+                    <span style={{ color: T.platinum, textAlign: 'right' }}>{v}</span>
+                  </div>
+                );
+              })}
 
               <div style={{
                 marginTop: '20px', paddingTop: '18px',
