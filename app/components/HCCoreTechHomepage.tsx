@@ -46,7 +46,7 @@ const R = {
 // ══════════════════════════════════════════════════════════════
 // HOOKS
 // ══════════════════════════════════════════════════════════════
-function useReveal(threshold: number = 0.12) {
+function useReveal(threshold: number = 0.2) {
   const ref = useRef<HTMLDivElement | null>(null);
   const [visible, setVisible] = useState(false);
   useEffect(() => {
@@ -54,7 +54,7 @@ function useReveal(threshold: number = 0.12) {
     if (!el) return;
     const obs = new IntersectionObserver(([e]) => {
       if (e.isIntersecting) { setVisible(true); obs.disconnect(); }
-    }, { threshold });
+    }, { threshold, rootMargin: '0px 0px -80px 0px' });
     obs.observe(el);
     return () => obs.disconnect();
   }, [threshold]);
@@ -1645,7 +1645,7 @@ function Reviews() {
         }}>
           {quotes.map((q, i) => (
             <Reveal key={q.author} delay={i * 100}>
-              <div style={{
+              <div data-card="true" style={{
                 background: `${T.obsidian}E6`,
                 backdropFilter: 'blur(6px)',
                 WebkitBackdropFilter: 'blur(6px)',

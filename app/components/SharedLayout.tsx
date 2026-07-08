@@ -59,6 +59,9 @@ function useIsMobile(bp: number = MOBILE_BP) {
 }
 
 // Reveal: fades content up into view when it enters the viewport.
+// Fires only when the element is at least 20% visible AND has scrolled
+// 80px inside the viewport bottom edge — makes reveals feel intentional,
+// not fired too early.
 export function Reveal({ children, delay = 0, y = 20 }: { children: React.ReactNode, delay?: number, y?: number }) {
   const ref = useRef<HTMLDivElement | null>(null)
   const [visible, setVisible] = useState(false)
@@ -67,7 +70,7 @@ export function Reveal({ children, delay = 0, y = 20 }: { children: React.ReactN
     if (!el) return
     const obs = new IntersectionObserver(([e]) => {
       if (e.isIntersecting) { setVisible(true); obs.disconnect() }
-    }, { threshold: 0.12 })
+    }, { threshold: 0.2, rootMargin: '0px 0px -80px 0px' })
     obs.observe(el)
     return () => obs.disconnect()
   }, [])
