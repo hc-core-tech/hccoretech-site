@@ -603,7 +603,7 @@ function Hero() {
       <Container>
         <div style={{
           display: 'grid',
-          gridTemplateColumns: isMobile ? '1fr' : '1.5fr 1fr',
+          gridTemplateColumns: isNarrow ? '1fr' : '1.5fr 1fr',
           gap: isMobile ? '40px' : '80px',
           alignItems: 'center',
         }}>
@@ -714,17 +714,29 @@ function Hero() {
               {operatorRows.map(([k, v], i) => {
                 const visible = i < typedRows;
                 const isCurrent = i === typedRows - 1;
+                // In the tight 640-1200 sidebar range, stack the key above
+                // its value. Cleaner than mid-word breaks and gives the card
+                // a more "code-listing" feel at those widths.
+                const stackRow = isMobile && !isNarrow;
                 return (
                   <div key={k} style={{
-                    display: 'flex', justifyContent: 'space-between',
-                    gap: '16px', padding: '7px 0',
+                    display: 'flex',
+                    flexDirection: stackRow ? 'column' : 'row',
+                    justifyContent: stackRow ? 'flex-start' : 'space-between',
+                    alignItems: stackRow ? 'flex-start' : 'baseline',
+                    gap: stackRow ? '3px' : '16px',
+                    padding: '8px 0',
                     borderBottom: `1px dashed ${T.hairline}`,
                     opacity: visible ? 1 : 0,
                     transform: visible ? 'translateY(0)' : 'translateY(-3px)',
                     transition: 'opacity 200ms ease, transform 200ms ease',
                   }}>
                     <span style={{ color: T.sapphire }}>{k}</span>
-                    <span style={{ color: T.platinum, textAlign: 'right' }}>
+                    <span style={{
+                      color: T.platinum,
+                      textAlign: stackRow ? 'left' : 'right',
+                      paddingLeft: stackRow ? '2px' : 0,
+                    }}>
                       {v}
                       {isCurrent && !typingDone && (
                         <span style={{ opacity: cursorOn ? 1 : 0, marginLeft: '3px', color: T.gold }}>▊</span>
@@ -963,8 +975,8 @@ function CoreDeskCallout() {
       <Container style={{ position: 'relative', zIndex: 1 }}>
         <div style={{
           display: 'grid',
-          gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr',
-          gap: isMobile ? '48px' : '80px',
+          gridTemplateColumns: isNarrow ? '1fr' : '1fr 1fr',
+          gap: isNarrow ? '48px' : '80px',
           alignItems: 'start',
         }}>
           <div>
@@ -1943,7 +1955,7 @@ function QuoteSection() {
 
         <div style={{
           display: 'grid',
-          gridTemplateColumns: isMobile ? '1fr' : '1.6fr 1fr',
+          gridTemplateColumns: isNarrow ? '1fr' : '1.6fr 1fr',
           gap: isMobile ? '32px' : '40px',
           alignItems: 'start',
         }}>
@@ -2158,17 +2170,26 @@ function QuoteSection() {
 
               {availRows.map(([k, v], i) => {
                 const visible = i < availTypedRows;
+                const stackRow = isMobile && !isNarrow;
                 return (
                   <div key={k} style={{
-                    display: 'flex', justifyContent: 'space-between',
-                    gap: '16px', padding: '7px 0',
+                    display: 'flex',
+                    flexDirection: stackRow ? 'column' : 'row',
+                    justifyContent: stackRow ? 'flex-start' : 'space-between',
+                    alignItems: stackRow ? 'flex-start' : 'baseline',
+                    gap: stackRow ? '3px' : '16px',
+                    padding: '8px 0',
                     borderBottom: `1px dashed ${T.hairline}`,
                     opacity: visible ? 1 : 0,
                     transform: visible ? 'translateY(0)' : 'translateY(-3px)',
                     transition: 'opacity 200ms ease, transform 200ms ease',
                   }}>
                     <span style={{ color: T.sapphire }}>{k}</span>
-                    <span style={{ color: T.platinum, textAlign: 'right' }}>{v}</span>
+                    <span style={{
+                      color: T.platinum,
+                      textAlign: stackRow ? 'left' : 'right',
+                      paddingLeft: stackRow ? '2px' : 0,
+                    }}>{v}</span>
                   </div>
                 );
               })}
