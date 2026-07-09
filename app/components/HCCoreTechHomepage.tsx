@@ -603,7 +603,7 @@ function Hero() {
       <Container>
         <div style={{
           display: 'grid',
-          gridTemplateColumns: isNarrow ? '1fr' : '1.5fr 1fr',
+          gridTemplateColumns: isMobile ? '1fr' : '1.5fr 1fr',
           gap: isMobile ? '40px' : '80px',
           alignItems: 'center',
         }}>
@@ -962,8 +962,8 @@ function CoreDeskCallout() {
       <Container style={{ position: 'relative', zIndex: 1 }}>
         <div style={{
           display: 'grid',
-          gridTemplateColumns: isNarrow ? '1fr' : '1fr 1fr',
-          gap: isNarrow ? '48px' : '80px',
+          gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr',
+          gap: isMobile ? '48px' : '80px',
           alignItems: 'start',
         }}>
           <div>
@@ -1940,7 +1940,7 @@ function QuoteSection() {
 
         <div style={{
           display: 'grid',
-          gridTemplateColumns: isNarrow ? '1fr' : '1.6fr 1fr',
+          gridTemplateColumns: isMobile ? '1fr' : '1.6fr 1fr',
           gap: isMobile ? '32px' : '40px',
           alignItems: 'start',
         }}>
