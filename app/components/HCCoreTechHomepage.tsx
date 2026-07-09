@@ -1264,6 +1264,7 @@ function CoreDeskCallout() {
 // ══════════════════════════════════════════════════════════════
 function Approach() {
   const isMobile = useIsMobile();
+  const isNarrow = useIsMobile(640);
   const steps = [
     { num: '01', title: 'Scope in writing',       body: 'Every engagement starts with a versioned scoping document. Price, timeline, in-scope, and explicitly out-of-scope. Nothing negotiated in chat threads.' },
     { num: '02', title: 'Direct engineer access', body: 'You talk to the engineer building it. No account manager between you and the code. Slack, email, or scheduled review calls, whichever works.' },
@@ -1289,7 +1290,7 @@ function Approach() {
 
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+          gridTemplateColumns: isNarrow ? '1fr' : 'repeat(2, 1fr)',
           gap: isMobile ? '32px' : '48px 60px',
         }}>
           {steps.map((s, i) => (
@@ -1458,6 +1459,7 @@ function ToluAuthorPreview() {
 // ══════════════════════════════════════════════════════════════
 function SelectedWork() {
   const isMobile = useIsMobile();
+  const isNarrow = useIsMobile(640);
 
   const projects = [
     { Preview: SeraphZorgPreview,
@@ -1543,7 +1545,7 @@ function SelectedWork() {
 
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+          gridTemplateColumns: isNarrow ? '1fr' : 'repeat(2, 1fr)',
           gap: '20px',
         }}>
           {projects.map((p, i) => {
