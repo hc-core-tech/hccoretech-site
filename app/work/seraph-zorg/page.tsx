@@ -108,7 +108,7 @@ export default function SeraphZorgCaseStudy() {
         <p style={paragraphStyle()}>
           The requirements were clear. A brand system that could carry both the
           seriousness of the work and the warmth of the person doing it. Two
-          sites, one for the practice, one for the founder. A back office that
+          websites, one for the practice, one for the founder. A back office that
           let her spend time with her clients instead of chasing invoices and
           proposal templates.
         </p>
@@ -128,7 +128,7 @@ export default function SeraphZorgCaseStudy() {
         </p>
 
         <p style={paragraphStyle()}>
-          Two sites, one voice.
+          Two websites, one voice.
         </p>
 
         <SubSection title="seraphzorg.com">
@@ -139,19 +139,19 @@ export default function SeraphZorgCaseStudy() {
 
         <SubSection title="jiska.seraphzorg.com">
           Carries the founder. Her training, her story, her values. Cross-linked
-          with the practice site so a visitor arriving through either door finds
+          with the practice website so a visitor arriving through either door finds
           the whole picture.
         </SubSection>
 
         <p style={paragraphStyle()}>
-          Both sites deployed on eWolve (Dutch hosting), mapped to her own
+          Both websites deployed on eWolve (Dutch hosting), mapped to her own
           domains, tuned for Dutch and English search performance. Analytics wired to a private
           dashboard so Jiska sees traffic without exposing visitor data to a
           third party.
         </p>
 
         <p style={paragraphStyle()}>
-          Alongside the sites, JS Zorg en Advies became the founding customer of
+          Alongside the websites, JS Zorg en Advies became the founding customer of
           CoreDesk, my AI back office platform for independent practitioners.
           Invoicing in EUR, quotes rendered as branded PDFs, meeting notes with
           AI-assisted preparation, and a governance dashboard for the AI features.
@@ -172,11 +172,11 @@ export default function SeraphZorgCaseStudy() {
           />
           <Deliverable
             label="seraphzorg.com"
-            body="Multi-page practice site. Dutch and English. Custom design, deployed to her eWolve hosting account, mapped to her own domain."
+            body="Multi-page practice website. Dutch and English. Custom design, deployed to her eWolve hosting account, mapped to her own domain."
           />
           <Deliverable
             label="jiska.seraphzorg.com"
-            body="Founder portfolio subdomain. Cross-linked with the practice site, shares the brand system."
+            body="Founder portfolio subdomain. Cross-linked with the practice website, shares the brand system."
           />
           <Deliverable
             label="CoreDesk workspace"
@@ -215,7 +215,7 @@ export default function SeraphZorgCaseStudy() {
                 fontFamily: FONTS.serif, fontStyle: 'italic',
                 fontSize: '22px', color: T.platinum,
                 letterSpacing: '-0.01em',
-              }}>The practice site and the founder portfolio</div>
+              }}>The practice website and the founder portfolio</div>
             </div>
             <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
               <a data-btn="secondary" href="https://seraphzorg.com" target="_blank" rel="noopener noreferrer" style={{

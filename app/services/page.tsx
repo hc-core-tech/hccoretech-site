@@ -14,8 +14,8 @@ const SERVICES = [
     num: '01',
     Icon: Globe,
     title: 'Websites',
-    tagline: 'Founder-led sites that turn visitors into clients.',
-    whoFor: "Most agencies build what you tell them. Most freelancers ship whatever the template says. Neither has time to sit with you and figure out what your site should actually be saying. That is the part I do first. What do you want your visitor to know? What should they feel? What makes them choose you and not someone else? Founders are often too close to see this clearly, so I sit in your audience's shoes with you until we get it right. Then I build the site to say it: brand system, page-by-page copy, mobile-responsive build, handover kit so it stays yours.",
+    tagline: 'Founder-led websites that turn visitors into clients.',
+    whoFor: "Most agencies build what you tell them. Most freelancers ship whatever the template says. Neither has time to sit with you and figure out what your website should actually be saying. That is the part I do first. What do you want your visitor to know? What should they feel? What makes them choose you and not someone else? Founders are often too close to see this clearly, so I sit in your audience's shoes with you until we get it right. Then I build the website to say it: brand system, page-by-page copy, mobile-responsive build, handover kit so it stays yours.",
     deliverables: [
       'Brand direction: colour, typography, voice',
       'Information architecture and page-by-page copy',
@@ -27,9 +27,9 @@ const SERVICES = [
       'One month of light post-launch support',
     ],
     timeline: '2 to 10 weeks depending on tier',
-    investment: 'From €1,400 landing page to €16,500 brand and site build. Maintenance from €250/mo.',
+    investment: 'From €1,400 landing page to €16,500 brand and website build. Maintenance from €250/mo.',
     flow: [
-      { step: 'Discovery', body: 'One or two calls to understand the practice, the audience, and what the site needs to do. Written brief follows.' },
+      { step: 'Discovery', body: 'One or two calls to understand the practice, the audience, and what the website needs to do. Written brief follows.' },
       { step: 'Direction', body: 'Brand direction, wireframes, and copy outline. You approve before build begins.' },
       { step: 'Build', body: 'Design and development in one motion. Weekly progress updates with a live staging link.' },
       { step: 'Launch', body: 'Migration to your hosting, launch checklist, handover, and 30 days of light support included.' },

@@ -205,19 +205,19 @@ export default function LegalPage() {
 
         <SubHead>2. What we collect on the website</SubHead>
         <Paragraph>
-          When you submit the quote form on this site, we collect the
+          When you submit the quote form on this website, we collect the
           information you provide: name, email address, company (optional),
           services requested, budget, timeline, and project brief. That data
           is used only to respond to your inquiry.
         </Paragraph>
         <Paragraph>
-          When you visit this site, our hosting provider (Vercel) collects
+          When you visit this website, our hosting provider (Vercel) collects
           minimal technical logs (IP address, browser type, referring page).
           These are used to prevent abuse and are retained for a maximum of
           30 days.
         </Paragraph>
         <Paragraph>
-          We use Vercel Analytics to understand aggregate site traffic (page
+          We use Vercel Analytics to understand aggregate website traffic (page
           views, top pages, referring sources, country-level location). Vercel
           Analytics is <strong>cookieless</strong> and does not track
           individual visitors across sessions. No personal data is collected
@@ -448,7 +448,7 @@ export default function LegalPage() {
         <Paragraph>
           On written request with reasonable notice (typically 30 days), HC
           Core Tech will provide the Controller with information reasonably
-          necessary to demonstrate compliance with this DPA. On-site audits
+          necessary to demonstrate compliance with this DPA. On-website audits
           are available for engagements exceeding a value threshold agreed in
           the scoping document.
         </Paragraph>

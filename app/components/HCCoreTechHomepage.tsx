@@ -625,7 +625,7 @@ function Hero() {
                   fontStyle: 'italic',
                   fontWeight: 500,
                   color: T.gold,
-                }}>Websites that ship.</span>
+                }}>Websites that convert.</span>
               </h1>
             </Reveal>
             <Reveal delay={200}>
@@ -635,8 +635,9 @@ function Hero() {
                 lineHeight: 1.6, color: T.softText,
                 maxWidth: '540px', marginBottom: '32px',
               }}>
-                Engineering-grade AI, mapped to EU frameworks, delivered by
-                one accountable engineer-founder. No agency layer. No handoffs.
+                One accountable engineer builds all three: websites that bring you
+                clients, AI systems that survive production, and governance
+                that stands up under scrutiny. No agency layer. No handoffs.
                 No hidden subcontractors.
               </p>
             </Reveal>
@@ -816,7 +817,7 @@ function Services() {
   const isNarrow = useIsMobile(640);
   const items = [
     { icon: Globe, title: 'Web Development',
-      body: "Most agencies build what you tell them. Most freelancers ship whatever the template says. I sit with you first and figure out what your site should actually be saying. What do visitors need to know? What should they feel? What makes them choose you and not someone else? Founders are often too close to see this clearly, so I sit in your audience's shoes with you until we get it right. Then I build the site to say it. Brand, page-by-page copy, mobile-responsive build, analytics wired up. Ships on time, fixed price, stays yours." },
+      body: "Most agencies build what you tell them. Most freelancers ship whatever the template says. I sit with you first and figure out what your website should actually be saying. What do visitors need to know? What should they feel? What makes them choose you and not someone else? Founders are often too close to see this clearly, so I sit in your audience's shoes with you until we get it right. Then I build the website to say it. Brand, page-by-page copy, mobile-responsive build, analytics wired up. Ships on time, fixed price, stays yours." },
     { icon: Brain, title: 'AI Engineering',
       body: "Your pilot works in a notebook, then real users touch it and it breaks. I build the version that ships and keeps working. When the system doesn't exist yet, I design the framework itself. Multi-agent workflows, evaluation harnesses, and the plumbing that lets everything talk to each other. In early 2026 I led AI development on a nine-agent content production system for enterprise clients, delivered on time." },
     { icon: Shield, title: 'AI Governance',
@@ -1295,10 +1296,10 @@ function Approach() {
   const isMobile = useIsMobile();
   const isNarrow = useIsMobile(640);
   const steps = [
-    { num: '01', title: 'Scope in writing',       body: 'Every engagement starts with a versioned scoping document. Price, timeline, in-scope, and explicitly out-of-scope. Nothing negotiated in chat threads.' },
-    { num: '02', title: 'Direct engineer access', body: 'You talk to the engineer building it. No account manager between you and the code. Slack, email, or scheduled review calls, whichever works.' },
-    { num: '03', title: 'Versioned artifacts',    body: 'Every major deliverable is a versioned Word document: copy, brand context, technical plan, handover. Nothing important lives only in chat.' },
-    { num: '04', title: 'Clean walk-away',        body: 'Every custom build deploys to your infrastructure. No vendor lock-in. Post-launch support is a retainer you choose to take, never one you inherit.' },
+    { num: '01', title: 'Scope in writing',       body: "Every engagement starts with a versioned scoping document. Price, timeline, in-scope, and explicitly out-of-scope. Nothing negotiated in chat threads that later get forgotten or quietly 'clarified' when the invoice arrives. If scope changes mid-project, we amend the document and both sign. That's not the industry norm. It should be." },
+    { num: '02', title: 'Direct engineer access', body: 'You talk to the engineer building your work. I stay hands-on on every engagement, from first call to handover. Not an account manager forwarding your messages. Not a support tier reading from a script. Not a junior contractor I quietly subbed the job to. Every message you send lands with the person writing your code. Slack, email, or scheduled review calls, whichever works.' },
+    { num: '03', title: 'Versioned artifacts',    body: 'Every major deliverable is a versioned Word document. Your copy, your brand context, your technical plan, your handover kit. Even the small design decisions get written down. Nothing important lives only in a Slack thread or a Notion page that disappears when someone leaves the team. When you look at your project in six months, you can still read what we decided and why.' },
+    { num: '04', title: 'Clean walk-away',        body: "Every custom build deploys to your infrastructure. You get every file, every credential, every document. Another engineer can pick it up tomorrow without calling me. Post-launch support is a retainer you choose to take, never one you inherit. That is how I sleep at night, and how you keep control of the thing you paid for." },
   ];
 
   return (
@@ -1311,10 +1312,24 @@ function Approach() {
             fontSize: isMobile ? '38px' : 'clamp(42px, 4.4vw, 62px)',
             lineHeight: 1.05, letterSpacing: '-0.015em',
             fontWeight: 400, color: T.platinum,
-            marginTop: '24px', marginBottom: '60px', maxWidth: '780px',
+            marginTop: '24px', marginBottom: '28px', maxWidth: '780px',
           }}>
             One engineer, <span style={{ fontStyle: 'italic', color: T.gold, fontWeight: 500 }}>four operating principles.</span>
           </h2>
+        </Reveal>
+        <Reveal delay={140}>
+          <p style={{
+            fontFamily: FONTS.ui,
+            fontSize: isMobile ? '16px' : '18px',
+            lineHeight: 1.6, color: T.softText,
+            maxWidth: '620px', marginBottom: '60px',
+          }}>
+            Every one of these principles exists because I have seen projects
+            fail without it. They are the four things I always wished someone
+            had told me before I hired an agency, a freelancer, or a
+            consultancy. Now they are the rules I hand my clients before we
+            start.
+          </p>
         </Reveal>
 
         <div style={{
@@ -1494,10 +1509,11 @@ function SelectedWork() {
     { Preview: SeraphZorgPreview,
       client: 'JS Zorg en Advies | Seraph Zorg',
       role: 'Dutch care practice · Netherlands',
-      description: 'Jiska needed a proper business site and a way to actually run her practice without her tools fighting each other. What shipped: a WordPress front-end for the world to see, and CoreDesk behind it running invoicing, proposals, and practice admin. Founding CoreDesk customer, still using it every day.',
+      description: 'Jiska needed a proper business website and a way to actually run her practice without her tools fighting each other. What shipped: a WordPress front-end for the world to see, and CoreDesk behind it running invoicing, proposals, and practice admin. Founding CoreDesk customer, still using it every day.',
       outcomes: [
         { headline: 'Delivered on time', subtitle: 'Fixed price, no scope disputes' },
-        { headline: '2 sites + 1 back-office platform', subtitle: 'One engagement, one accountable engineer' },
+        { headline: 'First client through the website', subtitle: 'Three days after launch, May 2026' },
+        { headline: '2 websites + 1 back-office platform', subtitle: 'One engagement, one accountable engineer' },
         { headline: 'Founding CoreDesk customer', subtitle: 'Runs the practice daily since launch' },
       ],
       tags: ['WordPress', 'Brand + copy', 'CoreDesk platform', 'Advisory'],
@@ -1505,18 +1521,18 @@ function SelectedWork() {
     { Preview: JiskaPortfolioPreview,
       client: 'Jiska · founder portfolio',
       role: 'Personal brand · Netherlands',
-      description: "Every practice is really about the person running it. Jiska wanted a companion site where a prospective client meets her before they book. Video-led, faith-grounded, editorial. Warmer than the business site, cross-linked so visitors can flow between the two.",
+      description: "Every practice is really about the person running it. Jiska wanted a companion website where a prospective client meets her before they book. Video-led, faith-grounded, editorial. Warmer than the business website, cross-linked so visitors can flow between the two.",
       outcomes: [
         { headline: 'Video-led personal brand', subtitle: 'Hero video, editorial pages, faith-grounded copy' },
         { headline: 'Cross-linked with the practice', subtitle: 'jiska.seraphzorg.com companion domain' },
-        { headline: 'Delivered alongside the practice site', subtitle: 'Same engagement, unified brand system' },
+        { headline: 'Delivered alongside the practice website', subtitle: 'Same engagement, unified brand system' },
       ],
       tags: ['WordPress', 'Personal brand', 'Copy', 'Video hero'],
       url: 'https://jiska.seraphzorg.com', urlLabel: 'jiska.seraphzorg.com', status: 'live' as const },
     { Preview: MCHPreview,
       client: "Magnifying Children's Horizons",
       role: 'Values-led education brand · Canada',
-      description: "Tolu wanted to teach children about the natural world without a single AI-generated image on the site. That constraint led to something beautiful. A full brand system, page-by-page copy written with her, real photography sourced or directed, a lead-magnet flow, and email automation. A programme site that feels as considered as the work itself.",
+      description: "Tolu wanted to teach children about the natural world without a single AI-generated image on the website. That constraint led to something beautiful. A full brand system, page-by-page copy written with her, real photography sourced or directed, a lead-magnet flow, and email automation. A programme website that feels as considered as the work itself.",
       outcomes: [
         { headline: 'Full brand system co-created', subtitle: 'Colour, typography, voice, page-by-page copy' },
         { headline: 'Real photography only, no AI imagery', subtitle: 'Every asset sourced or directed with the client' },
@@ -1526,8 +1542,8 @@ function SelectedWork() {
       url: 'https://pink-cheetah-352887.hostingersite.com', urlLabel: 'staging · magnifyingchildrenshorizons.com', status: 'in-build' as const },
     { Preview: ToluAuthorPreview,
       client: 'Tolu · author',
-      role: "Children's book author site · Canada",
-      description: 'Tolu is a published author. Two books, The Face in the Mountain and The Festival Shoes. She wanted a site that treats her author brand with the same care as her programme. Companion to the MCH site, same hosting, quiet editorial feel, snowy-woods portrait carrying the About hero.',
+      role: "Children's book author website · Canada",
+      description: 'Tolu is a published author. Two books, The Face in the Mountain and The Festival Shoes. She wanted a website that treats her author brand with the same care as her programme. Companion to the MCH website, same hosting, quiet editorial feel, snowy-woods portrait carrying the About hero.',
       outcomes: [
         { headline: 'Author brand for two published books', subtitle: 'The Face in the Mountain, The Festival Shoes' },
         { headline: 'Snowy-woods editorial portrait hero', subtitle: 'Anchors the About page as visual signature' },
@@ -1730,7 +1746,7 @@ function SelectedWork() {
                     }}
                     onMouseEnter={e => e.currentTarget.style.gap = '12px'}
                     onMouseLeave={e => e.currentTarget.style.gap = '8px'}
-                    >Visit site <ExternalLink size={11} /></a>
+                    >Visit website <ExternalLink size={11} /></a>
                   </div>
                 </div>
               </Reveal>
@@ -1750,7 +1766,9 @@ function Reviews() {
   const quotes = [
     { quote: "Hilary is remarkably careful, reliable, and substantively strong. She thinks with me, delivers quality, and honors her commitments. For my practice, where vulnerable clients and sensitive data are at stake, that is no small thing. I choose my collaborators with care, and Hilary is someone I trust.",
       author: 'Jiska',
-      role: 'Founder, JS Zorg en Advies | Seraph Zorg', draft: false },
+      role: 'Founder, JS Zorg en Advies | Seraph Zorg',
+      fact: 'First client through her website, three days after launch. May 2026.',
+      draft: false },
     { quote: "Hilary took a project I barely described and turned it into a brand system, a website, and a launch plan inside a month. The rigour she brings is more than most paid agencies deliver.",
       author: 'Tolu',
       role: "Founder, Magnifying Children's Horizons", draft: false },
@@ -1832,6 +1850,13 @@ function Reviews() {
                     letterSpacing: '0.14em', textTransform: 'uppercase',
                     color: T.muted,
                   }}>{q.role}</div>
+                  {q.fact && (
+                    <div style={{
+                      fontFamily: FONTS.serif, fontStyle: 'italic',
+                      fontSize: '13px', color: T.gold,
+                      marginTop: '10px', lineHeight: 1.45,
+                    }}>{q.fact}</div>
+                  )}
                 </div>
               </div>
             </Reveal>

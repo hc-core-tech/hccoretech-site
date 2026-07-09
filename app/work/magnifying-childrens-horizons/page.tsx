@@ -6,7 +6,7 @@ import SharedLayout, { T, FONTS, CALENDLY, Reveal } from '../../components/Share
 
 /**
  * /work/magnifying-childrens-horizons case study.
- * Two-site build for MCH (education programme) + Tolu Okudolo author companion.
+ * Two-website build for MCH (education programme) + Tolu Okudolo author companion.
  */
 
 export default function MCHCaseStudy() {
@@ -68,7 +68,7 @@ export default function MCHCaseStudy() {
             letterSpacing: '-0.005em',
           }}>
             A values-led children&apos;s education programme and a companion author
-            site for its founder, built with a forest-and-sunlight brand system,
+            website for its founder, built with a forest-and-sunlight brand system,
             real photography only, no AI imagery.
           </p>
         </Reveal>
@@ -105,14 +105,14 @@ export default function MCHCaseStudy() {
           The Face in the Mountain and The Festival Shoes.
         </p>
         <p style={paragraphStyle()}>
-          She needed two sites, tied together but not identical. One for the
+          She needed two websites, tied together but not identical. One for the
           programme, one for her author work. And she had one non-negotiable
           rule: no AI-generated imagery, anywhere. Everything visual on the
-          site had to come from real photography, real illustration, or real
+          website had to come from real photography, real illustration, or real
           hand-drawn work. The brand had to feel like the values it teaches.
         </p>
         <p style={paragraphStyle()}>
-          Beyond that, she needed the sites to be discoverable. Parents finding
+          Beyond that, she needed the websites to be discoverable. Parents finding
           MCH would mostly arrive through search, not paid ads. So SEO was not
           a nice-to-have. It was in the brief from day one.
         </p>
@@ -129,11 +129,11 @@ export default function MCHCaseStudy() {
         </p>
 
         <p style={paragraphStyle()}>
-          Two sites, cross-linked.
+          Two websites, cross-linked.
         </p>
 
         <SubSection title="magnifyingchildrenshorizons.com">
-          The programme site. Guiding Children with Nature laid out in
+          The programme website. Guiding Children with Nature laid out in
           scannable, warm copy. Parents can read the programme overview, meet
           the founder, read the philosophy, and enrol their family in one flow.
         </SubSection>
@@ -146,8 +146,8 @@ export default function MCHCaseStudy() {
         </SubSection>
 
         <p style={paragraphStyle()}>
-          Both sites built on the same brand system for coherence, but with
-          distinct tonal choices. MCH leans warmly instructive. The author site
+          Both websites built on the same brand system for coherence, but with
+          distinct tonal choices. MCH leans warmly instructive. The author website
           leans quietly literary.
         </p>
 
@@ -174,11 +174,11 @@ export default function MCHCaseStudy() {
           />
           <Deliverable
             label="magnifyingchildrenshorizons.com"
-            body="Programme site. Multi-page, cross-linked with the author companion. Deployed to Hostinger, mapped to the client's own domain."
+            body="Programme website. Multi-page, cross-linked with the author companion. Deployed to Hostinger, mapped to the client's own domain."
           />
           <Deliverable
             label="tolu.magnifyingchildrenshorizons.com"
-            body="Author companion site. Subdomain of MCH, shares the brand system, distinct in voice."
+            body="Author companion website. Subdomain of MCH, shares the brand system, distinct in voice."
           />
           <Deliverable
             label="SEO configuration"
