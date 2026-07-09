@@ -815,12 +815,12 @@ function Services() {
   const isMobile = useIsMobile();
   const isNarrow = useIsMobile(640);
   const items = [
+    { icon: Globe, title: 'Web Development',
+      body: "Most agencies build what you tell them. Most freelancers ship whatever the template says. I sit with you first and figure out what your site should actually be saying. What do visitors need to know? What should they feel? What makes them choose you and not someone else? Founders are often too close to see this clearly, so I sit in your audience's shoes with you until we get it right. Then I build the site to say it. Brand, page-by-page copy, mobile-responsive build, analytics wired up. Ships on time, fixed price, stays yours." },
     { icon: Brain, title: 'AI Engineering',
-      body: "Your pilot works in a notebook, then real users touch it and it breaks. I build the version that ships and keeps working. Designed against your actual workflow, evaluated with real data, deployed to your infrastructure. Your team owns it after the engagement." },
+      body: "Your pilot works in a notebook, then real users touch it and it breaks. I build the version that ships and keeps working. When the system doesn't exist yet, I design the framework itself. Multi-agent workflows, evaluation harnesses, and the plumbing that lets everything talk to each other. In early 2026 I led AI development on a nine-agent content production system for enterprise clients, delivered on time." },
     { icon: Shield, title: 'AI Governance',
       body: 'Every enterprise deal now starts with a compliance question. Your buyer wants documentation, risk mapping, and a story about how you handle AI decisions. I sit with your team, map your systems to the frameworks that apply to you, and produce the artifacts your next buyer will ask for. Aligned to EU AI Act, NIST AI RMF, ISO/IEC 42001, GDPR, and OECD AI.' },
-    { icon: Globe, title: 'Web Development',
-      body: "You need a real site, not a template. Not a six-month committee design either. Founders come to me for a brand, page-by-page copy, a mobile-responsive build, and a handover kit so you can edit it yourself. Ships on time, fixed price, stays yours." },
     { icon: MessageSquare, title: 'Advisory & Consulting',
       body: "Sometimes you don't need a project. You need someone who has built and shipped AI to sit in one meeting, ask the questions your team is avoiding, and write down what to do next. Executives leave with clarity: a technical review, a governance brief, or a read on a vendor you're considering." },
   ];
@@ -1914,7 +1914,7 @@ function QuoteSection() {
     }
   }
 
-  const services = ['AI Engineering', 'AI Governance', 'Web Development', 'Advisory'];
+  const services = ['Web Development', 'AI Engineering', 'AI Governance', 'Advisory'];
   const budgets = ['Under €5k', '€5k to €15k', '€15k to €30k', '€30k+', 'Not sure yet'];
   const timelines = ['This month', 'Next 1 to 3 months', 'Next 3 to 6 months', 'Flexible'];
 

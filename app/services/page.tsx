@@ -14,8 +14,8 @@ const SERVICES = [
     num: '01',
     Icon: Globe,
     title: 'Websites',
-    tagline: 'Founder-led sites that ship on time and stay yours.',
-    whoFor: "You know your practice deserves a proper site. Agencies want six months and a retainer. Freelancers ship and disappear. I sit in the middle. I build sites the way a serious engineer would, then hand them over so you can actually edit them yourself.",
+    tagline: 'Founder-led sites that turn visitors into clients.',
+    whoFor: "Most agencies build what you tell them. Most freelancers ship whatever the template says. Neither has time to sit with you and figure out what your site should actually be saying. That is the part I do first. What do you want your visitor to know? What should they feel? What makes them choose you and not someone else? Founders are often too close to see this clearly, so I sit in your audience's shoes with you until we get it right. Then I build the site to say it: brand system, page-by-page copy, mobile-responsive build, handover kit so it stays yours.",
     deliverables: [
       'Brand direction: colour, typography, voice',
       'Information architecture and page-by-page copy',
@@ -41,7 +41,7 @@ const SERVICES = [
     Icon: Brain,
     title: 'AI engineering',
     tagline: 'Custom AI systems built to be shipped, not demoed.',
-    whoFor: "You have a workflow that costs your team hours every week. Or a pilot that impressed a demo audience but falls over the second real users touch it. You need someone who understands both the model math and the production runbook, and who can hand your team a system they actually own after go-live.",
+    whoFor: "You have a workflow that costs your team hours every week, or a pilot that impressed a demo audience but falls over the second real users touch it. Sometimes the system does not exist yet, and you need someone to design it from scratch, including the frameworks that let multiple agents work together. You need someone who understands both the model math and the production runbook, and who can hand your team a system they actually own after go-live.",
     deliverables: [
       'Solution design and architecture proposal',
       'RAG pipelines, multi-agent orchestration, or custom assistants',
@@ -59,7 +59,7 @@ const SERVICES = [
       { step: 'Build', body: 'Iterative delivery in two-week milestones. Working software from week two, refined against real user feedback.' },
       { step: 'Handover', body: 'Deploy to your infrastructure, train your team, hand over runbook and documentation. Optional retainer for post-launch support.' },
     ],
-    example: 'Custom AI systems for teams building agents, RAG pipelines, and integrations into existing operational tooling. Every build deployed to client infrastructure with full governance documentation.',
+    example: 'In early 2026 I led AI development on a nine-agent content production system for enterprise clients, delivered on time. Custom agents, RAG pipelines, and multi-agent workflows deployed to client infrastructure with full governance documentation.',
   },
   {
     num: '03',
