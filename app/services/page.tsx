@@ -225,48 +225,67 @@ export default function ServicesPage() {
                   fontSize: '20px', lineHeight: 1.4,
                   color: T.gold, marginBottom: '0',
                 }}>{s.tagline}</p>
-
-                {/* Expand toggle */}
-                <button
-                  onClick={() => toggle(s.num)}
-                  aria-expanded={isExpanded}
-                  aria-controls={`${s.num}-details`}
-                  style={{
-                    marginTop: '20px',
-                    padding: '10px 18px',
-                    background: isExpanded ? `${T.gold}14` : 'transparent',
-                    border: `1px solid ${isExpanded ? T.gold : `${T.gold}66`}`,
-                    color: T.gold,
-                    borderRadius: '6px',
-                    fontFamily: FONTS.mono,
-                    fontSize: '11px',
-                    letterSpacing: '0.15em',
-                    textTransform: 'uppercase',
-                    cursor: 'pointer',
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    gap: '10px',
-                    transition: 'all 200ms ease',
-                  }}
-                  onMouseEnter={e => {
-                    e.currentTarget.style.background = `${T.gold}1A`;
-                    e.currentTarget.style.borderColor = T.gold;
-                  }}
-                  onMouseLeave={e => {
-                    e.currentTarget.style.background = isExpanded ? `${T.gold}14` : 'transparent';
-                    e.currentTarget.style.borderColor = isExpanded ? T.gold : `${T.gold}66`;
-                  }}
-                >
-                  {isExpanded ? 'Hide details' : 'Click for more info'}
-                  <ChevronDown
-                    size={13}
-                    style={{
-                      transform: isExpanded ? 'rotate(180deg)' : 'rotate(0deg)',
-                      transition: 'transform 300ms cubic-bezier(0.4, 0, 0.2, 1)',
-                    }}
-                  />
-                </button>
               </div>
+            </div>
+
+            {/* Expand toggle — pulsing chevron centered below the header.
+                When collapsed, the icon does a slow heartbeat (lub-dub) to
+                draw the eye. When expanded, it stops pulsing and rotates
+                180 degrees. Hover pauses the beat and warms the icon. */}
+            <div style={{
+              display: 'flex', justifyContent: 'center',
+              marginTop: '18px', marginBottom: '4px',
+            }}>
+              <style>{`
+                @keyframes service-heartbeat {
+                  0%   { transform: scale(1);    }
+                  14%  { transform: scale(1.18); }
+                  28%  { transform: scale(1);    }
+                  42%  { transform: scale(1.12); }
+                  70%  { transform: scale(1);    }
+                  100% { transform: scale(1);    }
+                }
+                .service-toggle {
+                  width: 40px; height: 40px;
+                  border-radius: 50%;
+                  background: transparent;
+                  border: 1px solid ${T.gold}55;
+                  color: ${T.gold};
+                  display: inline-flex; align-items: center; justify-content: center;
+                  cursor: pointer;
+                  transition: background 220ms ease, border-color 220ms ease, transform 220ms ease;
+                  animation: service-heartbeat 1.6s ease-in-out infinite;
+                  will-change: transform;
+                }
+                .service-toggle.expanded {
+                  animation: none;
+                  background: ${T.gold}18;
+                  border-color: ${T.gold};
+                }
+                .service-toggle:hover {
+                  animation-play-state: paused;
+                  background: ${T.gold}22;
+                  border-color: ${T.gold};
+                }
+                .service-toggle .chev {
+                  transition: transform 320ms cubic-bezier(0.4, 0, 0.2, 1);
+                }
+                .service-toggle.expanded .chev {
+                  transform: rotate(180deg);
+                }
+                @media (prefers-reduced-motion: reduce) {
+                  .service-toggle { animation: none !important; }
+                }
+              `}</style>
+              <button
+                onClick={() => toggle(s.num)}
+                aria-expanded={isExpanded}
+                aria-controls={`${s.num}-details`}
+                aria-label={isExpanded ? `Hide ${s.title} details` : `Show ${s.title} details`}
+                className={`service-toggle ${isExpanded ? 'expanded' : ''}`}
+              >
+                <ChevronDown size={16} className="chev" />
+              </button>
             </div>
 
             {/* Expandable details */}
