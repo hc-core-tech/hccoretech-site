@@ -413,7 +413,7 @@ function Nav() {
           <a href="/#top" style={{
             display: 'flex', alignItems: 'center', gap: '18px',
           }}>
-            <HCCTMonogram size={isMobile ? 20 : 24} variant="compact" animated />
+            <HCCTMonogram size={isMobile ? 24 : 30} variant="compact" animated />
             {!isMobile && (
               <span style={{
                 paddingLeft: '18px',
@@ -911,22 +911,37 @@ function Services() {
         <Reveal delay={260}>
           <div style={{
             marginTop: '40px',
-            padding: '20px 24px',
+            padding: '24px 28px',
             border: `1px solid ${T.hairline}`,
             borderRadius: R.card,
             background: `${T.deep}80`,
             fontFamily: FONTS.mono, fontSize: '11px',
             letterSpacing: '0.14em', color: T.muted,
             textTransform: 'uppercase',
-            display: 'flex', flexWrap: 'wrap', gap: '18px 32px',
-            alignItems: 'center', justifyContent: 'center',
+            display: 'flex', flexDirection: 'column',
+            alignItems: 'center', gap: '16px',
           }}>
-            <span style={{ color: T.sapphire }}>Typical range</span>
-            <span><span style={{ color: T.platinum }}>€1,500 to €28,000</span> per project</span>
-            <span style={{ color: T.hairline }}>·</span>
-            <span><span style={{ color: T.platinum }}>4 to 8 weeks</span> average delivery</span>
-            <span style={{ color: T.hairline }}>·</span>
-            <span><span style={{ color: T.platinum }}>€250/mo</span> minimum retainer</span>
+            {/* Header: hairline + label + hairline */}
+            <div style={{
+              display: 'flex', alignItems: 'center', gap: '12px',
+              color: T.sapphire,
+            }}>
+              <span style={{ width: '24px', height: '1px', background: T.midnight }} />
+              <span>Typical range</span>
+              <span style={{ width: '24px', height: '1px', background: T.midnight }} />
+            </div>
+
+            {/* Values row */}
+            <div style={{
+              display: 'flex', flexWrap: 'wrap', gap: '12px 28px',
+              alignItems: 'center', justifyContent: 'center',
+            }}>
+              <span><span style={{ color: T.platinum }}>€1,500 to €28,000</span> per project</span>
+              <span style={{ color: T.hairline }}>·</span>
+              <span><span style={{ color: T.platinum }}>4 to 8 weeks</span> average delivery</span>
+              <span style={{ color: T.hairline }}>·</span>
+              <span><span style={{ color: T.platinum }}>€250/mo</span> minimum retainer</span>
+            </div>
           </div>
         </Reveal>
       </Container>
@@ -2250,7 +2265,7 @@ function Footer() {
           borderBottom: `1px solid ${T.hairline}`,
           marginBottom: isMobile ? '48px' : '64px',
         }}>
-          <HCCTMonogram size={isMobile ? 38 : 56} variant="full" animated />
+          <HCCTMonogram size={isMobile ? 44 : 64} variant="full" animated />
         </div>
 
         <div style={{

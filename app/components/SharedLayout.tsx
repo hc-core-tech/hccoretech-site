@@ -167,7 +167,7 @@ function Nav() {
           gap: '48px',
         }}>
           <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '18px', textDecoration: 'none', flexShrink: 0 }}>
-            <HCCTMonogram size={isMobile ? 20 : 24} animated />
+            <HCCTMonogram size={isMobile ? 24 : 30} animated />
             {!isMobile && (
               <span style={{
                 paddingLeft: '18px', borderLeft: `1px solid ${T.hairline}`,
@@ -321,7 +321,7 @@ function Footer() {
           marginBottom: '48px',
         }}>
           <div style={{ display: 'inline-flex', flexDirection: 'column', alignItems: 'center' }}>
-            <HCCTMonogram size={40} animated />
+            <HCCTMonogram size={46} animated />
             <div style={{
               width: '160px', height: '1px',
               background: `linear-gradient(90deg, transparent, ${T.gold}9C, transparent)`,
