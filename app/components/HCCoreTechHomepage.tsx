@@ -840,7 +840,7 @@ function Services() {
 
         <div style={{
           display: 'grid',
-          gridTemplateColumns: isMobile ? '1fr' : 'repeat(2, 1fr)',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
           gap: '2px', background: T.hairline,
           border: `1px solid ${T.hairline}`,
           borderRadius: R.card,
@@ -1286,7 +1286,7 @@ function Approach() {
 
         <div style={{
           display: 'grid',
-          gridTemplateColumns: isMobile ? '1fr' : 'repeat(2, 1fr)',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
           gap: isMobile ? '32px' : '48px 60px',
         }}>
           {steps.map((s, i) => (
@@ -1520,7 +1520,7 @@ function SelectedWork() {
 
         <div style={{
           display: 'grid',
-          gridTemplateColumns: isMobile ? '1fr' : 'repeat(2, 1fr)',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))',
           gap: '20px',
         }}>
           {projects.map((p, i) => {
@@ -1672,7 +1672,7 @@ function Reviews() {
 
         <div style={{
           display: 'grid',
-          gridTemplateColumns: isMobile ? '1fr' : 'repeat(2, 1fr)',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
           gap: '20px',
         }}>
           {quotes.map((q, i) => (
