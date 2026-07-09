@@ -221,7 +221,7 @@ export default function CoreDeskPage() {
                 padding: '28px 26px',
                 background: T.deep,
                 border: `1px solid ${T.midnight}`,
-                borderRadius: '8px',
+                borderRadius: '12px',
                 height: '100%',
               }}>
                 <div style={{
@@ -343,7 +343,7 @@ export default function CoreDeskPage() {
               padding: '28px 24px',
               background: T.deep,
               border: `1px solid ${T.midnight}`,
-              borderRadius: '8px',
+              borderRadius: '12px',
               height: '100%',
             }}>
               <div style={{
@@ -376,7 +376,7 @@ export default function CoreDeskPage() {
               padding: '28px 24px',
               background: T.deep,
               border: `1px solid ${T.midnight}`,
-              borderRadius: '8px',
+              borderRadius: '12px',
               height: '100%',
             }}>
               <div style={{
@@ -494,7 +494,7 @@ export default function CoreDeskPage() {
                 padding: '28px 22px',
                 background: T.deep,
                 border: `1px solid ${tier.name === 'Basis' ? T.gold + '66' : T.midnight}`,
-                borderRadius: '8px',
+                borderRadius: '12px',
                 height: '100%',
                 display: 'flex', flexDirection: 'column',
                 position: 'relative',

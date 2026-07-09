@@ -151,7 +151,7 @@ export default function WorkPage() {
                   padding: '32px 28px',
                   background: T.deep,
                   border: `1px solid ${T.midnight}`,
-                  borderRadius: '10px',
+                  borderRadius: '12px',
                   cursor: 'pointer',
                 }}>
                   <StudyCardContent study={study} clickable />
@@ -163,7 +163,7 @@ export default function WorkPage() {
                   padding: '32px 28px',
                   background: T.deep,
                   border: `1px solid ${T.midnight}`,
-                  borderRadius: '10px',
+                  borderRadius: '12px',
                 }}>
                   <StudyCardContent study={study} clickable={false} />
                 </div>

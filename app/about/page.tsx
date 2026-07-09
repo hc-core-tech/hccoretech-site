@@ -305,7 +305,7 @@ export default function AboutPage() {
                 padding: '32px 28px',
                 background: T.deep,
                 border: `1px solid ${T.midnight}`,
-                borderRadius: '8px',
+                borderRadius: '12px',
                 height: '100%',
               }}>
                 <div style={{
@@ -475,7 +475,7 @@ export default function AboutPage() {
               padding: '28px 24px',
               background: T.deep,
               border: `1px solid ${T.midnight}`,
-              borderRadius: '8px',
+              borderRadius: '12px',
               height: '100%',
             }}>
               <div style={{
@@ -504,7 +504,7 @@ export default function AboutPage() {
               padding: '28px 24px',
               background: T.deep,
               border: `1px solid ${T.midnight}`,
-              borderRadius: '8px',
+              borderRadius: '12px',
               height: '100%',
             }}>
               <div style={{

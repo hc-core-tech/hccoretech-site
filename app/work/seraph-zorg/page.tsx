@@ -82,7 +82,7 @@ export default function SeraphZorgCaseStudy() {
             padding: '28px 24px',
             background: T.deep,
             border: `1px solid ${T.midnight}`,
-            borderRadius: '8px',
+            borderRadius: '12px',
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))',
             gap: '24px',
@@ -200,7 +200,7 @@ export default function SeraphZorgCaseStudy() {
             padding: '32px',
             background: T.deep,
             border: `1px solid ${T.midnight}`,
-            borderRadius: '10px',
+            borderRadius: '12px',
             display: 'flex', flexWrap: 'wrap',
             justifyContent: 'space-between', alignItems: 'center',
             gap: '20px',
@@ -348,7 +348,7 @@ function Deliverable({ label, body }: { label: string; body: string }) {
       padding: '22px 20px',
       background: T.deep,
       border: `1px solid ${T.midnight}`,
-      borderRadius: '8px',
+      borderRadius: '12px',
       height: '100%',
     }}>
       <div style={{

@@ -12,16 +12,16 @@
 }
 
 :root {
-  --bg: #080A12;
-  --deep: #0C0F1E;
-  --midnight: #1E2240;
-  --hairline: #141830;
+  --bg: #1E223C;
+  --deep: #262A4A;
+  --midnight: #30345C;
+  --hairline: #262842;
   --text: #E2E2E6;
   --soft: #9CA3AF;
   --muted: #6B7280;
-  --gold: #C9A961;
-  --gold-soft: #E8D8AB;
-  --gold-deep: #8C7A45;
+  --gold: #D4A85E;
+  --gold-soft: #EBC580;
+  --gold-deep: #8A7038;
 
   /* next/font drops the actual family names into these variables at
      build time; layout.tsx wires them onto <html className>. */
@@ -78,20 +78,6 @@ button {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: var(--gold-deep);
-}
-
-/* Update palette variables to match navy + amber bronze palette */
-:root {
-  --bg: #1E223C;
-  --deep: #262A4A;
-  --midnight: #30345C;
-  --hairline: #262842;
-  --text: #E2E2E6;
-  --soft: #9CA3AF;
-  --muted: #6B7280;
-  --gold: #D4A85E;
-  --gold-soft: #EBC580;
-  --gold-deep: #8A7038;
 }
 
 /* Global card hover — applies to any element with data-card="true"
