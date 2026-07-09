@@ -1,7 +1,8 @@
 'use client'
 
+import { useState } from 'react'
 import Link from 'next/link'
-import { ArrowRight, Globe, Brain, Shield, MessageSquare, LayoutDashboard } from 'lucide-react'
+import { ArrowRight, Globe, Brain, Shield, MessageSquare, LayoutDashboard, ChevronDown } from 'lucide-react'
 import SharedLayout, { T, FONTS, Reveal } from '../components/SharedLayout'
 
 /**
@@ -133,6 +134,9 @@ const SERVICES = [
 ]
 
 export default function ServicesPage() {
+  const [expanded, setExpanded] = useState<Record<string, boolean>>({});
+  const toggle = (num: string) => setExpanded(prev => ({ ...prev, [num]: !prev[num] }));
+
   return (
     <SharedLayout>
       {/* Hero */}
@@ -172,7 +176,9 @@ export default function ServicesPage() {
 
       {/* Services list */}
       <div style={{ maxWidth: '1080px', margin: '0 auto', padding: '0 32px' }}>
-        {SERVICES.map((s, i) => (
+        {SERVICES.map((s, i) => {
+          const isExpanded = !!expanded[s.num];
+          return (
           <Reveal key={s.num}>
             <section
               id={s.title.toLowerCase().replace(/\W+/g, '-')}
@@ -219,8 +225,64 @@ export default function ServicesPage() {
                   fontSize: '20px', lineHeight: 1.4,
                   color: T.gold, marginBottom: '0',
                 }}>{s.tagline}</p>
+
+                {/* Expand toggle */}
+                <button
+                  onClick={() => toggle(s.num)}
+                  aria-expanded={isExpanded}
+                  aria-controls={`${s.num}-details`}
+                  style={{
+                    marginTop: '20px',
+                    padding: '10px 18px',
+                    background: isExpanded ? `${T.gold}14` : 'transparent',
+                    border: `1px solid ${isExpanded ? T.gold : `${T.gold}66`}`,
+                    color: T.gold,
+                    borderRadius: '6px',
+                    fontFamily: FONTS.mono,
+                    fontSize: '11px',
+                    letterSpacing: '0.15em',
+                    textTransform: 'uppercase',
+                    cursor: 'pointer',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '10px',
+                    transition: 'all 200ms ease',
+                  }}
+                  onMouseEnter={e => {
+                    e.currentTarget.style.background = `${T.gold}1A`;
+                    e.currentTarget.style.borderColor = T.gold;
+                  }}
+                  onMouseLeave={e => {
+                    e.currentTarget.style.background = isExpanded ? `${T.gold}14` : 'transparent';
+                    e.currentTarget.style.borderColor = isExpanded ? T.gold : `${T.gold}66`;
+                  }}
+                >
+                  {isExpanded ? 'Hide details' : 'Click for more info'}
+                  <ChevronDown
+                    size={13}
+                    style={{
+                      transform: isExpanded ? 'rotate(180deg)' : 'rotate(0deg)',
+                      transition: 'transform 300ms cubic-bezier(0.4, 0, 0.2, 1)',
+                    }}
+                  />
+                </button>
               </div>
             </div>
+
+            {/* Expandable details */}
+            {isExpanded && (
+              <div
+                id={`${s.num}-details`}
+                style={{
+                  animation: 'service-expand 400ms cubic-bezier(0.16, 1, 0.3, 1)',
+                }}
+              >
+              <style>{`
+                @keyframes service-expand {
+                  from { opacity: 0; transform: translateY(-8px); }
+                  to   { opacity: 1; transform: translateY(0); }
+                }
+              `}</style>
 
             {/* Who for */}
             <div style={{
@@ -375,9 +437,12 @@ export default function ServicesPage() {
                 color: T.softText,
               }}>{s.example}</p>
             </div>
+              </div>
+            )}
             </section>
           </Reveal>
-        ))}
+          );
+        })}
       </div>
 
       {/* Bottom CTA */}
