@@ -399,7 +399,7 @@ function Nav() {
     <>
       <nav style={{
         position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100,
-        padding: isMobile ? '14px 20px' : '20px 32px',
+        padding: isMobile ? '10px 20px' : '12px 32px',
         background: scrolled ? 'rgba(30, 34, 60, 0.82)' : 'transparent',
         backdropFilter: scrolled ? 'blur(14px)' : 'none',
         WebkitBackdropFilter: scrolled ? 'blur(14px)' : 'none',
@@ -413,7 +413,7 @@ function Nav() {
           <a href="/#top" style={{
             display: 'flex', alignItems: 'center', gap: '18px',
           }}>
-            <HCCTMonogram size={isMobile ? 24 : 30} variant="compact" animated />
+            <HCCTMonogram size={isMobile ? 28 : 36} variant="compact" animated />
             {!isMobile && (
               <span style={{
                 paddingLeft: '18px',
