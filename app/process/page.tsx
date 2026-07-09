@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
-import SharedLayout, { T, FONTS, Reveal } from '../components/SharedLayout'
+import SharedLayout, { T, FONTS, Reveal, useIsMobile } from '../components/SharedLayout'
 
 const PROCESS = [
   {
@@ -68,6 +68,7 @@ const PROCESS = [
 ]
 
 export default function ProcessPage() {
+  const isMobile = useIsMobile();
   return (
     <SharedLayout>
       <section style={{ padding: '80px 32px 64px', maxWidth: '1080px', margin: '0 auto' }}>
@@ -111,8 +112,10 @@ export default function ProcessPage() {
             borderTop: i === 0 ? 'none' : `1px solid ${T.hairline}`,
           }}>
             <div style={{
-              display: 'grid', gridTemplateColumns: 'minmax(80px, 100px) 1fr',
-              gap: '32px', marginBottom: '28px',
+              display: 'grid',
+              gridTemplateColumns: isMobile ? '1fr' : 'minmax(80px, 100px) 1fr',
+              gap: isMobile ? '12px' : '32px',
+              marginBottom: '28px',
             }}>
               <div style={{
                 fontFamily: FONTS.serif, fontStyle: 'italic',
@@ -135,10 +138,11 @@ export default function ProcessPage() {
             </div>
 
             <div style={{
-              display: 'grid', gridTemplateColumns: 'minmax(80px, 100px) 1fr',
+              display: 'grid',
+              gridTemplateColumns: isMobile ? '1fr' : 'minmax(80px, 100px) 1fr',
               gap: '32px',
             }}>
-              <div />
+              {!isMobile && <div />}
               <div>
                 {p.body.map((par, j) => (
                   <p key={j} style={{

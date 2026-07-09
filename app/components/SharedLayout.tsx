@@ -575,4 +575,4 @@ export default function SharedLayout({ children }: { children: React.ReactNode }
   )
 }
 
-export { T, FONTS, CALENDLY }
+export { T, FONTS, CALENDLY, useIsMobile }
