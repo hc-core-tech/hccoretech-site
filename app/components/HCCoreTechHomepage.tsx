@@ -36,8 +36,8 @@ const FONTS = {
 
 // Softer radii. Buttons/CTAs are tactile (6px), cards architectural (4px)
 const R = {
-  card:   '4px',
-  input:  '4px',
+  card:   '12px',
+  input:  '6px',
   button: '6px',
   pill:   '4px',
   tag:    '3px',
@@ -1542,7 +1542,7 @@ function SelectedWork() {
 
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
           gap: '20px',
         }}>
           {projects.map((p, i) => {
@@ -1751,7 +1751,7 @@ function Reviews() {
 
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
           gap: '20px',
         }}>
           {quotes.map((q, i) => (
