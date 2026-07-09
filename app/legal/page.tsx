@@ -77,7 +77,7 @@ export default function LegalPage() {
       <LegalSection id="terms" title="Terms of Service">
         <Paragraph lead>
           These Terms of Service govern engagements between HC Core Tech
-          (registered as an independent Dutch practice by Hilary Azimoh) and
+          (an independent Dutch practice by Hilary Azimoh) and
           clients who commission work through this website, a written scoping
           document, or a signed proposal.
         </Paragraph>
@@ -179,10 +179,10 @@ export default function LegalPage() {
 
         <SubHead>9. Changes to these Terms</SubHead>
         <Paragraph>
-          These Terms may be updated. Changes will be posted on this page with
-          an updated &quot;Last updated&quot; date. Changes do not apply
-          retroactively to engagements already in progress under a signed
-          scoping document.
+          These terms may be updated from time to time and will be posted on
+          this page with a last updated date. Changes do not apply
+          retrospectively to engagements already in progress under an executed
+          scoping contract.
         </Paragraph>
       </LegalSection>
 
