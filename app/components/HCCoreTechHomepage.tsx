@@ -801,6 +801,7 @@ function FrameworkStrip() {
 // ══════════════════════════════════════════════════════════════
 function Services() {
   const isMobile = useIsMobile();
+  const isNarrow = useIsMobile(640);
   const items = [
     { icon: Brain, title: 'AI Engineering',
       body: 'Custom agents, RAG pipelines, multi-agent orchestration, integrations with existing tooling. Production-grade Python/FastAPI backends and Next.js frontends.' },
@@ -841,7 +842,7 @@ function Services() {
 
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+          gridTemplateColumns: isNarrow ? '1fr' : 'repeat(2, 1fr)',
           gap: '2px', background: T.hairline,
           border: `1px solid ${T.hairline}`,
           borderRadius: R.card,
