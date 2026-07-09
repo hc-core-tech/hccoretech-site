@@ -1461,24 +1461,44 @@ function SelectedWork() {
       client: 'JS Zorg en Advies | Seraph Zorg',
       role: 'Dutch care practice · Netherlands',
       description: 'Business website plus the CoreDesk back-office platform the practice runs on. WordPress + Elementor front-end; multi-tenant Python/TypeScript workspace behind it. Founding CoreDesk customer.',
+      outcomes: [
+        { headline: 'Delivered on time', subtitle: 'Fixed price, no scope disputes' },
+        { headline: '2 sites + 1 back-office platform', subtitle: 'One engagement, one accountable engineer' },
+        { headline: 'Founding CoreDesk customer', subtitle: 'Runs the practice daily since launch' },
+      ],
       tags: ['WordPress', 'Brand + copy', 'CoreDesk platform', 'Advisory'],
       url: 'https://seraphzorg.com', urlLabel: 'seraphzorg.com', status: 'live' as const },
     { Preview: JiskaPortfolioPreview,
       client: 'Jiska · founder portfolio',
       role: 'Personal brand · Netherlands',
       description: 'Companion portfolio site for the founder of Seraph Zorg. Video-led personal brand, faith-grounded copy, cross-linked with the business site. Warmer, more editorial than the practice site.',
+      outcomes: [
+        { headline: 'Video-led personal brand', subtitle: 'Hero video, editorial pages, faith-grounded copy' },
+        { headline: 'Cross-linked with the practice', subtitle: 'jiska.seraphzorg.com companion domain' },
+        { headline: 'Delivered alongside the practice site', subtitle: 'Same engagement, unified brand system' },
+      ],
       tags: ['WordPress', 'Personal brand', 'Copy', 'Video hero'],
       url: 'https://jiska.seraphzorg.com', urlLabel: 'jiska.seraphzorg.com', status: 'live' as const },
     { Preview: MCHPreview,
       client: "Magnifying Children's Horizons",
       role: 'Values-led education brand · Canada',
       description: 'Full brand system, page-by-page copy, WordPress build, hosting setup, lead-magnet flow and email automation for the Guiding Children with Nature program. Real photography only. Site-wide ban on AI imagery.',
+      outcomes: [
+        { headline: 'Full brand system co-created', subtitle: 'Colour, typography, voice, page-by-page copy' },
+        { headline: 'Real photography only, no AI imagery', subtitle: 'Every asset sourced or directed with the client' },
+        { headline: 'Guide download + email nurture flow', subtitle: 'Lead magnet wired end to end' },
+      ],
       tags: ['Brand system', 'Copy v4', 'WordPress + Astra', 'Lead-magnet flow'],
       url: 'https://pink-cheetah-352887.hostingersite.com', urlLabel: 'staging · magnifyingchildrenshorizons.com', status: 'in-build' as const },
     { Preview: ToluAuthorPreview,
       client: 'Tolu · author',
       role: "Children's book author site · Canada",
       description: 'Companion site for the author of The Face in the Mountain and The Festival Shoes. Same Hostinger plan as MCH, cross-linked, snowy-woods portrait carrying the About hero.',
+      outcomes: [
+        { headline: 'Author brand for two published books', subtitle: 'The Face in the Mountain, The Festival Shoes' },
+        { headline: 'Snowy-woods editorial portrait hero', subtitle: 'Anchors the About page as visual signature' },
+        { headline: 'Cross-linked with MCH programme', subtitle: 'Same hosting, unified operations' },
+      ],
       tags: ['Author brand', 'Cross-linked with MCH'],
       url: 'https://peachpuff-buffalo-882219.hostingersite.com', urlLabel: 'staging · tolu.magnifyingchildrenshorizons.com', status: 'in-build' as const },
   ];
@@ -1595,6 +1615,63 @@ function SelectedWork() {
                       fontSize: '14px', lineHeight: 1.6,
                       color: T.softText, marginBottom: '18px',
                     }}>{p.description}</p>
+
+                    {/* Outcomes — real, defensible statements about what
+                        was delivered. Uses status-aware header: "Delivered"
+                        for live projects (past tense), "In scope" for
+                        in-build projects (current commitment). */}
+                    {p.outcomes && p.outcomes.length > 0 && (
+                      <div style={{
+                        marginBottom: '20px',
+                        paddingTop: '18px',
+                        borderTop: `1px solid ${T.hairline}`,
+                      }}>
+                        <div style={{
+                          fontFamily: FONTS.mono, fontSize: '10px',
+                          letterSpacing: '0.18em', textTransform: 'uppercase',
+                          color: T.gold, marginBottom: '14px',
+                          display: 'flex', alignItems: 'center', gap: '10px',
+                        }}>
+                          <span style={{
+                            width: '18px', height: '1px', background: T.goldDeep,
+                          }} />
+                          {p.status === 'live' ? 'Delivered' : 'In scope'}
+                        </div>
+                        <ul style={{
+                          listStyle: 'none', margin: 0, padding: 0,
+                          display: 'flex', flexDirection: 'column', gap: '12px',
+                        }}>
+                          {p.outcomes.map((o, k) => (
+                            <li key={k} style={{
+                              display: 'grid',
+                              gridTemplateColumns: 'auto 1fr',
+                              gap: '10px',
+                              alignItems: 'start',
+                            }}>
+                              <span style={{
+                                color: T.gold, fontSize: '13px',
+                                lineHeight: 1.4,
+                                marginTop: '1px',
+                              }}>›</span>
+                              <div>
+                                <div style={{
+                                  fontFamily: FONTS.ui,
+                                  fontSize: '13px', fontWeight: 500,
+                                  color: T.platinum, lineHeight: 1.4,
+                                }}>{o.headline}</div>
+                                <div style={{
+                                  fontFamily: FONTS.ui,
+                                  fontSize: '12px',
+                                  color: T.muted, lineHeight: 1.5,
+                                  marginTop: '2px',
+                                }}>{o.subtitle}</div>
+                              </div>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+
                     <div style={{
                       display: 'flex', flexWrap: 'wrap', gap: '6px',
                       marginBottom: '20px',
