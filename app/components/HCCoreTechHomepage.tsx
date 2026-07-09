@@ -816,13 +816,13 @@ function Services() {
   const isNarrow = useIsMobile(640);
   const items = [
     { icon: Brain, title: 'AI Engineering',
-      body: 'Custom agents, RAG pipelines, multi-agent orchestration, integrations with existing tooling. Production-grade Python/FastAPI backends and Next.js frontends.' },
+      body: "Your pilot works in a notebook, then real users touch it and it breaks. I build the version that ships and keeps working. Designed against your actual workflow, evaluated with real data, deployed to your infrastructure. Your team owns it after the engagement." },
     { icon: Shield, title: 'AI Governance',
-      body: 'Risk classification, documentation packs, monitoring, and audits. Built for SMEs and vendors scaling into enterprise. Aligned to EU AI Act, NIST AI RMF, ISO/IEC 42001, GDPR, and OECD AI.' },
+      body: 'Every enterprise deal now starts with a compliance question. Your buyer wants documentation, risk mapping, and a story about how you handle AI decisions. I sit with your team, map your systems to the frameworks that apply to you, and produce the artifacts your next buyer will ask for. Aligned to EU AI Act, NIST AI RMF, ISO/IEC 42001, GDPR, and OECD AI.' },
     { icon: Globe, title: 'Web Development',
-      body: 'Landing pages, full sites, refurbishes, premium builds, and strategic brand-and-site engagements. Mobile-responsive, SEO-configured and deployed site.' },
+      body: "You need a real site, not a template. Not a six-month committee design either. Founders come to me for a brand, page-by-page copy, a mobile-responsive build, and a handover kit so you can edit it yourself. Ships on time, fixed price, stays yours." },
     { icon: MessageSquare, title: 'Advisory & Consulting',
-      body: 'Hourly sessions: AI strategy, technical review, governance consultation, and combined AI + governance calls for vendor onboarding and due diligence.' },
+      body: "Sometimes you don't need a project. You need someone who has built and shipped AI to sit in one meeting, ask the questions your team is avoiding, and write down what to do next. Executives leave with clarity: a technical review, a governance brief, or a read on a vendor you're considering." },
   ];
 
   return (
@@ -1013,9 +1013,11 @@ function CoreDeskCallout() {
                 fontSize: '16px', lineHeight: 1.65, color: T.softText,
                 marginBottom: '24px', maxWidth: '520px',
               }}>
-                CoreDesk is a multi-tenant AI workspace for SMEs, ZZP'ers and small independent
-                practices. Invoicing, proposals, meetings, agents and governance in one back office.
-                Every feature was shipped against a live practitioner first.
+                You run a small practice, and your evenings should not be spent chasing invoices,
+                hunting receipts, or fighting the four tools that never speak to each other.
+                CoreDesk is the workspace I built so my clients (and myself) get those hours back.
+                Invoicing, proposals, meetings, agents, and governance in one back office.
+                Every feature was shipped against a real practitioner in production first.
               </p>
             </Reveal>
             <Reveal delay={180}>
@@ -1492,7 +1494,7 @@ function SelectedWork() {
     { Preview: SeraphZorgPreview,
       client: 'JS Zorg en Advies | Seraph Zorg',
       role: 'Dutch care practice · Netherlands',
-      description: 'Business website plus the CoreDesk back-office platform the practice runs on. WordPress + Elementor front-end; multi-tenant Python/TypeScript workspace behind it. Founding CoreDesk customer.',
+      description: 'Jiska needed a proper business site and a way to actually run her practice without her tools fighting each other. What shipped: a WordPress front-end for the world to see, and CoreDesk behind it running invoicing, proposals, and practice admin. Founding CoreDesk customer, still using it every day.',
       outcomes: [
         { headline: 'Delivered on time', subtitle: 'Fixed price, no scope disputes' },
         { headline: '2 sites + 1 back-office platform', subtitle: 'One engagement, one accountable engineer' },
@@ -1503,7 +1505,7 @@ function SelectedWork() {
     { Preview: JiskaPortfolioPreview,
       client: 'Jiska · founder portfolio',
       role: 'Personal brand · Netherlands',
-      description: 'Companion portfolio site for the founder of Seraph Zorg. Video-led personal brand, faith-grounded copy, cross-linked with the business site. Warmer, more editorial than the practice site.',
+      description: "Every practice is really about the person running it. Jiska wanted a companion site where a prospective client meets her before they book. Video-led, faith-grounded, editorial. Warmer than the business site, cross-linked so visitors can flow between the two.",
       outcomes: [
         { headline: 'Video-led personal brand', subtitle: 'Hero video, editorial pages, faith-grounded copy' },
         { headline: 'Cross-linked with the practice', subtitle: 'jiska.seraphzorg.com companion domain' },
@@ -1514,7 +1516,7 @@ function SelectedWork() {
     { Preview: MCHPreview,
       client: "Magnifying Children's Horizons",
       role: 'Values-led education brand · Canada',
-      description: 'Full brand system, page-by-page copy, WordPress build, hosting setup, lead-magnet flow and email automation for the Guiding Children with Nature program. Real photography only. Site-wide ban on AI imagery.',
+      description: "Tolu wanted to teach children about the natural world without a single AI-generated image on the site. That constraint led to something beautiful. A full brand system, page-by-page copy written with her, real photography sourced or directed, a lead-magnet flow, and email automation. A programme site that feels as considered as the work itself.",
       outcomes: [
         { headline: 'Full brand system co-created', subtitle: 'Colour, typography, voice, page-by-page copy' },
         { headline: 'Real photography only, no AI imagery', subtitle: 'Every asset sourced or directed with the client' },
@@ -1525,7 +1527,7 @@ function SelectedWork() {
     { Preview: ToluAuthorPreview,
       client: 'Tolu · author',
       role: "Children's book author site · Canada",
-      description: 'Companion site for the author of The Face in the Mountain and The Festival Shoes. Same Hostinger plan as MCH, cross-linked, snowy-woods portrait carrying the About hero.',
+      description: 'Tolu is a published author. Two books, The Face in the Mountain and The Festival Shoes. She wanted a site that treats her author brand with the same care as her programme. Companion to the MCH site, same hosting, quiet editorial feel, snowy-woods portrait carrying the About hero.',
       outcomes: [
         { headline: 'Author brand for two published books', subtitle: 'The Face in the Mountain, The Festival Shoes' },
         { headline: 'Snowy-woods editorial portrait hero', subtitle: 'Anchors the About page as visual signature' },

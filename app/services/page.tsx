@@ -15,7 +15,7 @@ const SERVICES = [
     Icon: Globe,
     title: 'Websites',
     tagline: 'Founder-led sites that ship on time and stay yours.',
-    whoFor: 'Founders, practitioners, authors, and small teams who want a real site, not a template, but need it delivered without an agency retainer or six months of committee design.',
+    whoFor: "You know your practice deserves a proper site. Agencies want six months and a retainer. Freelancers ship and disappear. I sit in the middle. I build sites the way a serious engineer would, then hand them over so you can actually edit them yourself.",
     deliverables: [
       'Brand direction: colour, typography, voice',
       'Information architecture and page-by-page copy',
@@ -41,7 +41,7 @@ const SERVICES = [
     Icon: Brain,
     title: 'AI engineering',
     tagline: 'Custom AI systems built to be shipped, not demoed.',
-    whoFor: 'Companies with real operations to automate, evaluate, or augment. Teams that need a working system deployed on their infrastructure, not a fine-tuned prototype living in a notebook.',
+    whoFor: "You have a workflow that costs your team hours every week. Or a pilot that impressed a demo audience but falls over the second real users touch it. You need someone who understands both the model math and the production runbook, and who can hand your team a system they actually own after go-live.",
     deliverables: [
       'Solution design and architecture proposal',
       'RAG pipelines, multi-agent orchestration, or custom assistants',
@@ -66,7 +66,7 @@ const SERVICES = [
     Icon: Shield,
     title: 'AI governance',
     tagline: 'Frameworks that answer "how do you know?" with more than a slide.',
-    whoFor: 'Teams that already ship AI (or are about to) and need governance that stands up to an auditor, a procurement question, or a board review. Aligned to EU AI Act, NIST AI RMF, ISO/IEC 42001, and GDPR.',
+    whoFor: "Your enterprise buyer just asked for your AI documentation and the room went quiet. Or the EU AI Act deadline is coming and no one on your team is sure what applies to you. This service exists so your next procurement call, board update, or auditor visit goes well because you did the work before it was demanded.",
     deliverables: [
       'AI system inventory and risk classification',
       'Control catalogue mapped to your chosen framework',
@@ -90,7 +90,7 @@ const SERVICES = [
     Icon: LayoutDashboard,
     title: 'CoreDesk platform',
     tagline: 'The AI-first back office for independent practitioners and SMEs.',
-    whoFor: "Independent practitioners, ZZP'ers, small teams (up to ~20 people). Care practices, consultancies, coaches, agencies. Everyone gets direct engineer attention because the platform works when I am particular about who joins.",
+    whoFor: "You run a small practice. Some evenings, after the client work is done, you sit down to send invoices, chase receipts, prep for tomorrow's meetings, and check what got automated. CoreDesk is what I built so my clients (and myself) get those hours back. Every module was tested against a real practitioner in production first, then generalised.",
     deliverables: [
       'Invoicing, proposals, receipts (multi-issuer, multi-currency)',
       'CRM with pipeline and deal management',
@@ -114,7 +114,7 @@ const SERVICES = [
     Icon: MessageSquare,
     title: 'Advisory & technical review',
     tagline: 'An outside read that pays for itself in one meeting.',
-    whoFor: 'Founders, boards, and teams facing a decision that matters. A stack choice, an architecture review, a hire, an AI strategy, a vendor selection. Fixed-scope engagements, written deliverables, no ongoing retainer expected.',
+    whoFor: "You have a decision to make and you would rather not make it alone. Maybe it is a vendor you are about to sign with, a hire your team is split on, or an AI strategy the board keeps postponing. One hour with someone who has actually built and shipped these systems can save a project. That is what this is.",
     deliverables: [
       'Written scoping brief with clear questions to answer',
       'Working sessions with your team or vendor',
