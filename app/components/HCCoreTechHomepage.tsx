@@ -2287,6 +2287,7 @@ function Footer() {
               color: T.muted, maxWidth: '340px',
             }}>
               AI Engineering · AI Governance · Web Development.
+              <br />
               Independent Dutch practice, built and operated by Hilary Azimoh.
             </p>
           </div>
