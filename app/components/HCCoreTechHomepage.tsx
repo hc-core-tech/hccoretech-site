@@ -564,6 +564,7 @@ function Nav() {
 // ══════════════════════════════════════════════════════════════
 function Hero() {
   const isMobile = useIsMobile();
+  const isNarrow = useIsMobile(640);
   const [cursorOn, setCursorOn] = useState(true);
   const [typedRows, setTypedRows] = useState(0);
   const { ref: operatorRef, visible: operatorVisible } = useReveal();
@@ -602,7 +603,7 @@ function Hero() {
       <Container>
         <div style={{
           display: 'grid',
-          gridTemplateColumns: isMobile ? '1fr' : '1.5fr 1fr',
+          gridTemplateColumns: isNarrow ? '1fr' : '1.5fr 1fr',
           gap: isMobile ? '40px' : '80px',
           alignItems: 'center',
         }}>
@@ -925,6 +926,7 @@ function Services() {
 // ══════════════════════════════════════════════════════════════
 function CoreDeskCallout() {
   const isMobile = useIsMobile();
+  const isNarrow = useIsMobile(640);
 
   // IntersectionObserver on the mockup . fires the animations once when it scrolls in.
   const { ref: mockupRef, visible: mockupVisible } = useReveal(0.25);
@@ -960,8 +962,8 @@ function CoreDeskCallout() {
       <Container style={{ position: 'relative', zIndex: 1 }}>
         <div style={{
           display: 'grid',
-          gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr',
-          gap: isMobile ? '48px' : '80px',
+          gridTemplateColumns: isNarrow ? '1fr' : '1fr 1fr',
+          gap: isNarrow ? '48px' : '80px',
           alignItems: 'start',
         }}>
           <div>
@@ -1813,6 +1815,7 @@ function Reviews() {
 // ══════════════════════════════════════════════════════════════
 function QuoteSection() {
   const isMobile = useIsMobile();
+  const isNarrow = useIsMobile(640);
   const [form, setForm] = useState<{
     name: string;
     email: string;
@@ -1937,7 +1940,7 @@ function QuoteSection() {
 
         <div style={{
           display: 'grid',
-          gridTemplateColumns: isMobile ? '1fr' : '1.6fr 1fr',
+          gridTemplateColumns: isNarrow ? '1fr' : '1.6fr 1fr',
           gap: isMobile ? '32px' : '40px',
           alignItems: 'start',
         }}>
