@@ -206,6 +206,30 @@ export default function ServicesPage() {
 
       {/* Services list */}
       <div style={{ maxWidth: '1080px', margin: '0 auto', padding: '0 32px' }}>
+        <Reveal>
+          <div style={{
+            marginTop: '48px',
+            marginBottom: '16px',
+            padding: '20px 24px',
+            background: `${T.gold}0A`,
+            border: `1px solid ${T.gold}33`,
+            borderLeft: `3px solid ${T.gold}`,
+            borderRadius: '10px',
+          }}>
+            <div style={{
+              fontFamily: FONTS.mono, fontSize: '10px',
+              letterSpacing: '0.22em', textTransform: 'uppercase',
+              color: T.gold, marginBottom: '8px',
+            }}>A note on the numbers</div>
+            <p style={{
+              fontFamily: FONTS.serif, fontStyle: 'italic',
+              fontSize: '15px', lineHeight: 1.6, color: T.softText,
+              margin: 0,
+            }}>
+              The prices below reflect typical scopes for each service. Every project is quoted individually after a discovery call, and larger enterprise engagements are sized independently.
+            </p>
+          </div>
+        </Reveal>
         {SERVICES.map((s, i) => {
           const isExpanded = !!expanded[s.num];
           return (
