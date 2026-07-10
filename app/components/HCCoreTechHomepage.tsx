@@ -571,11 +571,11 @@ function Hero() {
 
   const operatorRows: [string, string][] = [
     ['name',       'Hilary Azimoh'],
-    ['role',       'Founder · Sole Engineer'],
-    ['location',   'Amsterdam, NL'],
+    ['role',       'Founder · Lead Engineer'],
+    ['location',   'Netherlands'],
     ['stack',      'Python · TypeScript · Postgres'],
     ['frameworks', 'EU AI Act · ISO/IEC 42001'],
-    ['building',   'CoreDesk v1'],
+    ['now shipping', 'CoreDesk v1'],
     ['status',     'Booking Q4 2026'],
   ];
 
@@ -635,10 +635,11 @@ function Hero() {
                 lineHeight: 1.6, color: T.softText,
                 maxWidth: '540px', marginBottom: '32px',
               }}>
-                One accountable engineer builds all three: websites that bring you
-                clients, AI systems that survive production, and governance
-                that stands up under scrutiny. No agency layer. No handoffs.
-                No hidden subcontractors.
+                One accountable engineer builds all three: websites that grow your
+                clientele, AI systems that survive live production, and governance
+                that holds up under scrutiny.
+                <br /><br />
+                No agency layer. No handoffs. No hidden subcontractors.
               </p>
             </Reveal>
             <Reveal delay={250}>
@@ -817,13 +818,32 @@ function Services() {
   const isNarrow = useIsMobile(640);
   const items = [
     { icon: Globe, title: 'Web Development',
-      body: "Most agencies build what you tell them. Most freelancers ship whatever the template says. I sit with you first and figure out what your website should actually be saying. What do visitors need to know? What should they feel? What makes them choose you and not someone else? Founders are often too close to see this clearly, so I sit in your audience's shoes with you until we get it right. Then I build the website to say it. Brand, page-by-page copy, mobile-responsive build, analytics wired up. Ships on time, fixed price, stays yours." },
+      body: [
+        "Most agencies build what you tell them. Most freelancers ship whatever the template says. I do the thinking with you first.",
+        "Everyone has an audience. Yours just needs to notice you, understand what you offer, and connect with you. Founders are often too close to their own work to see it the way visitors do, so I sit in your audience's shoes with you until we bridge that gap.",
+        "Only then does the build begin: a brand system, page-by-page copy, a mobile-responsive site, and analytics wired up.",
+        "It ships on time, at a fixed price, and stays yours.",
+        "Long after the launch, if I see something that could work harder for you, I'd bring it up. And of course, I am always happy to collaborate on the upgrade.",
+      ] },
     { icon: Brain, title: 'AI Engineering',
-      body: "Your pilot works in a notebook, then real users touch it and it breaks. I build the version that ships and keeps working. When the system doesn't exist yet, I design the framework itself. Multi-agent workflows, evaluation harnesses, and the plumbing that lets everything talk to each other. In early 2026 I led AI development on a nine-agent content production system for enterprise clients, delivered on time." },
+      body: [
+        "Does your AI pilot work in a demo, then break the moment real users touch it?",
+        "I build the version that ships to live production and keeps working.",
+        "When the system does not exist yet, I design the framework itself: multi-agent workflows, evaluation harnesses, and the integrations that make them work as a system.",
+        "Governance is designed in from day one, not retrofitted after the fact. That produces cleaner systems and saves your team time.",
+        "I have led AI development on nine-agent production systems for enterprise clients. That is the level of complexity I often take on, and the expertise I deliver.",
+      ] },
     { icon: Shield, title: 'AI Governance',
-      body: 'Every enterprise deal now starts with a compliance question. Your buyer wants documentation, risk mapping, and a story about how you handle AI decisions. I sit with your team, map your systems to the frameworks that apply to you, and produce the artifacts your next buyer will ask for. Aligned to EU AI Act, NIST AI RMF, ISO/IEC 42001, GDPR, and OECD AI.' },
+      body: [
+        "Every enterprise deal now starts with the same compliance question: how does your AI make decisions, and can you show the human oversight behind them?",
+        "I sit with your team, map your systems to the frameworks that apply to you, and produce the artifacts for your executive board review, auditor, or next buyer.",
+        "Aligned to EU AI Act, NIST AI RMF, ISO/IEC 42001, GDPR, and OECD AI.",
+      ] },
     { icon: MessageSquare, title: 'Advisory & Consulting',
-      body: "Sometimes you don't need a project. You need someone who has built and shipped AI to sit in one meeting, ask the questions your team is avoiding, and write down what to do next. Executives leave with clarity: a technical review, a governance brief, or a read on a vendor you're considering." },
+      body: [
+        "Sometimes you don't need a project. You need someone who has built and shipped AI to sit with you, ask the questions your team is avoiding, take notes, and communicate next steps.",
+        "Executives and stakeholders leave with clarity: a technical review, a governance brief, or a read on a vendor being considered.",
+      ] },
   ];
 
   return (
@@ -843,14 +863,15 @@ function Services() {
           </h2>
         </Reveal>
         <Reveal delay={140}>
-          <p style={{
+          <div style={{
             fontFamily: FONTS.ui,
             fontSize: '16px', lineHeight: 1.6, color: T.softText,
             maxWidth: '620px', marginBottom: '60px',
           }}>
-            The practice offers engineering, governance, web, and advisory services. All of it delivered
-            by the same hand that scoped it. Every project quoted individually.
-          </p>
+            <p style={{ marginBottom: '6px' }}>The practice offers engineering, governance, web, and advisory services.</p>
+            <p style={{ marginBottom: '6px' }}>All of it delivered by the same hand that scoped it.</p>
+            <p style={{ marginBottom: '0' }}>Every project quoted individually.</p>
+          </div>
         </Reveal>
 
         <div style={{
@@ -889,11 +910,16 @@ function Services() {
                   fontSize: '30px', fontWeight: 500, letterSpacing: '-0.01em',
                   color: T.platinum, marginBottom: '14px',
                 }}>{it.title}</h3>
-                <p style={{
-                  fontFamily: FONTS.ui,
-                  fontSize: '15px', lineHeight: 1.65,
-                  color: T.softText, marginBottom: '24px',
-                }}>{it.body}</p>
+                <div style={{ marginBottom: '24px' }}>
+                  {it.body.map((para, k) => (
+                    <p key={k} style={{
+                      fontFamily: FONTS.ui,
+                      fontSize: '15px', lineHeight: 1.65,
+                      color: T.softText,
+                      marginBottom: k === it.body.length - 1 ? '0' : '14px',
+                    }}>{para}</p>
+                  ))}
+                </div>
                 <a href="#quote" style={{
                   fontFamily: FONTS.mono,
                   fontSize: '11px', letterSpacing: '0.18em', textTransform: 'uppercase',
@@ -969,11 +995,12 @@ function CoreDeskCallout() {
     'Independent practitioners',
     "ZZP'ers (Dutch sole prop.)",
     'Small teams, up to ~20 people',
-    'Care practices, consultancies, coaches',
+    'Hands-on founders running client-facing businesses',
+    'Care practices, consultancies, coaches, creatives',
   ];
   const notForItems = [
     'Large enterprises',
-    'Compliance-first industries as lift-and-shift',
+    'Highly regulated industries (healthcare, finance, gov) needing bespoke compliance builds',
     'Self-service without engineer contact',
     'Teams that need managed-service SLAs',
   ];
@@ -996,7 +1023,20 @@ function CoreDeskCallout() {
           alignItems: 'start',
         }}>
           <div>
-            <Reveal><Eyebrow color={T.gold}>Flagship product · by invitation</Eyebrow></Reveal>
+            <Reveal>
+              <div style={{
+                fontFamily: FONTS.mono,
+                fontSize: '11px', letterSpacing: '0.22em',
+                textTransform: 'uppercase', fontWeight: 500,
+                display: 'inline-flex', alignItems: 'center', gap: '12px',
+                marginBottom: '4px',
+              }}>
+                <span style={{ width: '24px', height: '1px', background: T.gold }} />
+                <span style={{ color: T.gold }}>Flagship product</span>
+                <span style={{ color: T.midnight }}>·</span>
+                <span style={{ color: T.platinum, opacity: 0.75 }}>by invitation</span>
+              </div>
+            </Reveal>
             <Reveal delay={80}>
               <h2 style={{
                 fontFamily: FONTS.serif,
@@ -1005,21 +1045,43 @@ function CoreDeskCallout() {
                 fontWeight: 400, color: T.platinum,
                 marginTop: '24px', marginBottom: '24px',
               }}>
-                <span style={{ fontStyle: 'italic', color: T.gold, fontWeight: 500 }}>CoreDesk.</span> The AI workspace, built around a real practitioner.
+                <span style={{ fontStyle: 'italic', color: T.gold, fontWeight: 500 }}>CoreDesk.</span><br />
+                The AI workspace, built around a real practitioner.
               </h2>
             </Reveal>
             <Reveal delay={140}>
-              <p style={{
-                fontFamily: FONTS.ui,
-                fontSize: '16px', lineHeight: 1.65, color: T.softText,
-                marginBottom: '24px', maxWidth: '520px',
-              }}>
-                You run a small practice, and your evenings should not be spent chasing invoices,
-                hunting receipts, or fighting the four tools that never speak to each other.
-                CoreDesk is the workspace I built so my clients (and myself) get those hours back.
-                Invoicing, proposals, meetings, agents, and governance in one back office.
-                Every feature was shipped against a real practitioner in production first.
-              </p>
+              <div style={{ marginBottom: '24px', maxWidth: '520px' }}>
+                <p style={{
+                  fontFamily: FONTS.ui,
+                  fontSize: '16px', lineHeight: 1.5, color: T.softText,
+                  marginBottom: '14px',
+                }}>
+                  You run a small practice?
+                </p>
+                <p style={{
+                  fontFamily: FONTS.ui,
+                  fontSize: '16px', lineHeight: 1.5, color: T.softText,
+                  marginBottom: '14px',
+                }}>
+                  Your time should not be spent buried under a backlog of invoices, receipts,
+                  and follow-ups. Nor should it be spent guessing what actually needs your attention.
+                </p>
+                <p style={{
+                  fontFamily: FONTS.ui,
+                  fontSize: '16px', lineHeight: 1.5, color: T.softText,
+                  marginBottom: '14px',
+                }}>
+                  CoreDesk is the workspace I built so my clients (and myself) get those hours back.
+                  Invoicing, proposals, meetings, agents, and governance, all in one place.
+                </p>
+                <p style={{
+                  fontFamily: FONTS.ui,
+                  fontSize: '16px', lineHeight: 1.5, color: T.softText,
+                  marginBottom: '0',
+                }}>
+                  Every feature was tested with a real practitioner in live production before shipping to the platform.
+                </p>
+              </div>
             </Reveal>
             <Reveal delay={180}>
               <p style={{
@@ -1048,7 +1110,7 @@ function CoreDeskCallout() {
                 }}
                 onMouseEnter={e => { e.currentTarget.style.background = T.gold; e.currentTarget.style.color = T.obsidian; }}
                 onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = T.gold; }}
-                >Visit hccoredesk.com <ArrowUpRight size={14} /></a>
+                >Visit CoreDesk <ArrowUpRight size={14} /></a>
                 <a href="#quote" style={{
                   fontFamily: FONTS.ui, fontSize: '14px', fontWeight: 500,
                   padding: '14px 26px',
@@ -1267,6 +1329,14 @@ function CoreDeskCallout() {
                         <span>{it}</span>
                       </div>
                     ))}
+                    <div style={{
+                      marginTop: '10px',
+                      fontFamily: FONTS.serif, fontStyle: 'italic',
+                      fontSize: '11px', lineHeight: 1.5,
+                      color: T.gold,
+                    }}>
+                      Advisory, AI engineering, and AI governance engagements are available for these categories as separate projects.
+                    </div>
                   </div>
                 </div>
 
@@ -1296,10 +1366,29 @@ function Approach() {
   const isMobile = useIsMobile();
   const isNarrow = useIsMobile(640);
   const steps = [
-    { num: '01', title: 'Scope in writing',       body: "Every engagement starts with a versioned scoping document. Price, timeline, in-scope, and explicitly out-of-scope. Nothing negotiated in chat threads that later get forgotten or quietly 'clarified' when the invoice arrives. If scope changes mid-project, we amend the document and both sign. That's not the industry norm. It should be." },
-    { num: '02', title: 'Direct engineer access', body: 'You talk to the engineer building your work. I stay hands-on on every engagement, from first call to handover. Not an account manager forwarding your messages. Not a support tier reading from a script. Not a junior contractor I quietly subbed the job to. Every message you send lands with the person writing your code. Slack, email, or scheduled review calls, whichever works.' },
-    { num: '03', title: 'Versioned artifacts',    body: 'Every major deliverable is a versioned Word document. Your copy, your brand context, your technical plan, your handover kit. Even the small design decisions get written down. Nothing important lives only in a Slack thread or a Notion page that disappears when someone leaves the team. When you look at your project in six months, you can still read what we decided and why.' },
-    { num: '04', title: 'Clean walk-away',        body: "Every custom build deploys to your infrastructure. You get every file, every credential, every document. Another engineer can pick it up tomorrow without calling me. Post-launch support is a retainer you choose to take, never one you inherit. That is how I sleep at night, and how you keep control of the thing you paid for." },
+    { num: '01', title: 'Scope in writing',       body: [
+      "Every engagement starts with a versioned scoping document that sets the price, the timeline, what is in scope, and what is explicitly out of scope.",
+      "Nothing is negotiated in chat threads or verbally agreed that later gets forgotten, or quietly 'clarified' when the invoice arrives.",
+      "If scope changes mid-project, we amend the document and both sign. That is not the industry norm, but it should be.",
+    ] },
+    { num: '02', title: 'Direct engineer access', body: [
+      "Talk to the engineer building your work.",
+      "I stay hands-on from first call to handover. Not an account manager forwarding your messages. Not a support tier reading from a script. Not a junior contractor I quietly subbed the job to.",
+      "The direct access lets me understand who you are and what you are building, so I can bring that vision to life for you, and for whoever else it is meant to reach.",
+      "This is the actual work.",
+    ] },
+    { num: '03', title: 'Versioned artifacts',    body: [
+      "Every major deliverable is a versioned Word document: your written content, your brand context, your technical plan, your handover kit, and any other project-critical files.",
+      "Even the small design decisions get written down. Nothing important lives only in a Slack thread or a Notion page that disappears when someone leaves the team.",
+      "When you look at your project over time, you can still read what we decided at every stage, and why.",
+    ] },
+    { num: '04', title: 'Clean walk-away',        body: [
+      "Every custom build I deliver runs on your own infrastructure, not mine or a shared vendor platform where someone else holds the keys.",
+      "You get every file, every credential, and every document from the project.",
+      "Another engineer should be able to pick it up at any time and adapt to the project quickly. Not because I want to walk away, but because I care about my projects too much to let one depend on any single person, including me.",
+      "A good build stays alive without you needing the builder. Whoever comes to it next, from your team or a future collaborator, would find it clean, documented, and ready to keep moving.",
+      "Post-launch support is a retainer you choose to take, never one you inherit.",
+    ] },
   ];
 
   return (
@@ -1318,18 +1407,24 @@ function Approach() {
           </h2>
         </Reveal>
         <Reveal delay={140}>
-          <p style={{
+          <div style={{
             fontFamily: FONTS.ui,
             fontSize: isMobile ? '16px' : '18px',
             lineHeight: 1.6, color: T.softText,
             maxWidth: '620px', marginBottom: '60px',
           }}>
-            Every one of these principles exists because I have seen projects
-            fail without it. They are the four things I always wished someone
-            had told me before I hired an agency, a freelancer, or a
-            consultancy. Now they are the rules I hand my clients before we
-            start.
-          </p>
+            <p style={{ marginBottom: '12px' }}>
+              Every one of these principles exists because I have seen projects suffer unnecessarily without it.
+            </p>
+            <p style={{ marginBottom: '12px' }}>
+              My corporate experience showed me how difficult these disciplines are to implement
+              and maintain when nobody insists on them from the start.
+            </p>
+            <p style={{ marginBottom: '0' }}>
+              My clients deserve better; they should leave our engagement fully equipped, with
+              everything they need to keep moving on their own.
+            </p>
+          </div>
         </Reveal>
 
         <div style={{
@@ -1356,10 +1451,13 @@ function Approach() {
                     fontSize: '26px', fontWeight: 500, letterSpacing: '-0.01em',
                     color: T.platinum, marginBottom: '10px',
                   }}>{s.title}</h3>
-                  <p style={{
-                    fontFamily: FONTS.ui,
-                    fontSize: '15px', lineHeight: 1.65, color: T.softText,
-                  }}>{s.body}</p>
+                  {(Array.isArray(s.body) ? s.body : [s.body]).map((para, k, arr) => (
+                    <p key={k} style={{
+                      fontFamily: FONTS.ui,
+                      fontSize: '15px', lineHeight: 1.65, color: T.softText,
+                      marginBottom: k === arr.length - 1 ? '0' : '12px',
+                    }}>{para}</p>
+                  ))}
                 </div>
               </div>
             </Reveal>
@@ -1509,7 +1607,14 @@ function SelectedWork() {
     { Preview: SeraphZorgPreview,
       client: 'JS Zorg en Advies | Seraph Zorg',
       role: 'Dutch care practice · Netherlands',
-      description: 'Jiska needed a proper business website and a way to actually run her practice without her tools fighting each other. What shipped: a WordPress front-end for the world to see, and CoreDesk behind it running invoicing, proposals, and practice admin. Founding CoreDesk customer, still using it every day.',
+      description: [
+        'Jiska had a backlog of invoices and admin, a full client load, and no time for herself. She needed the operational side of the practice organised and automated so she could focus on the work that actually needed her.',
+        'She is also creative, and wanted a place to gather her thoughts and ideas, build on them, then turn them into something real.',
+        'That led me to rebuild seraphzorg.com from the ground up, with CoreDesk running behind it.',
+        'What shipped?',
+        'A WordPress front-end for the world to see, and CoreDesk running invoicing, proposals, and practice admin.',
+        'She is the founding CoreDesk customer, still using it every day.',
+      ],
       outcomes: [
         { headline: 'Delivered on time', subtitle: 'Fixed price, no scope disputes' },
         { headline: 'First client through the website', subtitle: 'Three days after launch, May 2026' },
@@ -1519,37 +1624,51 @@ function SelectedWork() {
       tags: ['WordPress', 'Brand + copy', 'CoreDesk platform', 'Advisory'],
       url: 'https://seraphzorg.com', urlLabel: 'seraphzorg.com', status: 'live' as const },
     { Preview: JiskaPortfolioPreview,
-      client: 'Jiska · founder portfolio',
+      client: 'Jiska · Founder Portfolio',
       role: 'Personal brand · Netherlands',
-      description: "Every practice is really about the person running it. Jiska wanted a companion website where a prospective client meets her before they book. Video-led, faith-grounded, editorial. Warmer than the business website, cross-linked so visitors can flow between the two.",
+      description: [
+        'Every practice is really about the person running it.',
+        'Under the qualifications and the professional care, there is a relatable woman driven by faith, purpose, and a creative side her clients rarely get to see. She wanted a website where she could share a piece of that with the world.',
+        'It is video-led, faith-grounded, and editorial, warmer than the business website. Cross-linked with seraphzorg.com so visitors can flow between the two.',
+      ],
       outcomes: [
         { headline: 'Video-led personal brand', subtitle: 'Hero video, editorial pages, faith-grounded copy' },
         { headline: 'Cross-linked with the practice', subtitle: 'jiska.seraphzorg.com companion domain' },
-        { headline: 'Delivered alongside the practice website', subtitle: 'Same engagement, unified brand system' },
+        { headline: 'Delivered alongside the business website', subtitle: 'Same engagement, unified brand system' },
       ],
       tags: ['WordPress', 'Personal brand', 'Copy', 'Video hero'],
       url: 'https://jiska.seraphzorg.com', urlLabel: 'jiska.seraphzorg.com', status: 'live' as const },
     { Preview: MCHPreview,
       client: "Magnifying Children's Horizons",
       role: 'Values-led education brand · Canada',
-      description: "Tolu wanted to teach children about the natural world without a single AI-generated image on the website. That constraint led to something beautiful. A full brand system, page-by-page copy written with her, real photography sourced or directed, a lead-magnet flow, and email automation. A programme website that feels as considered as the work itself.",
+      description: [
+        'Tolu is sharing her knowledge with parents and educators on how to guide children into a real relationship with the natural world.',
+        'She initially wanted AI-generated imagery on the website, but I had to push back. Parents choosing an educator for their child need to trust that what they are seeing is real.',
+        "Even with Tolu's genuineness and years of experience behind the programme, synthetic nature and generated children would have undermined the very message her programme carries. I am glad she trusted me on it.",
+        'What shipped?',
+        'A full brand system, page-by-page copy written with her, real photography sourced or directed, email automation, and a downloadable guide.',
+      ],
       outcomes: [
         { headline: 'Full brand system co-created', subtitle: 'Colour, typography, voice, page-by-page copy' },
-        { headline: 'Real photography only, no AI imagery', subtitle: 'Every asset sourced or directed with the client' },
+        { headline: 'Real photography only, no AI imagery', subtitle: 'A design judgment call the audience deserves' },
         { headline: 'Guide download + email nurture flow', subtitle: 'Lead magnet wired end to end' },
       ],
       tags: ['Brand system', 'Copy v4', 'WordPress + Astra', 'Lead-magnet flow'],
       url: 'https://pink-cheetah-352887.hostingersite.com', urlLabel: 'staging · magnifyingchildrenshorizons.com', status: 'in-build' as const },
     { Preview: ToluAuthorPreview,
-      client: 'Tolu · author',
+      client: 'Tolu · Author',
       role: "Children's book author website · Canada",
-      description: 'Tolu is a published author. Two books, The Face in the Mountain and The Festival Shoes. She wanted a website that treats her author brand with the same care as her programme. Companion to the MCH website, same hosting, quiet editorial feel, snowy-woods portrait carrying the About hero.',
+      description: [
+        'Tolu is a published author with two books: The Face in the Mountain, and The Festival Shoes.',
+        'She wanted a website that treats her author brand with the same care as her programme. A companion to the MCH website, cross-linked so parents, educators, or interested parties who arrive at one website discover the other.',
+        "The author site is also where Drumlo's Journey lives: a free printable memory game Tolu designed as a lead magnet for young readers. It takes them through the events and lessons of the book.",
+      ],
       outcomes: [
         { headline: 'Author brand for two published books', subtitle: 'The Face in the Mountain, The Festival Shoes' },
-        { headline: 'Snowy-woods editorial portrait hero', subtitle: 'Anchors the About page as visual signature' },
+        { headline: "Drumlo's Journey as free printable lead magnet", subtitle: 'Takes young readers through the events and lessons of the book' },
         { headline: 'Cross-linked with MCH programme', subtitle: 'Same hosting, unified operations' },
       ],
-      tags: ['Author brand', 'Cross-linked with MCH'],
+      tags: ['Author brand', "Drumlo's Journey game", 'Cross-linked with MCH'],
       url: 'https://peachpuff-buffalo-882219.hostingersite.com', urlLabel: 'staging · tolu.magnifyingchildrenshorizons.com', status: 'in-build' as const },
   ];
 
@@ -1577,15 +1696,15 @@ function SelectedWork() {
           </h2>
         </Reveal>
         <Reveal delay={140}>
-          <p style={{
+          <div style={{
             fontFamily: FONTS.ui,
             fontSize: '16px', lineHeight: 1.6, color: T.softText,
             maxWidth: '620px', marginBottom: '60px',
           }}>
-            Engagements with clients across borders and disciplines. Websites, brand systems, AI platforms,
-            and the operations that hold small businesses together. Every project carried end to end,
-            with the attention of someone who owns the outcome.
-          </p>
+            <p style={{ marginBottom: '12px' }}>I engage with clients across borders and disciplines.</p>
+            <p style={{ marginBottom: '12px' }}>The work spans websites, brand systems, AI platforms, and the operations that hold small businesses together.</p>
+            <p style={{ marginBottom: '0' }}>Every project is carried end to end, with the attention of someone who owns the outcome.</p>
+          </div>
         </Reveal>
 
         <div style={{
@@ -1660,11 +1779,16 @@ function SelectedWork() {
                       letterSpacing: '-0.01em', color: T.platinum,
                       marginBottom: '12px',
                     }}>{p.client}</h3>
-                    <p style={{
-                      fontFamily: FONTS.ui,
-                      fontSize: '14px', lineHeight: 1.6,
-                      color: T.softText, marginBottom: '18px',
-                    }}>{p.description}</p>
+                    <div style={{ marginBottom: '18px' }}>
+                      {p.description.map((para, k) => (
+                        <p key={k} style={{
+                          fontFamily: FONTS.ui,
+                          fontSize: '14px', lineHeight: 1.6,
+                          color: T.softText,
+                          marginBottom: k === p.description.length - 1 ? '0' : '8px',
+                        }}>{para}</p>
+                      ))}
+                    </div>
 
                     {/* Outcomes — real, defensible statements about what
                         was delivered. Uses status-aware header: "Delivered"
@@ -1764,12 +1888,20 @@ function SelectedWork() {
 function Reviews() {
   const isMobile = useIsMobile();
   const quotes = [
-    { quote: "Hilary is remarkably careful, reliable, and substantively strong. She thinks with me, delivers quality, and honors her commitments. For my practice, where vulnerable clients and sensitive data are at stake, that is no small thing. I choose my collaborators with care, and Hilary is someone I trust.",
+    { quote: [
+        "Hilary is remarkably careful, reliable, and substantively strong.",
+        "She thinks with me, delivers quality work, and honors her commitments.",
+        "For my practice, where vulnerable clients and sensitive data are at stake, that is no small thing. I choose my collaborators with care, and Hilary is someone I trust.",
+      ],
       author: 'Jiska',
       role: 'Founder, JS Zorg en Advies | Seraph Zorg',
-      fact: 'First client through her website, three days after launch. May 2026.',
+      fact: 'First client through her website, three days after launch.',
       draft: false },
-    { quote: "Hilary took a project I barely described and turned it into a brand system, a website, and a launch plan inside a month. The rigour she brings is more than most paid agencies deliver.",
+    { quote: [
+        "Hilary took a project I barely described and turned it into a brand system, website, and launch plan inside a month.",
+        "Seeing my ideas made visible was better than I had imagined. The process was like pouring my soul into a painting, except Hilary channelled me and helped what I envisioned come out in a way everyone could connect with.",
+        "The rigour she brings is more than most paid agencies deliver.",
+      ],
       author: 'Tolu',
       role: "Founder, Magnifying Children's Horizons", draft: false },
   ];
@@ -1795,7 +1927,7 @@ function Reviews() {
             fontSize: '16px', lineHeight: 1.6, color: T.softText,
             maxWidth: '620px', marginBottom: '60px',
           }}>
-            Every engagement is a direct relationship with the engineer building it. The reviews below reflect that.
+            The founders I have built with, in their own words.
           </p>
         </Reveal>
 
@@ -1812,7 +1944,7 @@ function Reviews() {
                 WebkitBackdropFilter: 'blur(6px)',
                 border: `1px solid ${T.midnight}`,
                 borderRadius: R.card,
-                padding: isMobile ? '32px 24px' : '44px 40px',
+                padding: isMobile ? '28px 24px' : '36px 32px',
                 position: 'relative',
                 height: '100%',
                 display: 'flex', flexDirection: 'column',
@@ -1829,14 +1961,20 @@ function Reviews() {
                     borderRadius: R.pill,
                   }}>Draft · for sign-off</div>
                 )}
-                <Quote size={28} style={{ color: T.gold, marginBottom: '20px', opacity: 0.7 }} />
-                <p style={{
-                  fontFamily: FONTS.serif,
-                  fontSize: isMobile ? '22px' : '26px',
-                  lineHeight: 1.4, letterSpacing: '-0.005em',
-                  color: T.platinum, fontWeight: 400,
-                  marginBottom: '28px', flex: 1,
-                }}>“{q.quote}”</p>
+                <Quote size={22} style={{ color: T.gold, marginBottom: '16px', opacity: 0.7 }} />
+                <div style={{
+                  flex: 1, marginBottom: '20px',
+                }}>
+                  {(Array.isArray(q.quote) ? q.quote : [q.quote]).map((para, k, arr) => (
+                    <p key={k} style={{
+                      fontFamily: FONTS.serif,
+                      fontSize: isMobile ? '18px' : '20px',
+                      lineHeight: 1.5, letterSpacing: '-0.005em',
+                      color: T.platinum, fontWeight: 400,
+                      marginBottom: k === arr.length - 1 ? '0' : '12px',
+                    }}>{k === 0 ? '“' : ''}{para}{k === arr.length - 1 ? '”' : ''}</p>
+                  ))}
+                </div>
                 <div style={{
                   paddingTop: '20px',
                   borderTop: `1px solid ${T.hairline}`,
@@ -1894,10 +2032,10 @@ function QuoteSection() {
   const { ref: availRef, visible: availVisible } = useReveal();
   const [availTypedRows, setAvailTypedRows] = useState(0);
   const availRows: [string, string][] = [
-    ['seats',     '3 of 4 open'],
-    ['booking',   'Q4 2026'],
-    ['response',  'within 48 hours'],
-    ['min scope', 'discovery call'],
+    ['seats',           '3 of 4 open'],
+    ['currently booking', 'Q4 2026'],
+    ['response time',   'within 48 hours'],
+    ['minimum scope',   'discovery call'],
   ];
   useEffect(() => {
     if (!availVisible) return;
@@ -2247,9 +2385,13 @@ function QuoteSection() {
                   letterSpacing: '0.18em', color: T.gold,
                   textTransform: 'uppercase', marginBottom: '10px',
                 }}>Why the scarcity is deliberate</div>
-                I take on a maximum of <span style={{ color: T.platinum }}>4 concurrent engagements</span> to
-                ensure every project gets direct engineer attention. When seats fill,
-                new work joins the Q1 waitlist.
+                <p style={{ marginBottom: '10px' }}>
+                  I take on a maximum of <span style={{ color: T.platinum }}>4 concurrent engagements</span>.
+                  Not just for direct access, but for the depth of attention that produces the best results.
+                </p>
+                <p style={{ marginBottom: '0' }}>
+                  When seats fill, new work joins the waitlist.
+                </p>
               </div>
 
               <div style={{
@@ -2264,7 +2406,7 @@ function QuoteSection() {
                 }}>
                   <Mail size={12} color={T.gold} /> hc@hccoretech.com
                 </a>
-                <span>Amsterdam, Netherlands</span>
+                <span>Netherlands</span>
               </div>
             </div>
           </Reveal>
@@ -2330,7 +2472,6 @@ function Footer() {
             { title: 'Contact',  items: [
               { label: 'Request a quote',    href: '/#quote' },
               { label: 'hc@hccoretech.com',  href: 'mailto:hc@hccoretech.com' },
-              { label: 'Amsterdam, Netherlands', href: null },
             ]},
             { title: 'Legal',    items: [
               { label: 'Terms of service',   href: '/legal#terms' },
@@ -2372,7 +2513,7 @@ function Footer() {
           fontFamily: FONTS.mono, fontSize: '11px',
           color: T.muted, letterSpacing: '0.14em',
         }}>
-          <span>© 2025 HC Core Tech · Amsterdam, Netherlands · All rights reserved</span>
+          <span>© 2025 HC Core Tech · Netherlands · All rights reserved</span>
           <span>BTW vrijgesteld · pending KvK registration</span>
         </div>
       </Container>
