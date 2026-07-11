@@ -24,7 +24,7 @@ export default function MCHCaseStudy() {
             <span style={{ margin: '0 10px', color: T.hairline }}>/</span>
             <Link href="/work" style={{ color: T.muted, textDecoration: 'none' }}>Work</Link>
             <span style={{ margin: '0 10px', color: T.hairline }}>/</span>
-            <span>Magnifying Children&apos;s Horizons</span>
+            <span>MCH</span>
           </div>
         </Reveal>
 
@@ -52,10 +52,10 @@ export default function MCHCaseStudy() {
             lineHeight: 1.05, letterSpacing: '-0.02em',
             color: T.platinum, marginBottom: '20px',
           }}>
-            Magnifying
+            MCH.
             <br />
             <span style={{ fontStyle: 'italic', color: T.gold, fontWeight: 500 }}>
-              Children&apos;s Horizons.
+              Guiding Children with Nature.
             </span>
           </h1>
         </Reveal>
@@ -98,11 +98,11 @@ export default function MCHCaseStudy() {
       {/* The brief */}
       <Section eyebrow="The brief">
         <p style={paragraphStyle(true)}>
-          Tolu founded Magnifying Children&apos;s Horizons to run Guiding
-          Children with Nature, a values-led programme that helps families
-          raise curious, grounded children through outdoor exploration and
-          story. She is also a published author, with two books to her name:
-          The Face in the Mountain and The Festival Shoes.
+          Tolu founded MCH to run Guiding Children with Nature, a values-led
+          programme that helps families raise curious, grounded children through
+          outdoor exploration and story. She is also a published author, with
+          two books to her name: The Face in the Mountain and The Festival
+          Shoes.
         </p>
         <p style={paragraphStyle()}>
           She needed two websites, tied together but not identical. One for
@@ -275,7 +275,7 @@ export default function MCHCaseStudy() {
               fontFamily: FONTS.ui, fontSize: '13px',
               color: T.softText,
               letterSpacing: '0.02em',
-            }}>Tolu  ·  Founder, Magnifying Children&apos;s Horizons</div>
+            }}>Tolu  ·  Founder, MCH</div>
           </div>
         </Reveal>
       </section>

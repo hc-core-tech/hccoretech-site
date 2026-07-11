@@ -1544,7 +1544,7 @@ function MCHPreview() {
         fontFamily: FONTS.mono, fontSize: '9px',
         letterSpacing: '0.16em', textTransform: 'uppercase',
         color: '#7A4A2B', marginBottom: '10px',
-      }}>Magnifying Children's Horizons</div>
+      }}>MCH</div>
       <div style={{
         fontFamily: FONTS.serif,
         fontSize: '26px', lineHeight: 1.1,
@@ -1639,7 +1639,7 @@ function SelectedWork() {
       tags: ['WordPress', 'Personal brand', 'Copy', 'Video hero'],
       url: 'https://jiska.seraphzorg.com', urlLabel: 'jiska.seraphzorg.com', status: 'live' as const },
     { Preview: MCHPreview,
-      client: "Magnifying Children's Horizons",
+      client: "MCH",
       role: 'Values-led education brand · Canada',
       description: [
         'Tolu is sharing her knowledge with parents and educators on how to guide children into a real relationship with the natural world.',
@@ -1903,7 +1903,7 @@ function Reviews() {
         "The rigour she brings is more than most paid agencies deliver.",
       ],
       author: 'Tolu',
-      role: "Founder, Magnifying Children's Horizons", draft: false },
+      role: "Founder, MCH", draft: false },
   ];
 
   return (

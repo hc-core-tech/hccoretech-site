@@ -36,7 +36,7 @@ const STUDIES: Study[] = [
   },
   {
     slug: 'magnifying-childrens-horizons',
-    client: 'Magnifying Children\'s Horizons',
+    client: 'MCH',
     role: 'Children\'s education programme + author companion',
     sector: 'Education · Children\'s books',
     location: 'Canada',
