@@ -1575,7 +1575,7 @@ function ToluAuthorPreview() {
         fontFamily: FONTS.mono, fontSize: '9px',
         letterSpacing: '0.16em', textTransform: 'uppercase',
         color: '#8C4A2B', marginBottom: '10px',
-      }}>Tolu Okudolo · author</div>
+      }}>Tolu · author</div>
       <div style={{
         fontFamily: FONTS.serif,
         fontSize: '34px', lineHeight: 1.05,
