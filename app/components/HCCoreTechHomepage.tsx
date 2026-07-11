@@ -2,6 +2,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 import React, { useState, useEffect, useRef } from 'react';
+import Link from 'next/link';
 import {
   Brain, Shield, Globe, MessageSquare, ArrowRight, ArrowUpRight, Mail, Menu, X,
   ExternalLink, Quote, CheckCircle2, Send, Check, Minus, ChevronDown,
@@ -1686,6 +1687,8 @@ function ToluAuthorPreview() {
 function SelectedWork() {
   const isMobile = useIsMobile();
   const isNarrow = useIsMobile(640);
+  const [projectExpanded, setProjectExpanded] = useState<Record<string, boolean>>({});
+  const toggleProject = (client: string) => setProjectExpanded(prev => ({ ...prev, [client]: !prev[client] }));
 
   const projects = [
     { Preview: SeraphZorgPreview,
@@ -1722,38 +1725,6 @@ function SelectedWork() {
       ],
       tags: ['WordPress', 'Personal brand', 'Copy', 'Video hero'],
       url: 'https://jiska.seraphzorg.com', urlLabel: 'jiska.seraphzorg.com', status: 'live' as const },
-    { Preview: MCHPreview,
-      client: "Magnifying Children's Horizons",
-      role: 'Values-led education brand · Canada',
-      description: [
-        'Tolu is sharing her knowledge with parents and educators on how to guide children into a real relationship with the natural world.',
-        'She initially wanted AI-generated imagery on the website, but I had to push back. Parents choosing an educator for their child need to trust that what they are seeing is real.',
-        "Even with Tolu's genuineness and years of experience behind the programme, synthetic nature and generated children would have undermined the very message her programme carries. I am glad she trusted me on it.",
-        'What shipped?',
-        'A full brand system, page-by-page writing shaped with her, real photography sourced or directed, email automation, and a downloadable guide.',
-      ],
-      outcomes: [
-        { headline: 'Full brand system co-created', subtitle: 'Colour, typography, voice, page-by-page writing' },
-        { headline: 'Real photography only, no AI imagery', subtitle: 'A design judgment call the audience deserves' },
-        { headline: 'Guide download + welcome email sequence', subtitle: 'Signup gift and follow-up wired end to end' },
-      ],
-      tags: ['Brand system', 'Copy v4', 'WordPress + Astra', 'Lead-magnet flow'],
-      url: 'https://pink-cheetah-352887.hostingersite.com', urlLabel: 'staging · magnifyingchildrenshorizons.com', status: 'in-build' as const },
-    { Preview: ToluAuthorPreview,
-      client: 'Tolu · Author',
-      role: "Children's book author website · Canada",
-      description: [
-        'Tolu is a published author with two books: The Face in the Mountain, and The Festival Shoes.',
-        'She wanted a website that treats her author brand with the same care as her programme. A companion to the Magnifying Children\'s Horizons website, cross-linked so parents, educators, or interested parties who arrive at one website discover the other.',
-        "The author site is also where Drumlo's Journey lives: a free printable memory game Tolu designed for young readers, offered when families sign up. It takes them through the events and lessons of the book.",
-      ],
-      outcomes: [
-        { headline: 'Author brand for two published books', subtitle: 'The Face in the Mountain, The Festival Shoes' },
-        { headline: "Drumlo's Journey as free printable download", subtitle: 'Takes young readers through the events and lessons of the book' },
-        { headline: 'Cross-linked with Magnifying Children\'s Horizons', subtitle: 'Same hosting, unified operations' },
-      ],
-      tags: ['Author brand', "Drumlo's Journey game", "Cross-linked with Magnifying Children's Horizons"],
-      url: 'https://peachpuff-buffalo-882219.hostingersite.com', urlLabel: 'staging · tolu.magnifyingchildrenshorizons.com', status: 'in-build' as const },
   ];
 
   return (
@@ -1798,6 +1769,7 @@ function SelectedWork() {
         }}>
           {projects.map((p, i) => {
             const { Preview } = p;
+            const isExpanded = !!projectExpanded[p.client];
             return (
               <Reveal key={p.client} delay={i * 90}>
                 <div style={{
@@ -1861,89 +1833,118 @@ function SelectedWork() {
                       fontFamily: FONTS.serif,
                       fontSize: '26px', fontWeight: 500,
                       letterSpacing: '-0.01em', color: T.platinum,
-                      marginBottom: '12px',
+                      marginBottom: '16px',
                     }}>{p.client}</h3>
-                    <div style={{ marginBottom: '18px' }}>
-                      {p.description.map((para, k) => (
-                        <p key={k} style={{
-                          fontFamily: FONTS.ui,
-                          fontSize: '14px', lineHeight: 1.6,
-                          color: T.softText,
-                          marginBottom: k === p.description.length - 1 ? '0' : '8px',
-                        }}>{para}</p>
-                      ))}
+
+                    {/* Expand toggle — pulsing chevron centered below title.
+                        Collapsed: heartbeat pulse. Expanded: rotate 180°.
+                        Hover: pause + warm background. */}
+                    <div style={{
+                      display: 'flex', justifyContent: 'center',
+                      marginBottom: isExpanded ? '20px' : '18px',
+                    }}>
+                      <button
+                        onClick={() => toggleProject(p.client)}
+                        aria-expanded={isExpanded}
+                        aria-controls={`project-${i}-details`}
+                        aria-label={isExpanded ? `Hide ${p.client} details` : `Show ${p.client} details`}
+                        className={`project-toggle ${isExpanded ? 'expanded' : ''}`}
+                      >
+                        <ChevronDown size={14} className="chev" />
+                      </button>
                     </div>
 
-                    {/* Outcomes — real, defensible statements about what
-                        was delivered. Uses status-aware header: "Delivered"
-                        for live projects (past tense), "In scope" for
-                        in-build projects (current commitment). */}
-                    {p.outcomes && p.outcomes.length > 0 && (
-                      <div style={{
-                        marginBottom: '20px',
-                        paddingTop: '18px',
-                        borderTop: `1px solid ${T.hairline}`,
-                      }}>
-                        <div style={{
-                          fontFamily: FONTS.mono, fontSize: '10px',
-                          letterSpacing: '0.18em', textTransform: 'uppercase',
-                          color: T.gold, marginBottom: '14px',
-                          display: 'flex', alignItems: 'center', gap: '10px',
-                        }}>
-                          <span style={{
-                            width: '18px', height: '1px', background: T.goldDeep,
-                          }} />
-                          {p.status === 'live' ? 'Delivered' : 'In scope'}
+                    {isExpanded && (
+                      <div
+                        id={`project-${i}-details`}
+                        style={{
+                          animation: 'project-expand 400ms cubic-bezier(0.16, 1, 0.3, 1)',
+                        }}
+                      >
+                        <div style={{ marginBottom: '18px' }}>
+                          {p.description.map((para, k) => (
+                            <p key={k} style={{
+                              fontFamily: FONTS.ui,
+                              fontSize: '14px', lineHeight: 1.6,
+                              color: T.softText,
+                              marginBottom: k === p.description.length - 1 ? '0' : '8px',
+                            }}>{para}</p>
+                          ))}
                         </div>
-                        <ul style={{
-                          listStyle: 'none', margin: 0, padding: 0,
-                          display: 'flex', flexDirection: 'column', gap: '12px',
-                        }}>
-                          {p.outcomes.map((o, k) => (
-                            <li key={k} style={{
-                              display: 'grid',
-                              gridTemplateColumns: 'auto 1fr',
-                              gap: '10px',
-                              alignItems: 'start',
+
+                        {/* Outcomes — real, defensible statements about what
+                            was delivered. Uses status-aware header: "Delivered"
+                            for live projects (past tense), "In scope" for
+                            in-build projects (current commitment). */}
+                        {p.outcomes && p.outcomes.length > 0 && (
+                          <div style={{
+                            marginBottom: '20px',
+                            paddingTop: '18px',
+                            borderTop: `1px solid ${T.hairline}`,
+                          }}>
+                            <div style={{
+                              fontFamily: FONTS.mono, fontSize: '10px',
+                              letterSpacing: '0.18em', textTransform: 'uppercase',
+                              color: T.gold, marginBottom: '14px',
+                              display: 'flex', alignItems: 'center', gap: '10px',
                             }}>
                               <span style={{
-                                color: T.gold, fontSize: '13px',
-                                lineHeight: 1.4,
-                                marginTop: '1px',
-                              }}>›</span>
-                              <div>
-                                <div style={{
-                                  fontFamily: FONTS.ui,
-                                  fontSize: '13px', fontWeight: 500,
-                                  color: T.platinum, lineHeight: 1.4,
-                                }}>{o.headline}</div>
-                                <div style={{
-                                  fontFamily: FONTS.ui,
-                                  fontSize: '12px',
-                                  color: T.muted, lineHeight: 1.5,
-                                  marginTop: '2px',
-                                }}>{o.subtitle}</div>
-                              </div>
-                            </li>
+                                width: '18px', height: '1px', background: T.goldDeep,
+                              }} />
+                              {p.status === 'live' ? 'Delivered' : 'In scope'}
+                            </div>
+                            <ul style={{
+                              listStyle: 'none', margin: 0, padding: 0,
+                              display: 'flex', flexDirection: 'column', gap: '12px',
+                            }}>
+                              {p.outcomes.map((o, k) => (
+                                <li key={k} style={{
+                                  display: 'grid',
+                                  gridTemplateColumns: 'auto 1fr',
+                                  gap: '10px',
+                                  alignItems: 'start',
+                                }}>
+                                  <span style={{
+                                    color: T.gold, fontSize: '13px',
+                                    lineHeight: 1.4,
+                                    marginTop: '1px',
+                                  }}>›</span>
+                                  <div>
+                                    <div style={{
+                                      fontFamily: FONTS.ui,
+                                      fontSize: '13px', fontWeight: 500,
+                                      color: T.platinum, lineHeight: 1.4,
+                                    }}>{o.headline}</div>
+                                    <div style={{
+                                      fontFamily: FONTS.ui,
+                                      fontSize: '12px',
+                                      color: T.muted, lineHeight: 1.5,
+                                      marginTop: '2px',
+                                    }}>{o.subtitle}</div>
+                                  </div>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
+
+                        <div style={{
+                          display: 'flex', flexWrap: 'wrap', gap: '6px',
+                          marginBottom: '20px',
+                        }}>
+                          {p.tags.map(tag => (
+                            <span key={tag} style={{
+                              fontFamily: FONTS.mono, fontSize: '10px',
+                              letterSpacing: '0.08em', textTransform: 'uppercase',
+                              padding: '4px 9px',
+                              border: `1px solid ${T.hairline}`,
+                              color: T.softText, borderRadius: R.tag,
+                            }}>{tag}</span>
                           ))}
-                        </ul>
+                        </div>
                       </div>
                     )}
 
-                    <div style={{
-                      display: 'flex', flexWrap: 'wrap', gap: '6px',
-                      marginBottom: '20px',
-                    }}>
-                      {p.tags.map(tag => (
-                        <span key={tag} style={{
-                          fontFamily: FONTS.mono, fontSize: '10px',
-                          letterSpacing: '0.08em', textTransform: 'uppercase',
-                          padding: '4px 9px',
-                          border: `1px solid ${T.hairline}`,
-                          color: T.softText, borderRadius: R.tag,
-                        }}>{tag}</span>
-                      ))}
-                    </div>
                     <a href={p.url} target="_blank" rel="noopener noreferrer" style={{
                       marginTop: 'auto',
                       fontFamily: FONTS.mono, fontSize: '11px',
@@ -1961,6 +1962,84 @@ function SelectedWork() {
             );
           })}
         </div>
+
+        {/* Shared CSS for the project chevron toggle */}
+        <style>{`
+          @keyframes project-heartbeat {
+            0%   { transform: scale(1);    }
+            14%  { transform: scale(1.18); }
+            28%  { transform: scale(1);    }
+            42%  { transform: scale(1.12); }
+            70%  { transform: scale(1);    }
+            100% { transform: scale(1);    }
+          }
+          @keyframes project-expand {
+            from { opacity: 0; transform: translateY(-8px); }
+            to   { opacity: 1; transform: translateY(0);     }
+          }
+          .project-toggle {
+            width: 40px; height: 40px;
+            border-radius: 50%;
+            background: transparent;
+            border: 1px solid ${T.gold}55;
+            color: ${T.gold};
+            display: inline-flex; align-items: center; justify-content: center;
+            cursor: pointer;
+            transition: background 220ms ease, border-color 220ms ease, transform 220ms ease;
+            animation: project-heartbeat 1.6s ease-in-out infinite;
+            will-change: transform;
+          }
+          .project-toggle.expanded {
+            animation: none;
+            background: ${T.gold}18;
+            border-color: ${T.gold};
+          }
+          .project-toggle:hover {
+            animation-play-state: paused;
+            background: ${T.gold}22;
+            border-color: ${T.gold};
+          }
+          .project-toggle .chev {
+            transition: transform 320ms cubic-bezier(0.4, 0, 0.2, 1);
+          }
+          .project-toggle.expanded .chev {
+            transform: rotate(180deg);
+          }
+          @media (prefers-reduced-motion: reduce) {
+            .project-toggle { animation: none !important; }
+          }
+        `}</style>
+
+        {/* CTA — link to full case studies index */}
+        <Reveal delay={200}>
+          <div style={{
+            display: 'flex', justifyContent: 'center',
+            marginTop: isMobile ? '56px' : '72px',
+          }}>
+            <Link href="/work" style={{
+              fontFamily: FONTS.mono, fontSize: '12px',
+              letterSpacing: '0.22em', textTransform: 'uppercase',
+              color: T.gold, fontWeight: 500,
+              display: 'inline-flex', alignItems: 'center', gap: '12px',
+              padding: '14px 24px',
+              border: `1px solid ${T.gold}55`,
+              borderRadius: '999px',
+              textDecoration: 'none',
+              transition: 'background 220ms, border-color 220ms, gap 220ms',
+            }}
+            onMouseEnter={e => {
+              e.currentTarget.style.background = `${T.gold}12`;
+              e.currentTarget.style.borderColor = T.gold;
+              e.currentTarget.style.gap = '16px';
+            }}
+            onMouseLeave={e => {
+              e.currentTarget.style.background = 'transparent';
+              e.currentTarget.style.borderColor = `${T.gold}55`;
+              e.currentTarget.style.gap = '12px';
+            }}
+            >See all case studies <ArrowRight size={14} /></Link>
+          </div>
+        </Reveal>
       </Container>
     </section>
   );
