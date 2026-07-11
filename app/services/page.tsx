@@ -16,15 +16,15 @@ const SERVICES = [
     title: 'Websites',
     tagline: 'Founder-led websites that grow your clientele.',
     whoFor: [
-      "Discovery is the part most agencies skip and most freelancers skim. I make it the beginning.",
-      "We start with a working session: you bring your business, your clientele, and your instincts, and I bring the questions you would never think to ask yourself. How do you show a visitor to your site that you have what they are looking for? Do they recognise you as the right person for what they need? What are the next steps you want them to take?",
-      "That conversation becomes the brief. The brief becomes the copy. The copy shapes the design. The design becomes the site.",
-      "By the time you approve staging, we have already agreed on every important decision.",
-      "One month of hands-on support after launch is included. Beyond that, I stay reachable. If I ever spot something that could work harder for you, I will tell you.",
+      "Discovery is the part most agencies skip and most freelancers skim. I begin with it.",
+      "We start with a working session: you bring your business, your clientele, and your instincts, and I bring the questions you would never think to ask yourself. How do you show your website viewers that you have what they are looking for? Do they recognise you as the right person for what they need? What are the next steps you want them to take?",
+      "That conversation becomes the brief. The brief becomes the copy for every page of the site. The copy shapes the design. The design becomes the site itself.",
+      "By the time you approve staging, we will have decided on every meaningful decision.",
+      "One month of hands-on support after launch is included. Beyond that, I stay reachable. If I ever spot something that could work harder for you, I will bring it forward.",
     ],
     deliverables: [
       'A brand direction covering colour, typography, and tone of voice',
-      'A structured site map that shows how visitors move through the pages, and the copy written for each of those pages',
+      'A structured site map that shows how visitors move through the pages of the website, and the copy written for each of those pages',
       'A full design, built to responsive and accessibility standards',
       'SEO configuration: metadata, structured data, semantic HTML, sitemap, and Open Graph tags for search and social sharing',
       'Contact forms, booking flows, or checkout, wired to your preferred provider',
@@ -68,7 +68,7 @@ const SERVICES = [
     flow: [
       { step: 'Discovery', body: 'Working sessions with your team to map the workflow, the data available, and the constraints we need to design around. I write everything up as a scoping document with a fixed price and timeline, and share it with you before any commitment.' },
       { step: 'Design', body: 'I write up the solution architecture, model choices, evaluation plan, and deployment target. We review it together and you approve before I start coding.' },
-      { step: 'Build', body: 'I deliver in two-week milestones. From the second milestone you have working software on staging that your team can test with real users, and each milestone refines it further based on that feedback.' },
+      { step: 'Build', body: 'I deliver in two-week milestones. From the second milestone, you have a working version of the software in a private preview environment where real people from your team can use it and give feedback. Each milestone refines the system further based on what they find.' },
       { step: 'Handover', body: 'I deploy the system to your infrastructure, train your team on how to run it, and hand over the runbook and full documentation. If you want ongoing support after that, an ongoing retainer is available.' },
     ],
     example: "A recent example: a nine-agent content production system for enterprise clients. Custom agents, RAG pipelines, and multi-agent orchestration, all deployed to the client's own infrastructure with full governance documentation.",
@@ -96,7 +96,7 @@ const SERVICES = [
     investment: 'From €2,800 for governance intake and report, to €28,000 for an enterprise compliance audit. Monthly compliance monitor from €850/mo.',
     flow: [
       { step: 'Scope', body: 'We agree on the frameworks that apply to you, which AI systems are in scope, and which risks are actually material. I then write this up as a scoping document you sign before the assessment begins.' },
-      { step: 'Assessment', body: 'I run a gap analysis of your current state against the chosen framework. A written report is produced with a prioritised list of remediations, ordered by risk and effort.' },
+      { step: 'Assessment', body: 'I run a gap analysis of how your AI governance currently stands against the requirements of the chosen framework. I then produce a written report with a prioritised list of remediations, ordered by risk and effort.' },
       { step: 'Documentation', body: 'I draft the policies, the control catalogue, and the audit-ready packs. Every draft is reviewed with you before it is finalised.' },
       { step: 'Handover', body: 'I run a training session for the team owning the programme going forward, and hand over the final documentation. From that point, you own and run the programme yourself, with optional check-ins if you want them.' },
     ],
@@ -109,7 +109,7 @@ const SERVICES = [
     tagline: 'The AI workspace, built around a real practitioner.',
     whoFor: [
       "A quick tour, because 'AI-first back office' means nothing until you see what one actually does for you.",
-      "You log in, and CoreDesk has already done most of the work.",
+      "You log in, and CoreDesk has already done most of the work:",
       "The invoice for last week's engagement is drafted and waiting for your approval. The prep notes for your ten o'clock meeting are ready in the meeting card. The receipt from Wednesday has been matched against the right invoice.",
       "You review, adjust if you want to, and approve. The agent takes it from there.",
       "Nothing has slipped, because CoreDesk did not wait for anything to slip.",
@@ -128,7 +128,7 @@ const SERVICES = [
     investment: 'Starter €250/mo, Basis €450/mo, Pro €950/mo. Enterprise pricing on request. Founding pricing available for select customers.',
     flow: [
       { step: 'Discovery call', body: 'We meet on a mutual-fit call to understand your practice, your day-to-day, and what you need CoreDesk to hold for you. I am selective about who I take on so every customer gets the direct attention the product promises.' },
-      { step: 'Setup', body: 'I provision your workspace, apply your brand, and migrate the first month of your data so you have real invoices, clients, and receipts to work with from day one.' },
+      { step: 'Setup', body: "I provision your workspace, apply your brand, and bring in the invoices, clients, and receipts you already have from wherever they live now, so you are not starting with an empty workspace." },
       { step: 'Onboarding', body: 'We meet for a working session that walks you through the daily flow: invoicing, meetings, the CRM, and how the agents behave. The session is recorded so you can revisit it any time.' },
       { step: 'Ongoing', body: 'You have direct engineer access for questions, feature requests, and iterations. Not a ticket queue routing you to a stranger. You reach me, and I handle it.' },
     ],
