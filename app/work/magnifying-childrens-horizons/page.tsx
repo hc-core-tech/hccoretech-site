@@ -110,12 +110,13 @@ export default function MCHCaseStudy() {
           values the programme teaches.
         </p>
         <p style={paragraphStyle()}>
-          She initially wanted AI-generated imagery on the website. I pushed
-          back. Parents choosing an educator for their child need to trust
-          that what they are seeing is real. Even with her years of experience
-          behind the programme, synthetic nature and generated children would
-          have undermined the very message the programme carries. She trusted
-          me on it.
+          Early in the brief, Tolu asked about AI-generated imagery for parts
+          of the site. I recommended against it. Her audience is parents
+          choosing an educator for their child, and the trust that decision
+          asks of them is fragile enough without asking them to look past
+          synthetic nature and children who do not exist. The programme&apos;s
+          whole premise is real connection to the natural world. Anything less
+          than real imagery would have quietly undermined it. She agreed.
         </p>
         <p style={paragraphStyle()}>
           Beyond the imagery decision, discoverability was essential. Parents
@@ -127,11 +128,12 @@ export default function MCHCaseStudy() {
       {/* The approach */}
       <Section eyebrow="The approach">
         <p style={paragraphStyle(true)}>
-          Brand direction started with palette: forest green as the primary,
-          sage as the secondary, warm cream as the surround, sunlight gold as
-          the accent. Typography paired a warm serif for headings with a
-          humanist sans for body, both chosen for gentle readability by
-          parents reading on their phones with a kid on their lap.
+          The brand had to convey a specific feeling: the calm you find in a
+          field with a breeze on your face and sunlight overhead. Palette
+          anchored the mood. Forest green as the primary, sage as the secondary,
+          warm cream as the surround, sunlight gold as the accent. Typography
+          paired Cormorant Garamond for headings with Inter for body, each
+          carrying the same natural calm the palette holds.
         </p>
 
         <p style={paragraphStyle()}>
@@ -139,10 +141,11 @@ export default function MCHCaseStudy() {
         </p>
 
         <SubSection title="magnifyingchildrenshorizons.com">
-          The programme website. Guiding Children with Nature laid out in
-          scannable, warm copy. Parents can read the programme overview, meet
-          the founder, read the philosophy, and download the Free Mini Guide,
-          which begins their nurture flow into the programme.
+          The programme website. Guiding Children with Nature laid out in warm,
+          clear copy that busy parents can move through quickly. They can read
+          the programme overview, meet the founder, read the philosophy, and
+          download the Free Mini Guide, which begins their nurture flow into
+          the programme.
         </SubSection>
 
         <SubSection title="tolu.magnifyingchildrenshorizons.com">
@@ -156,8 +159,8 @@ export default function MCHCaseStudy() {
 
         <p style={paragraphStyle()}>
           Both websites built on the same brand system for coherence, but with
-          distinct tonal choices. MCH leans warmly instructive. The author website
-          leans quietly literary.
+          distinct tonal choices. MCH leans warmly informative. The author
+          website carries whimsy and personality.
         </p>
 
         <p style={paragraphStyle()}>
