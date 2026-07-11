@@ -198,7 +198,7 @@ export default function ServicesPage() {
           fontFamily: FONTS.ui, fontSize: '18px', lineHeight: 1.65,
           color: T.softText, maxWidth: '640px',
         }}>
-          <p style={{ marginBottom: '10px' }}>The mechanics behind each engagement without the sales-page vagueness.</p>
+          <p style={{ marginBottom: '10px' }}>The mechanics behind each engagement.</p>
           <p style={{ marginBottom: '10px' }}>Below you will find what each service actually delivers, what it costs, and what to expect from the first call to the final handover.</p>
           <p style={{ marginBottom: '0' }}>Tap the dropdown under any service to open its full breakdown.</p>
         </div>
