@@ -6,7 +6,7 @@ import SharedLayout, { T, FONTS, CALENDLY, Reveal } from '../../components/Share
 
 /**
  * /work/magnifying-childrens-horizons case study.
- * Two-website build for MCH (education programme) + Tolu Okudolo author companion.
+ * Two-website build for MCH (education programme) + Tolu's author companion.
  */
 
 export default function MCHCaseStudy() {
@@ -41,7 +41,7 @@ export default function MCHCaseStudy() {
               fontFamily: FONTS.mono, fontSize: '10px',
               letterSpacing: '0.22em', color: T.gold,
               textTransform: 'uppercase',
-            }}>In build . staging live</span>
+            }}>In build · staging live</span>
           </div>
         </Reveal>
 
@@ -67,8 +67,8 @@ export default function MCHCaseStudy() {
             color: T.softText, maxWidth: '760px',
             letterSpacing: '-0.005em',
           }}>
-            A values-led children&apos;s education programme and a companion author
-            website for its founder, built with a forest-and-sunlight brand system,
+            A values-led children&apos;s education programme and its founder&apos;s
+            author companion, built with a forest-and-sunlight brand system,
             real photography only, no AI imagery.
           </p>
         </Reveal>
@@ -86,11 +86,11 @@ export default function MCHCaseStudy() {
             gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))',
             gap: '24px',
           }}>
-            <Fact label="Client"    value="Tolu Okudolo" />
-            <Fact label="Sector"    value="Education . Children's books" />
+            <Fact label="Client"    value="Tolu" />
+            <Fact label="Sector"    value="Education · Children's books" />
             <Fact label="Location"  value="Canada" />
             <Fact label="Duration"  value="2025 to present" />
-            <Fact label="Services"  value="Brand . Web . SEO" />
+            <Fact label="Services"  value="Brand · Web · SEO" />
           </div>
         </Reveal>
       </section>
@@ -98,23 +98,29 @@ export default function MCHCaseStudy() {
       {/* The brief */}
       <Section eyebrow="The brief">
         <p style={paragraphStyle(true)}>
-          Tolu Okudolo founded Magnifying Children&apos;s Horizons to run
-          Guiding Children with Nature, a values-led programme that helps
-          families raise curious, grounded children through outdoor exploration
-          and story. She also writes children&apos;s books under her own name,
+          Tolu founded Magnifying Children&apos;s Horizons to run Guiding
+          Children with Nature, a values-led programme that helps families
+          raise curious, grounded children through outdoor exploration and
+          story. She is also a published author, with two books to her name:
           The Face in the Mountain and The Festival Shoes.
         </p>
         <p style={paragraphStyle()}>
-          She needed two websites, tied together but not identical. One for the
-          programme, one for her author work. And she had one non-negotiable
-          rule: no AI-generated imagery, anywhere. Everything visual on the
-          website had to come from real photography, real illustration, or real
-          hand-drawn work. The brand had to feel like the values it teaches.
+          She needed two websites, tied together but not identical. One for
+          the programme, one for her author work. Both had to feel like the
+          values the programme teaches.
         </p>
         <p style={paragraphStyle()}>
-          Beyond that, she needed the websites to be discoverable. Parents finding
-          MCH would mostly arrive through search, not paid ads. So SEO was not
-          a nice-to-have. It was in the brief from day one.
+          She initially wanted AI-generated imagery on the website. I pushed
+          back. Parents choosing an educator for their child need to trust
+          that what they are seeing is real. Even with her years of experience
+          behind the programme, synthetic nature and generated children would
+          have undermined the very message the programme carries. She trusted
+          me on it.
+        </p>
+        <p style={paragraphStyle()}>
+          Beyond the imagery decision, discoverability was essential. Parents
+          finding MCH would mostly arrive through search, not paid ads, so SEO
+          was in the brief from day one.
         </p>
       </Section>
 
@@ -139,10 +145,12 @@ export default function MCHCaseStudy() {
         </SubSection>
 
         <SubSection title="tolu.magnifyingchildrenshorizons.com">
-          The author companion. Tolu&apos;s story, her books, and the reader
-          resources that accompany them. Cross-linked back to MCH so a parent
-          discovering the books can find the programme, and a parent
-          discovering the programme can find the books.
+          The author companion. Tolu&apos;s story, her books, and Drumlo&apos;s
+          Journey: the free printable memory game she designed as a lead magnet
+          for young readers, which walks them through the events and lessons of
+          the book. Cross-linked back to MCH so a parent discovering the books
+          can find the programme, and a parent discovering the programme can
+          find the books.
         </SubSection>
 
         <p style={paragraphStyle()}>
@@ -185,6 +193,10 @@ export default function MCHCaseStudy() {
             body="Metadata, structured data, semantic HTML, sitemap, Open Graph tags. Tuned for organic discovery through search and parent-facing social."
           />
           <Deliverable
+            label="Drumlo's Journey lead magnet"
+            body="Free printable memory game designed by Tolu as a lead magnet for young readers. Walks them through the events and lessons of the book."
+          />
+          <Deliverable
             label="Analytics dashboard"
             body="Private analytics wired so Tolu sees traffic and search performance without exposing visitor data to a third party."
           />
@@ -194,6 +206,120 @@ export default function MCHCaseStudy() {
           />
         </div>
       </Section>
+
+      {/* Outcomes */}
+      <Section eyebrow="Outcomes">
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
+          gap: '20px',
+        }}>
+          <Deliverable
+            label="Full brand system co-created"
+            body="Palette, typography, voice, and page-by-page copy shaped session by session with Tolu."
+          />
+          <Deliverable
+            label="Real photography only, no AI imagery"
+            body="A design judgment call the audience deserves. Every visual sourced or directed."
+          />
+          <Deliverable
+            label="Two websites cross-linked"
+            body="Programme site plus author companion, one brand system, distinct voices."
+          />
+          <Deliverable
+            label="Drumlo's Journey as free printable lead magnet"
+            body="Takes young readers through the events and lessons of the book."
+          />
+        </div>
+      </Section>
+
+      {/* In her words */}
+      <section style={{ padding: '48px 32px', maxWidth: '900px', margin: '0 auto' }}>
+        <Reveal>
+          <div style={{
+            padding: '40px 32px',
+            background: T.deep,
+            border: `1px solid ${T.midnight}`,
+            borderLeft: `3px solid ${T.gold}`,
+            borderRadius: '12px',
+          }}>
+            <div style={{
+              fontFamily: FONTS.mono, fontSize: '10px',
+              letterSpacing: '0.22em', color: T.gold,
+              textTransform: 'uppercase', marginBottom: '20px',
+            }}>In Tolu&apos;s words</div>
+            <p style={{
+              fontFamily: FONTS.serif, fontSize: '19px',
+              lineHeight: 1.55, color: T.platinum,
+              letterSpacing: '-0.005em',
+              marginBottom: '12px',
+            }}>&ldquo;Hilary took a project I barely described and turned it into a brand system, website, and launch plan inside a month.</p>
+            <p style={{
+              fontFamily: FONTS.serif, fontSize: '19px',
+              lineHeight: 1.55, color: T.platinum,
+              letterSpacing: '-0.005em',
+              marginBottom: '12px',
+            }}>Seeing my ideas made visible was better than I had imagined. The process was like pouring my soul into a painting, except Hilary channelled me and helped what I envisioned come out in a way everyone could connect with.</p>
+            <p style={{
+              fontFamily: FONTS.serif, fontSize: '19px',
+              lineHeight: 1.55, color: T.platinum,
+              letterSpacing: '-0.005em',
+              marginBottom: '20px',
+            }}>The rigour she brings is more than most paid agencies deliver.&rdquo;</p>
+            <div style={{
+              fontFamily: FONTS.ui, fontSize: '13px',
+              color: T.softText,
+              letterSpacing: '0.02em',
+            }}>Tolu  ·  Founder, Magnifying Children&apos;s Horizons</div>
+          </div>
+        </Reveal>
+      </section>
+
+      {/* See it live */}
+      <section style={{ padding: '48px 32px', maxWidth: '1080px', margin: '0 auto' }}>
+        <Reveal>
+          <div style={{
+            padding: '32px',
+            background: T.deep,
+            border: `1px solid ${T.midnight}`,
+            borderRadius: '12px',
+            display: 'flex', flexWrap: 'wrap',
+            justifyContent: 'space-between', alignItems: 'center',
+            gap: '20px',
+          }}>
+            <div>
+              <div style={{
+                fontFamily: FONTS.mono, fontSize: '10px',
+                letterSpacing: '0.22em', color: T.goldDeep,
+                textTransform: 'uppercase', marginBottom: '8px',
+              }}>See it on staging</div>
+              <div style={{
+                fontFamily: FONTS.serif, fontStyle: 'italic',
+                fontSize: '22px', color: T.platinum,
+                letterSpacing: '-0.01em',
+              }}>The programme site and the author companion</div>
+            </div>
+            <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+              <a data-btn="secondary" href="https://pink-cheetah-352887.hostingersite.com" target="_blank" rel="noopener noreferrer" style={{
+                padding: '12px 20px',
+                background: 'transparent', border: `1px solid ${T.midnight}`,
+                color: T.platinum, borderRadius: '6px',
+                fontFamily: FONTS.ui, fontSize: '13px', fontWeight: 500,
+                letterSpacing: '0.04em', textDecoration: 'none',
+                display: 'inline-flex', alignItems: 'center', gap: '8px',
+              }}>staging · MCH <ExternalLink size={13} /></a>
+              <a data-btn="secondary" href="https://peachpuff-buffalo-882219.hostingersite.com" target="_blank" rel="noopener noreferrer" style={{
+                padding: '12px 20px',
+                background: 'transparent', border: `1px solid ${T.midnight}`,
+                color: T.platinum, borderRadius: '6px',
+                fontFamily: FONTS.ui, fontSize: '13px', fontWeight: 500,
+                letterSpacing: '0.04em', textDecoration: 'none',
+                display: 'inline-flex', alignItems: 'center', gap: '8px',
+              }}>staging · Tolu author <ExternalLink size={13} /></a>
+            </div>
+          </div>
+        </Reveal>
+      </section>
 
       {/* Bottom CTA */}
       <section style={{
