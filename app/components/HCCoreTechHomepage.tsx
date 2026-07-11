@@ -1366,18 +1366,17 @@ function Approach() {
   const isNarrow = useIsMobile(640);
   const steps = [
     { num: '01', title: 'Scope in writing',       lead: 'Every engagement starts with a versioned scoping document.', body: [
-      "Every engagement starts with a versioned scoping document that sets the price, the timeline, what is in scope, and what is explicitly out of scope.",
+      "That document sets the price, the timeline, what is in scope, and what is explicitly out of scope.",
       "Nothing is negotiated in chat threads or verbally agreed that later gets forgotten, or quietly 'clarified' when the invoice arrives.",
       "If scope changes mid-project, we amend the document and both sign. That is not the industry norm, but it should be.",
     ] },
     { num: '02', title: 'Direct engineer access', lead: 'Talk to the engineer building your work.', body: [
-      "Talk to the engineer building your work.",
       "I stay hands-on from first call to handover. Not an account manager forwarding your messages. Not a support tier reading from a script. Not a junior contractor I quietly subbed the job to.",
       "The direct access lets me understand who you are and what you are building, so I can bring that vision to life for you, and for whoever else it is meant to reach.",
       "This is the actual work.",
     ] },
     { num: '03', title: 'Versioned artifacts',    lead: 'Every major deliverable is a versioned document.', body: [
-      "Every major deliverable is a versioned Word document: your written content, your brand context, your technical plan, your handover kit, and any other project-critical files.",
+      "That means a Word document for your written content, your brand context, your technical plan, your handover kit, and any other project-critical files.",
       "Even the small design decisions get written down. Nothing important lives only in a Slack thread or a Notion page that disappears when someone leaves the team.",
       "When you look at your project over time, you can still read what we decided at every stage, and why.",
     ] },
