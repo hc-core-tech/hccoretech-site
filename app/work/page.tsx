@@ -42,7 +42,7 @@ const STUDIES: Study[] = [
     location: 'Canada',
     year: '2025 to present',
     status: 'in-build',
-    summary: "Full brand system, page-by-page copy, and two-website build for a values-led children's education programme and its founder's author companion. Real photography throughout, no AI imagery. Drumlo's Journey memory game as lead magnet.",
+    summary: "Full brand system, page-by-page writing, and two-website build for a values-led children's education programme and its founder's author companion. Real photography throughout, no AI imagery. Drumlo's Journey memory game as free download.",
     services: ['Brand direction', 'Web development', 'SEO'],
   },
   {

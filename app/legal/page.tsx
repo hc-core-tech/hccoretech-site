@@ -107,7 +107,7 @@ export default function LegalPage() {
 
         <SubHead>3. Intellectual property</SubHead>
         <Paragraph>
-          All custom work (code, designs, copy, brand assets, documentation)
+          All custom work (code, designs, written content, brand assets, documentation)
           produced during an engagement transfers to the client on receipt of
           final payment. HC Core Tech retains no rights to specifically
           commissioned work once paid for.

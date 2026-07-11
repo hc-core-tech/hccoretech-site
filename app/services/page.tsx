@@ -18,13 +18,13 @@ const SERVICES = [
     whoFor: [
       "Discovery is the part most agencies skip and most freelancers skim. I begin with it.",
       "We start with a working session: you bring your business, your clientele, and your instincts, and I bring the questions you would never think to ask yourself. How do you show your website viewers that you have what they are looking for? Do they recognise you as the right person for what they need? What are the next steps you want them to take?",
-      "That conversation becomes the brief. The brief becomes the copy for every page of the site. The copy shapes the design. The design becomes the site itself.",
+      "That conversation becomes the brief. The brief becomes the writing for every page of the site. The writing shapes the design. The design becomes the site itself.",
       "By the time you approve staging, we will have decided on every meaningful decision.",
       "One month of hands-on support after launch is included. Beyond that, I stay reachable. If I ever spot something that could work harder for you, I will bring it forward.",
     ],
     deliverables: [
       'A brand direction covering colour, typography, and tone of voice',
-      'A structured site map that shows how visitors move through the pages of the website, and the copy written for each of those pages',
+      'A structured site map that shows how visitors move through the pages of the website, and the writing for each of those pages',
       'A full design, built to responsive and accessibility standards',
       'SEO configuration: metadata, structured data, semantic HTML, sitemap, and Open Graph tags for search and social sharing',
       'Contact forms, booking flows, or checkout, wired to your preferred provider',
@@ -37,11 +37,11 @@ const SERVICES = [
     investment: 'From €1,400 landing page to €16,500 brand and website build. Maintenance from €250/mo.',
     flow: [
       { step: 'Discovery', body: 'We meet on one or two calls to understand your business, your audience, and what you need the website to do for you. I write everything up as a brief and share it with you before we go further.' },
-      { step: 'Direction', body: 'I present the brand direction, wireframes for each page, and an outline of the copy for every page of the site. You review and approve this before any design or code work begins.' },
+      { step: 'Direction', body: 'I present the brand direction, wireframes for each page, and an outline of the writing for every page of the site. You review and approve this before any design or code work begins.' },
       { step: 'Build', body: 'I design and build the site as one continuous effort, not two separate phases. Every week I send you a progress update with a live staging link you can click through and comment on.' },
       { step: 'Launch', body: 'On launch day I migrate everything to your hosting, walk through a launch checklist with you, and hand over the edit instructions. You get 30 days of light support included after go-live.' },
     ],
-    example: "A recent example is Seraph Zorg. I built the full brand system, wrote every page of copy with the founder, deployed the WordPress front-end, and set up CoreDesk to run the back office. The site launched in May 2026 and produced its first client booking within three days.",
+    example: "A recent example is Seraph Zorg. I built the full brand system, wrote every page with the founder, deployed the WordPress front-end, and set up CoreDesk to run the back office. The site launched in May 2026 and produced its first client booking within three days.",
   },
   {
     num: '02',

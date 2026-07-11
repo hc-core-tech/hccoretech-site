@@ -18,7 +18,7 @@ const VALUES = [
   {
     num: '03',
     title: 'Written deliverables, nothing lost',
-    body: 'Every major deliverable is a versioned document: project plan, copy doc, brand context, build handover, governance assessment. Decisions go in the doc, not the chat thread. You leave every engagement with a permanent record you can hand to your team, an auditor, or your next engineer.',
+    body: 'Every major deliverable is a versioned document: project plan, written content document, brand context, build handover, governance assessment. Decisions go in the doc, not the chat thread. You leave every engagement with a permanent record you can hand to your team, an auditor, or your next engineer.',
   },
   {
     num: '04',
@@ -264,7 +264,7 @@ export default function AboutPage() {
                 color: T.softText,
               }}>
                 Alongside the AI work, I build websites end to end. Production WordPress
-                and headless Next.js. Brand systems and design tokens, conversion-led copy,
+                and headless Next.js. Brand systems and design tokens, conversion-led writing,
                 SEO setup, lead-capture automation. Recent web work includes Seraph Zorg,
                 Jiska's portfolio, and the two-site Magnifying Children's Horizons build
                 in Canada.
