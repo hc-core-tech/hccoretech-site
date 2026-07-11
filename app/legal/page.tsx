@@ -174,7 +174,7 @@ export default function LegalPage() {
           These Terms are governed by Dutch law. Any dispute arising from an
           engagement will first be attempted to be resolved through good-faith
           negotiation. Failing that, disputes fall under the exclusive
-          jurisdiction of the courts of Amsterdam, Netherlands.
+          jurisdiction of the competent courts of the Netherlands.
         </Paragraph>
 
         <SubHead>9. Changes to these Terms</SubHead>
@@ -197,7 +197,7 @@ export default function LegalPage() {
 
         <SubHead>1. Who is responsible</SubHead>
         <Paragraph>
-          HC Core Tech, operated by Hilary Azimoh in Amsterdam, Netherlands,
+          HC Core Tech, operated by Hilary Azimoh in the Netherlands,
           is the data controller for personal data collected through this
           website and during client engagements. For any privacy question,
           email <ExternalLink href="mailto:hc@hccoretech.com">hc@hccoretech.com</ExternalLink>.
@@ -471,8 +471,8 @@ export default function LegalPage() {
         <SubHead>13. Governing law</SubHead>
         <Paragraph>
           This DPA is governed by Dutch law and the exclusive jurisdiction of
-          the courts of Amsterdam, Netherlands, consistent with the Terms of
-          Service.
+          the competent courts of the Netherlands, consistent with the Terms
+          of Service.
         </Paragraph>
       </LegalSection>
 

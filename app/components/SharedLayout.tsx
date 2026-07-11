@@ -381,7 +381,7 @@ function Footer() {
             <span style={{
               display: 'block', fontFamily: FONTS.ui, fontSize: '13px',
               color: T.softText, padding: '5px 0',
-            }}>Amsterdam, Netherlands</span>
+            }}>Netherlands</span>
           </div>
 
           <div>
@@ -413,8 +413,8 @@ function Footer() {
           fontFamily: FONTS.mono, fontSize: '11px',
           color: T.muted, letterSpacing: '0.14em',
         }}>
-          <span>© 2025 HC Core Tech . Amsterdam, Netherlands . All rights reserved</span>
-          <span>BTW vrijgesteld . pending KvK registration</span>
+          <span>© 2025 HC Core Tech · Netherlands · All rights reserved</span>
+          <span>BTW vrijgesteld · pending KvK registration</span>
         </div>
       </div>
     </footer>
