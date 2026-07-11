@@ -1766,6 +1766,7 @@ function SelectedWork() {
           display: 'grid',
           gridTemplateColumns: isNarrow ? '1fr' : 'repeat(2, 1fr)',
           gap: '20px',
+          alignItems: 'start',
         }}>
           {projects.map((p, i) => {
             const { Preview } = p;
