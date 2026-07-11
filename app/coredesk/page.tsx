@@ -26,7 +26,7 @@ const CAPABILITIES = [
   },
   {
     Icon: Bot,
-    title: 'AI agents you can trust',
+    title: 'AI agents you can defend',
     body: 'Four built-in agents: Email, Invoice, Content, and a Governance Auditor. Each one has a live governance score, framework mapping, and audit trail. Human-in-the-loop where it matters (email, content). Fully explainable.',
   },
   {
@@ -60,7 +60,7 @@ const ONBOARDING = [
   { step: 'Discovery call', body: 'A 30-minute call to make sure CoreDesk fits your practice. Not everyone is a fit, and that is deliberate.' },
   { step: 'Setup',          body: 'I provision your workspace, set your brand, and migrate the first month of your data. Ready before onboarding.' },
   { step: 'Onboarding',     body: 'A working session (recorded) walking through daily flow: invoicing, meetings, CRM, agents. You leave using the platform.' },
-  { step: 'Ongoing',        body: 'Direct engineer contact for questions, feature requests, and iterations. No support ticket queue.' },
+  { step: 'Ongoing',        body: 'Direct engineer contact for questions, feature requests, and iterations. Not a ticket queue routing you to a stranger. You reach me, and I handle it.' },
 ]
 
 export default function CoreDeskPage() {
@@ -95,7 +95,7 @@ export default function CoreDeskPage() {
               fontFamily: FONTS.mono, fontSize: '10px',
               letterSpacing: '0.22em', color: T.gold,
               textTransform: 'uppercase',
-            }}>Live . by invitation only</span>
+            }}>Live · by invitation only</span>
           </div>
         </Reveal>
 
@@ -169,7 +169,7 @@ export default function CoreDeskPage() {
                 fontFamily: FONTS.ui, fontSize: '17px', lineHeight: 1.75,
                 color: T.platinum, marginBottom: '20px',
               }}>
-                CoreDesk is a multi-tenant AI workspace for small businesses. It handles
+                CoreDesk is an AI workspace for small businesses. It handles
                 the operational plumbing (invoicing, proposals, receipts, CRM, meetings)
                 while giving you AI agents and a governance dashboard that lets you
                 actually defend how your business uses AI.
@@ -178,10 +178,11 @@ export default function CoreDeskPage() {
                 fontFamily: FONTS.ui, fontSize: '17px', lineHeight: 1.75,
                 color: T.softText,
               }}>
-                It exists because Jiska Doekes (founder of JS Zorg en Advies | Seraph Zorg,
+                It exists because Jiska (founder of JS Zorg en Advies | Seraph Zorg,
                 the founding customer) needed a back office built around how a real
-                practice actually runs, not around how a SaaS PM imagined one would.
-                Every feature you see was shipped against a live practitioner first.
+                practice actually runs, not around how a product manager imagined one
+                would. Every feature you see was shipped against a live practitioner
+                first.
               </p>
             </div>
           </div>
