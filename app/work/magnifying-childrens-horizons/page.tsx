@@ -24,7 +24,7 @@ export default function MCHCaseStudy() {
             <span style={{ margin: '0 10px', color: T.hairline }}>/</span>
             <Link href="/work" style={{ color: T.muted, textDecoration: 'none' }}>Work</Link>
             <span style={{ margin: '0 10px', color: T.hairline }}>/</span>
-            <span>MCH</span>
+            <span>Magnifying Children&apos;s Horizons</span>
           </div>
         </Reveal>
 
@@ -52,10 +52,10 @@ export default function MCHCaseStudy() {
             lineHeight: 1.05, letterSpacing: '-0.02em',
             color: T.platinum, marginBottom: '20px',
           }}>
-            MCH.
+            Magnifying
             <br />
             <span style={{ fontStyle: 'italic', color: T.gold, fontWeight: 500 }}>
-              Guiding Children with Nature.
+              Children&apos;s Horizons.
             </span>
           </h1>
         </Reveal>
@@ -98,11 +98,11 @@ export default function MCHCaseStudy() {
       {/* The brief */}
       <Section eyebrow="The brief">
         <p style={paragraphStyle(true)}>
-          Tolu founded MCH to run Guiding Children with Nature, a values-led
-          programme that helps families raise curious, grounded children through
-          outdoor exploration and story. She is also a published author, with
-          two books to her name: The Face in the Mountain and The Festival
-          Shoes.
+          Tolu founded Magnifying Children&apos;s Horizons to run Guiding
+          Children with Nature, a values-led programme that helps families
+          raise curious, grounded children through outdoor exploration and
+          story. She is also a published author, with two books to her name:
+          The Face in the Mountain and The Festival Shoes.
         </p>
         <p style={paragraphStyle()}>
           She needed two websites, tied together but not identical. One for
@@ -120,8 +120,8 @@ export default function MCHCaseStudy() {
         </p>
         <p style={paragraphStyle()}>
           Beyond the imagery decision, discoverability was essential. Parents
-          finding MCH would mostly arrive through search, not paid ads, so SEO
-          was in the brief from day one.
+          finding the programme would mostly arrive through search, not paid
+          ads, so SEO was in the brief from day one.
         </p>
       </Section>
 
@@ -152,15 +152,15 @@ export default function MCHCaseStudy() {
           The author companion. Tolu&apos;s story, her books, and Drumlo&apos;s
           Journey: the free printable memory game she designed as a lead magnet
           for young readers, which walks them through the events and lessons of
-          the book. Cross-linked back to MCH so a parent discovering the books
-          can find the programme, and a parent discovering the programme can
-          find the books.
+          the book. Cross-linked back to the programme site so a parent
+          discovering the books can find the programme, and a parent
+          discovering the programme can find the books.
         </SubSection>
 
         <p style={paragraphStyle()}>
           Both websites built on the same brand system for coherence, but with
-          distinct tonal choices. MCH leans warmly informative. The author
-          website carries whimsy and personality.
+          distinct tonal choices. The programme site leans warmly informative.
+          The author website carries whimsy and personality.
         </p>
 
         <p style={paragraphStyle()}>
@@ -190,7 +190,7 @@ export default function MCHCaseStudy() {
           />
           <Deliverable
             label="tolu.magnifyingchildrenshorizons.com"
-            body="Author companion website. Subdomain of MCH, shares the brand system, distinct in voice."
+            body="Author companion website. Subdomain of Magnifying Children&apos;s Horizons, shares the brand system, distinct in voice."
           />
           <Deliverable
             label="SEO configuration"
@@ -278,7 +278,7 @@ export default function MCHCaseStudy() {
               fontFamily: FONTS.ui, fontSize: '13px',
               color: T.softText,
               letterSpacing: '0.02em',
-            }}>Tolu  ·  Founder, MCH</div>
+            }}>Tolu  ·  Founder, Magnifying Children&apos;s Horizons</div>
           </div>
         </Reveal>
       </section>
@@ -315,7 +315,7 @@ export default function MCHCaseStudy() {
                 fontFamily: FONTS.ui, fontSize: '13px', fontWeight: 500,
                 letterSpacing: '0.04em', textDecoration: 'none',
                 display: 'inline-flex', alignItems: 'center', gap: '8px',
-              }}>staging · MCH <ExternalLink size={13} /></a>
+              }}>staging · programme <ExternalLink size={13} /></a>
               <a data-btn="secondary" href="https://peachpuff-buffalo-882219.hostingersite.com" target="_blank" rel="noopener noreferrer" style={{
                 padding: '12px 20px',
                 background: 'transparent', border: `1px solid ${T.midnight}`,

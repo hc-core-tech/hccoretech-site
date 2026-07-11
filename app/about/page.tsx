@@ -266,7 +266,8 @@ export default function AboutPage() {
                 Alongside the AI work, I build websites end to end. Production WordPress
                 and headless Next.js. Brand systems and design tokens, conversion-led copy,
                 SEO setup, lead-capture automation. Recent web work includes Seraph Zorg,
-                Jiska's portfolio, and the two-site MCH build in Canada.
+                Jiska's portfolio, and the two-site Magnifying Children's Horizons build
+                in Canada.
               </p>
             </div>
           </div>

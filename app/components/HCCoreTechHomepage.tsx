@@ -1544,7 +1544,7 @@ function MCHPreview() {
         fontFamily: FONTS.mono, fontSize: '9px',
         letterSpacing: '0.16em', textTransform: 'uppercase',
         color: '#7A4A2B', marginBottom: '10px',
-      }}>MCH</div>
+      }}>Magnifying Children's Horizons</div>
       <div style={{
         fontFamily: FONTS.serif,
         fontSize: '26px', lineHeight: 1.1,
@@ -1639,7 +1639,7 @@ function SelectedWork() {
       tags: ['WordPress', 'Personal brand', 'Copy', 'Video hero'],
       url: 'https://jiska.seraphzorg.com', urlLabel: 'jiska.seraphzorg.com', status: 'live' as const },
     { Preview: MCHPreview,
-      client: "MCH",
+      client: "Magnifying Children's Horizons",
       role: 'Values-led education brand · Canada',
       description: [
         'Tolu is sharing her knowledge with parents and educators on how to guide children into a real relationship with the natural world.',
@@ -1660,15 +1660,15 @@ function SelectedWork() {
       role: "Children's book author website · Canada",
       description: [
         'Tolu is a published author with two books: The Face in the Mountain, and The Festival Shoes.',
-        'She wanted a website that treats her author brand with the same care as her programme. A companion to the MCH website, cross-linked so parents, educators, or interested parties who arrive at one website discover the other.',
+        'She wanted a website that treats her author brand with the same care as her programme. A companion to the Magnifying Children\'s Horizons website, cross-linked so parents, educators, or interested parties who arrive at one website discover the other.',
         "The author site is also where Drumlo's Journey lives: a free printable memory game Tolu designed as a lead magnet for young readers. It takes them through the events and lessons of the book.",
       ],
       outcomes: [
         { headline: 'Author brand for two published books', subtitle: 'The Face in the Mountain, The Festival Shoes' },
         { headline: "Drumlo's Journey as free printable lead magnet", subtitle: 'Takes young readers through the events and lessons of the book' },
-        { headline: 'Cross-linked with MCH programme', subtitle: 'Same hosting, unified operations' },
+        { headline: 'Cross-linked with Magnifying Children\'s Horizons', subtitle: 'Same hosting, unified operations' },
       ],
-      tags: ['Author brand', "Drumlo's Journey game", 'Cross-linked with MCH'],
+      tags: ['Author brand', "Drumlo's Journey game", "Cross-linked with Magnifying Children's Horizons"],
       url: 'https://peachpuff-buffalo-882219.hostingersite.com', urlLabel: 'staging · tolu.magnifyingchildrenshorizons.com', status: 'in-build' as const },
   ];
 
@@ -1903,7 +1903,7 @@ function Reviews() {
         "The rigour she brings is more than most paid agencies deliver.",
       ],
       author: 'Tolu',
-      role: "Founder, MCH", draft: false },
+      role: "Founder, Magnifying Children's Horizons", draft: false },
   ];
 
   return (
