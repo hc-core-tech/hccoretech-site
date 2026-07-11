@@ -68,7 +68,7 @@ export default function SeraphZorgCaseStudy() {
             color: T.softText, maxWidth: '740px',
             letterSpacing: '-0.005em',
           }}>
-            A trauma-informed Dutch care practice serving families rebuilding after
+            A trauma-sensitive Dutch care practice supporting families affected by
             the toeslagenaffaire, delivered with a brand and back office that
             match the seriousness of the work.
           </p>
@@ -88,10 +88,10 @@ export default function SeraphZorgCaseStudy() {
             gap: '24px',
           }}>
             <Fact label="Client"    value="Jiska Doekes" />
-            <Fact label="Sector"    value="Care . Advisory" />
+            <Fact label="Sector"    value="Care · Advisory" />
             <Fact label="Location"  value="Diemen, NL" />
             <Fact label="Duration"  value="2025 to present" />
-            <Fact label="Services"  value="Brand . Web . CoreDesk" />
+            <Fact label="Services"  value="Brand · Web · CoreDesk" />
           </div>
         </Reveal>
       </section>
@@ -103,7 +103,7 @@ export default function SeraphZorgCaseStudy() {
           aftermath of the Dutch toeslagenaffaire, the childcare benefits scandal
           that upended thousands of Dutch households. Under the Seraph Zorg
           handelsnaam, she needed a professional web presence that felt as
-          careful and trauma-informed as her practice itself.
+          careful and trauma-sensitive as her practice itself.
         </p>
         <p style={paragraphStyle()}>
           The requirements were clear. A brand system that could carry both the
@@ -184,7 +184,7 @@ export default function SeraphZorgCaseStudy() {
           />
           <Deliverable
             label="Ongoing engineer contact"
-            body="Direct access for questions, feature requests, and iterations. Not a support ticket queue."
+            body="Direct access for questions, feature requests, and iterations. Not a ticket queue routing you to a stranger. You reach me, and I handle it."
           />
           <Deliverable
             label="Handover documents"
@@ -192,6 +192,74 @@ export default function SeraphZorgCaseStudy() {
           />
         </div>
       </Section>
+
+      {/* Outcomes */}
+      <Section eyebrow="Outcomes">
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
+          gap: '20px',
+        }}>
+          <Deliverable
+            label="Delivered on time"
+            body="Fixed price, no scope disputes, no invoice surprises."
+          />
+          <Deliverable
+            label="First client through the website"
+            body="Three days after launch, May 2026."
+          />
+          <Deliverable
+            label="Two websites + one back-office platform"
+            body="Delivered under one engagement, one accountable engineer."
+          />
+          <Deliverable
+            label="Founding CoreDesk customer"
+            body="Runs the practice daily since launch."
+          />
+        </div>
+      </Section>
+
+      {/* In her words */}
+      <section style={{ padding: '48px 32px', maxWidth: '900px', margin: '0 auto' }}>
+        <Reveal>
+          <div style={{
+            padding: '40px 32px',
+            background: T.deep,
+            border: `1px solid ${T.midnight}`,
+            borderLeft: `3px solid ${T.gold}`,
+            borderRadius: '12px',
+          }}>
+            <div style={{
+              fontFamily: FONTS.mono, fontSize: '10px',
+              letterSpacing: '0.22em', color: T.gold,
+              textTransform: 'uppercase', marginBottom: '20px',
+            }}>In Jiska's words</div>
+            <p style={{
+              fontFamily: FONTS.serif, fontSize: '19px',
+              lineHeight: 1.55, color: T.platinum,
+              letterSpacing: '-0.005em',
+              marginBottom: '12px',
+            }}>&ldquo;Hilary is remarkably careful, reliable, and substantively strong.</p>
+            <p style={{
+              fontFamily: FONTS.serif, fontSize: '19px',
+              lineHeight: 1.55, color: T.platinum,
+              letterSpacing: '-0.005em',
+              marginBottom: '12px',
+            }}>She thinks with me, delivers quality work, and honors her commitments.</p>
+            <p style={{
+              fontFamily: FONTS.serif, fontSize: '19px',
+              lineHeight: 1.55, color: T.platinum,
+              letterSpacing: '-0.005em',
+              marginBottom: '20px',
+            }}>For my practice, where vulnerable clients and sensitive data are at stake, that is no small thing. I choose my collaborators with care, and Hilary is someone I trust.&rdquo;</p>
+            <div style={{
+              fontFamily: FONTS.ui, fontSize: '13px',
+              color: T.softText,
+              letterSpacing: '0.02em',
+            }}>Jiska Doekes  ·  Founder, JS Zorg en Advies | Seraph Zorg</div>
+          </div>
+        </Reveal>
+      </section>
 
       {/* Visit */}
       <section style={{ padding: '48px 32px', maxWidth: '1080px', margin: '0 auto' }}>
