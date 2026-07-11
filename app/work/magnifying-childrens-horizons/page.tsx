@@ -116,7 +116,8 @@ export default function MCHCaseStudy() {
           asks of them is fragile enough without asking them to look past
           synthetic nature and children who do not exist. The programme&apos;s
           whole premise is real connection to the natural world. Anything less
-          than real imagery would have quietly undermined it. She agreed.
+          than real imagery would have quietly undermined it. She trusted my
+          judgement.
         </p>
         <p style={paragraphStyle()}>
           Beyond the imagery decision, discoverability was essential. Parents
@@ -141,20 +142,21 @@ export default function MCHCaseStudy() {
         </p>
 
         <SubSection title="magnifyingchildrenshorizons.com">
-          The programme website. Guiding Children with Nature laid out in warm,
-          clear copy that busy parents can move through quickly. They can read
-          the programme overview, meet the founder, read the philosophy, and
-          download the Free Mini Guide, which begins their nurture flow into
-          the programme.
+          The programme website. Guiding Children with Nature explained in
+          warm, clear language that busy parents can move through quickly.
+          They can read the programme overview, meet the founder, read the
+          philosophy, and download the Free Mini Guide, which starts a
+          welcome email sequence introducing them to the programme in more
+          depth.
         </SubSection>
 
         <SubSection title="tolu.magnifyingchildrenshorizons.com">
           The author companion. Tolu&apos;s story, her books, and Drumlo&apos;s
-          Journey: the free printable memory game she designed as a lead magnet
-          for young readers, which walks them through the events and lessons of
-          the book. Cross-linked back to the programme site so a parent
-          discovering the books can find the programme, and a parent
-          discovering the programme can find the books.
+          Journey: the free printable memory game she designed for young
+          readers, offered when families sign up, which walks them through the
+          events and lessons of the book. Cross-linked back to the programme
+          site so a parent discovering the books can find the programme, and a
+          parent discovering the programme can find the books.
         </SubSection>
 
         <p style={paragraphStyle()}>
@@ -182,7 +184,7 @@ export default function MCHCaseStudy() {
         }}>
           <Deliverable
             label="Brand system"
-            body="Forest and sunlight palette, dual typography system, voice guidelines for programme copy and author copy. Documented in a versioned brand book."
+            body="Forest and sunlight palette, dual typography system, voice guidelines for the programme website and the author website. Documented in a versioned brand book."
           />
           <Deliverable
             label="magnifyingchildrenshorizons.com"
@@ -201,8 +203,8 @@ export default function MCHCaseStudy() {
             body="Free Mini Guide PDF delivered automatically on signup. Welcome sequence, subscriber management, and feedback automation wired end-to-end."
           />
           <Deliverable
-            label="Drumlo's Journey lead magnet"
-            body="Free printable memory game designed by Tolu as a lead magnet for young readers. Walks them through the events and lessons of the book."
+            label="Drumlo's Journey"
+            body="Free printable memory game designed by Tolu for young readers. Offered when families sign up. Walks them through the events and lessons of the book."
           />
           <Deliverable
             label="Analytics dashboard"
@@ -224,7 +226,7 @@ export default function MCHCaseStudy() {
         }}>
           <Deliverable
             label="Full brand system co-created"
-            body="Palette, typography, voice, and page-by-page copy shaped session by session with Tolu."
+            body="Palette, typography, voice, and page-by-page writing shaped session by session with Tolu."
           />
           <Deliverable
             label="Real photography only, no AI imagery"
@@ -235,7 +237,7 @@ export default function MCHCaseStudy() {
             body="Programme site plus author companion, one brand system, distinct voices."
           />
           <Deliverable
-            label="Drumlo's Journey as free printable lead magnet"
+            label="Drumlo's Journey as free printable download"
             body="Takes young readers through the events and lessons of the book."
           />
         </div>
