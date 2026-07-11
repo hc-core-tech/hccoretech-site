@@ -100,15 +100,15 @@ export default function SeraphZorgCaseStudy() {
       <Section eyebrow="The brief">
         <p style={paragraphStyle(true)}>
           Jiska founded JS Zorg en Advies to support people, families, and
-          organizations working through recovery across the Dutch sociaal
-          domein. A defining part of her work is with families affected by the
+          organizations working through recovery across the Dutch social care
+          sector. A defining part of her work is with families affected by the
           toeslagenaffaire, the childcare benefits scandal that upended
           thousands of Dutch households.
         </p>
         <p style={paragraphStyle()}>
-          Under the Seraph Zorg handelsnaam, she needed a professional web
-          presence that felt as careful, trauma-sensitive, and culturally aware
-          as her practice itself.
+          Under the Seraph Zorg name, she needed a professional web presence
+          that felt as careful, trauma-sensitive, and culturally aware as her
+          practice itself.
         </p>
         <p style={paragraphStyle()}>
           The requirements were clear. A brand system that could carry both the
@@ -139,7 +139,7 @@ export default function SeraphZorgCaseStudy() {
         <SubSection title="seraphzorg.com">
           Carries the practice. Who the work is for, what happens in a session,
           how families can reach out. Written in Dutch, with English available.
-          Discreet inquiry form, no dark patterns, no urgency tactics.
+          A simple contact form, no dark patterns, no urgency tactics.
         </SubSection>
 
         <SubSection title="jiska.seraphzorg.com">
