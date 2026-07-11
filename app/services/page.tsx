@@ -127,7 +127,7 @@ const SERVICES = [
     timeline: 'Onboarding 1 to 2 weeks. Ongoing subscription.',
     investment: 'Starter €250/mo, Basis €450/mo, Pro €950/mo. Enterprise pricing on request. Founding pricing available for select customers.',
     flow: [
-      { step: 'Discovery call', body: 'We meet on a mutual-fit call to understand your practice, your day-to-day, and what you need CoreDesk to hold for you. I am selective about who I take on so every customer gets the direct attention the product promises.' },
+      { step: 'Discovery call', body: 'We meet on a mutual-fit call to understand your practice, your day-to-day, and what you need CoreDesk to hold for you. I am selective about who I take on so every user gets the direct attention the product promises.' },
       { step: 'Setup', body: "I provision your workspace, apply your brand, and bring in the invoices, clients, and receipts you already have from wherever they live now, so you are not starting with an empty workspace." },
       { step: 'Onboarding', body: 'We meet for a working session that walks you through the daily flow: invoicing, meetings, the CRM, and how the agents behave. The session is recorded so you can revisit it any time.' },
       { step: 'Ongoing', body: 'You have direct engineer access for questions, feature requests, and iterations. Not a ticket queue routing you to a stranger. You reach me, and I handle it.' },
