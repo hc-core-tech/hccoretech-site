@@ -4,7 +4,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import {
   Brain, Shield, Globe, MessageSquare, ArrowRight, ArrowUpRight, Mail, Menu, X,
-  ExternalLink, Quote, CheckCircle2, Send, Check, Minus,
+  ExternalLink, Quote, CheckCircle2, Send, Check, Minus, ChevronDown,
 } from 'lucide-react';
 
 // ══════════════════════════════════════════════════════════════
@@ -389,7 +389,6 @@ function Nav() {
     { label: 'Services', href: '/services' },
     { label: 'CoreDesk', href: '/coredesk' },
     { label: 'Work',     href: '/work' },
-    { label: 'Process',  href: '/process' },
     { label: 'Reviews',  href: '/#reviews' },
     { label: 'About',    href: '/about' },
     { label: 'FAQ',      href: '/faq' },
@@ -1366,23 +1365,23 @@ function Approach() {
   const isMobile = useIsMobile();
   const isNarrow = useIsMobile(640);
   const steps = [
-    { num: '01', title: 'Scope in writing',       body: [
+    { num: '01', title: 'Scope in writing',       lead: 'Every engagement starts with a versioned scoping document.', body: [
       "Every engagement starts with a versioned scoping document that sets the price, the timeline, what is in scope, and what is explicitly out of scope.",
       "Nothing is negotiated in chat threads or verbally agreed that later gets forgotten, or quietly 'clarified' when the invoice arrives.",
       "If scope changes mid-project, we amend the document and both sign. That is not the industry norm, but it should be.",
     ] },
-    { num: '02', title: 'Direct engineer access', body: [
+    { num: '02', title: 'Direct engineer access', lead: 'Talk to the engineer building your work.', body: [
       "Talk to the engineer building your work.",
       "I stay hands-on from first call to handover. Not an account manager forwarding your messages. Not a support tier reading from a script. Not a junior contractor I quietly subbed the job to.",
       "The direct access lets me understand who you are and what you are building, so I can bring that vision to life for you, and for whoever else it is meant to reach.",
       "This is the actual work.",
     ] },
-    { num: '03', title: 'Versioned artifacts',    body: [
+    { num: '03', title: 'Versioned artifacts',    lead: 'Every major deliverable is a versioned document.', body: [
       "Every major deliverable is a versioned Word document: your written content, your brand context, your technical plan, your handover kit, and any other project-critical files.",
       "Even the small design decisions get written down. Nothing important lives only in a Slack thread or a Notion page that disappears when someone leaves the team.",
       "When you look at your project over time, you can still read what we decided at every stage, and why.",
     ] },
-    { num: '04', title: 'Clean walk-away',        body: [
+    { num: '04', title: 'Clean walk-away',        lead: 'You own everything. Support is a choice, not an inheritance.', body: [
       "Every custom build I deliver runs on your own infrastructure, not mine or a shared vendor platform where someone else holds the keys.",
       "You get every file, every credential, and every document from the project.",
       "Another engineer should be able to pick it up at any time and adapt to the project quickly. Not because I want to walk away, but because I care about my projects too much to let one depend on any single person, including me.",
@@ -1391,8 +1390,11 @@ function Approach() {
     ] },
   ];
 
+  const [principleExpanded, setPrincipleExpanded] = useState<Record<string, boolean>>({});
+  const togglePrinciple = (num: string) => setPrincipleExpanded(prev => ({ ...prev, [num]: !prev[num] }));
+
   return (
-    <section id="about" style={{ padding: isMobile ? '80px 0' : '140px 0' }}>
+    <section id="how-i-work" style={{ padding: isMobile ? '80px 0' : '140px 0' }}>
       <Container>
         <Reveal><Eyebrow>How I work</Eyebrow></Reveal>
         <Reveal delay={80}>
@@ -1432,7 +1434,56 @@ function Approach() {
           gridTemplateColumns: isNarrow ? '1fr' : 'repeat(2, 1fr)',
           gap: isMobile ? '32px' : '48px 60px',
         }}>
-          {steps.map((s, i) => (
+          <style>{`
+            @keyframes principle-heartbeat {
+              0%   { transform: scale(1);    }
+              14%  { transform: scale(1.18); }
+              28%  { transform: scale(1);    }
+              42%  { transform: scale(1.12); }
+              70%  { transform: scale(1);    }
+              100% { transform: scale(1);    }
+            }
+            @keyframes principle-expand {
+              from { opacity: 0; transform: translateY(-8px); }
+              to   { opacity: 1; transform: translateY(0);     }
+            }
+            .principle-toggle {
+              width: 32px; height: 32px;
+              border-radius: 50%;
+              background: transparent;
+              border: 1px solid ${T.gold}55;
+              color: ${T.gold};
+              display: inline-flex; align-items: center; justify-content: center;
+              cursor: pointer;
+              transition: background 220ms ease, border-color 220ms ease, transform 220ms ease;
+              animation: principle-heartbeat 1.6s ease-in-out infinite;
+              will-change: transform;
+              margin-top: 4px;
+              flex-shrink: 0;
+            }
+            .principle-toggle.expanded {
+              animation: none;
+              background: ${T.gold}18;
+              border-color: ${T.gold};
+            }
+            .principle-toggle:hover {
+              animation-play-state: paused;
+              background: ${T.gold}22;
+              border-color: ${T.gold};
+            }
+            .principle-toggle .chev {
+              transition: transform 320ms cubic-bezier(0.4, 0, 0.2, 1);
+            }
+            .principle-toggle.expanded .chev {
+              transform: rotate(180deg);
+            }
+            @media (prefers-reduced-motion: reduce) {
+              .principle-toggle { animation: none !important; }
+            }
+          `}</style>
+          {steps.map((s, i) => {
+            const isExpanded = !!principleExpanded[s.num];
+            return (
             <Reveal key={s.num} delay={i * 100}>
               <div style={{
                 display: 'flex', gap: '24px',
@@ -1445,23 +1496,57 @@ function Approach() {
                   flexShrink: 0, paddingTop: '2px',
                   letterSpacing: '0.02em',
                 }}>{s.num}</div>
-                <div>
-                  <h3 style={{
-                    fontFamily: FONTS.serif,
-                    fontSize: '26px', fontWeight: 500, letterSpacing: '-0.01em',
-                    color: T.platinum, marginBottom: '10px',
-                  }}>{s.title}</h3>
-                  {(Array.isArray(s.body) ? s.body : [s.body]).map((para, k, arr) => (
-                    <p key={k} style={{
-                      fontFamily: FONTS.ui,
-                      fontSize: '15px', lineHeight: 1.65, color: T.softText,
-                      marginBottom: k === arr.length - 1 ? '0' : '12px',
-                    }}>{para}</p>
-                  ))}
+                <div style={{ flex: 1 }}>
+                  <div style={{
+                    display: 'flex', gap: '16px',
+                    alignItems: 'flex-start', justifyContent: 'space-between',
+                  }}>
+                    <div style={{ flex: 1 }}>
+                      <h3 style={{
+                        fontFamily: FONTS.serif,
+                        fontSize: '26px', fontWeight: 500, letterSpacing: '-0.01em',
+                        color: T.platinum, marginBottom: '10px',
+                      }}>{s.title}</h3>
+                      <p style={{
+                        fontFamily: FONTS.ui,
+                        fontSize: '15px', lineHeight: 1.6, color: T.softText,
+                        margin: 0,
+                      }}>{s.lead}</p>
+                    </div>
+                    <button
+                      onClick={() => togglePrinciple(s.num)}
+                      aria-expanded={isExpanded}
+                      aria-controls={`principle-${s.num}-details`}
+                      aria-label={isExpanded ? `Hide ${s.title} details` : `Show ${s.title} details`}
+                      className={`principle-toggle ${isExpanded ? 'expanded' : ''}`}
+                    >
+                      <ChevronDown size={14} className="chev" />
+                    </button>
+                  </div>
+                  {isExpanded && (
+                    <div
+                      id={`principle-${s.num}-details`}
+                      style={{
+                        marginTop: '16px',
+                        paddingTop: '16px',
+                        borderTop: `1px solid ${T.hairline}`,
+                        animation: 'principle-expand 400ms cubic-bezier(0.16, 1, 0.3, 1)',
+                      }}
+                    >
+                      {(Array.isArray(s.body) ? s.body : [s.body]).map((para, k, arr) => (
+                        <p key={k} style={{
+                          fontFamily: FONTS.ui,
+                          fontSize: '15px', lineHeight: 1.65, color: T.softText,
+                          marginBottom: k === arr.length - 1 ? '0' : '12px',
+                        }}>{para}</p>
+                      ))}
+                    </div>
+                  )}
                 </div>
               </div>
             </Reveal>
-          ))}
+            );
+          })}
         </div>
       </Container>
     </section>
@@ -2467,7 +2552,7 @@ function Footer() {
               { label: 'CoreDesk',      href: '/#coredesk' },
               { label: 'Selected work', href: '/#work' },
               { label: 'Reviews',       href: '/#reviews' },
-              { label: 'About',         href: '/#about' },
+              { label: 'How I work',    href: '/#how-i-work' },
             ]},
             { title: 'Contact',  items: [
               { label: 'Request a quote',    href: '/#quote' },

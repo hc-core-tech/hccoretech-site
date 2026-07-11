@@ -11,7 +11,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/services`,                                    lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${BASE}/coredesk`,                                    lastModified: now, changeFrequency: 'weekly',  priority: 0.9 },
     { url: `${BASE}/about`,                                       lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${BASE}/process`,                                     lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
     // Case studies
     { url: `${BASE}/work`,                                        lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE}/work/seraph-zorg`,                            lastModified: now, changeFrequency: 'monthly', priority: 0.7 },

@@ -37,7 +37,6 @@ const NAV_ITEMS = [
   { label: 'Services', href: '/services' },
   { label: 'CoreDesk', href: '/coredesk' },
   { label: 'Work',     href: '/work' },
-  { label: 'Process',  href: '/process' },
   { label: 'About',    href: '/about' },
   { label: 'FAQ',      href: '/faq' },
 ]
@@ -349,7 +348,6 @@ function Footer() {
               { label: 'Services', href: '/services' },
               { label: 'CoreDesk', href: '/coredesk' },
               { label: 'Work',     href: '/work' },
-              { label: 'Process',  href: '/process' },
               { label: 'About',    href: '/about' },
               { label: 'FAQ',      href: '/faq' },
             ].map(l => (
