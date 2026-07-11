@@ -141,7 +141,8 @@ export default function MCHCaseStudy() {
         <SubSection title="magnifyingchildrenshorizons.com">
           The programme website. Guiding Children with Nature laid out in
           scannable, warm copy. Parents can read the programme overview, meet
-          the founder, read the philosophy, and enrol their family in one flow.
+          the founder, read the philosophy, and download the Free Mini Guide,
+          which begins their nurture flow into the programme.
         </SubSection>
 
         <SubSection title="tolu.magnifyingchildrenshorizons.com">
@@ -193,6 +194,10 @@ export default function MCHCaseStudy() {
             body="Metadata, structured data, semantic HTML, sitemap, Open Graph tags. Tuned for organic discovery through search and parent-facing social."
           />
           <Deliverable
+            label="Free Mini Guide + email flow"
+            body="Free Mini Guide PDF delivered automatically on signup. Welcome sequence, subscriber management, and feedback automation wired end-to-end."
+          />
+          <Deliverable
             label="Drumlo's Journey lead magnet"
             body="Free printable memory game designed by Tolu as a lead magnet for young readers. Walks them through the events and lessons of the book."
           />
@@ -220,7 +225,7 @@ export default function MCHCaseStudy() {
           />
           <Deliverable
             label="Real photography only, no AI imagery"
-            body="A design judgment call the audience deserves. Every visual sourced or directed."
+            body="A design call I made, informed by who the audience is."
           />
           <Deliverable
             label="Two websites cross-linked"
