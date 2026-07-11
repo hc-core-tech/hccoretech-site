@@ -68,9 +68,9 @@ export default function SeraphZorgCaseStudy() {
             color: T.softText, maxWidth: '740px',
             letterSpacing: '-0.005em',
           }}>
-            A trauma-sensitive Dutch care practice supporting families affected by
-            the toeslagenaffaire, delivered with a brand and back office that
-            match the seriousness of the work.
+            A trauma-sensitive, culturally aware Dutch care practice supporting
+            people and families through recovery, delivered with a brand and back
+            office that match the seriousness of the work.
           </p>
         </Reveal>
       </section>
@@ -87,7 +87,7 @@ export default function SeraphZorgCaseStudy() {
             gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))',
             gap: '24px',
           }}>
-            <Fact label="Client"    value="Jiska Doekes" />
+            <Fact label="Client"    value="Jiska" />
             <Fact label="Sector"    value="Care · Advisory" />
             <Fact label="Location"  value="Diemen, NL" />
             <Fact label="Duration"  value="2025 to present" />
@@ -99,11 +99,16 @@ export default function SeraphZorgCaseStudy() {
       {/* The brief */}
       <Section eyebrow="The brief">
         <p style={paragraphStyle(true)}>
-          Jiska Doekes founded JS Zorg en Advies to serve families navigating the
-          aftermath of the Dutch toeslagenaffaire, the childcare benefits scandal
-          that upended thousands of Dutch households. Under the Seraph Zorg
-          handelsnaam, she needed a professional web presence that felt as
-          careful and trauma-sensitive as her practice itself.
+          Jiska founded JS Zorg en Advies to support people, families, and
+          organizations working through recovery across the Dutch sociaal
+          domein. A defining part of her work is with families affected by the
+          toeslagenaffaire, the childcare benefits scandal that upended
+          thousands of Dutch households.
+        </p>
+        <p style={paragraphStyle()}>
+          Under the Seraph Zorg handelsnaam, she needed a professional web
+          presence that felt as careful, trauma-sensitive, and culturally aware
+          as her practice itself.
         </p>
         <p style={paragraphStyle()}>
           The requirements were clear. A brand system that could carry both the
@@ -123,8 +128,8 @@ export default function SeraphZorgCaseStudy() {
         <p style={paragraphStyle(true)}>
           Brand direction started with colour: mustard gold as the base, warm
           neutrals as the surround. A modern serif for the display marks, a
-          clean sans for body. Every choice tested against a single question,
-          does this feel careful?
+          clean sans for body. Every choice tested against one question: does
+          this feel considered enough for the people the practice serves?
         </p>
 
         <p style={paragraphStyle()}>
@@ -256,7 +261,7 @@ export default function SeraphZorgCaseStudy() {
               fontFamily: FONTS.ui, fontSize: '13px',
               color: T.softText,
               letterSpacing: '0.02em',
-            }}>Jiska Doekes  ·  Founder, JS Zorg en Advies | Seraph Zorg</div>
+            }}>Jiska  ·  Founder, JS Zorg en Advies | Seraph Zorg</div>
           </div>
         </Reveal>
       </section>
