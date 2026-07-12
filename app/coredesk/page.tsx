@@ -282,7 +282,7 @@ export default function CoreDeskPage() {
           gap: '16px',
         }}>
           {[
-            { Icon: Mail,         name: 'Email Agent',        role: 'Drafts your replies, translates when a client writes in another language, and flags what needs your attention. Nothing goes out until you click send.' },
+            { Icon: Mail,         name: 'Email Agent',        role: 'Drafts your replies, optionally translates when a client writes in another language, and flags what needs your attention. Nothing goes out until you click send.' },
             { Icon: Receipt,      name: 'Invoice Agent',      role: 'Watches the finance side for invoices, receipts, and follow-ups you might have missed. Aware of multiple currencies and multiple issuer identities.' },
             { Icon: Sparkles,     name: 'Content Agent',      role: 'Drafts LinkedIn, Instagram, and Facebook posts in your voice. You review, edit, and post from your own accounts.' },
             { Icon: ShieldAlert,  name: 'Governance Auditor', role: 'Scores your AI use out of 100, maps every score to real frameworks (EU AI Act, NIST, ISO 42001, GDPR, OECD AI), and drafts the policies you would otherwise pay a consultant to write.' },
@@ -503,10 +503,10 @@ export default function CoreDeskPage() {
           gap: '16px',
         }}>
           {[
-            { name: 'Starter',    price: '€250',  unit: '/mo', forWho: 'For when you are just starting to systemize.',           features: ['1 AI agent', 'Governance essentials', '~150 interactions/mo', 'Dutch or English', 'Email support'] },
-            { name: 'Basis',      price: '€450',  unit: '/mo', forWho: 'For steady client work with a real admin load.',        features: ['3 AI agents', 'Full governance module', '~600 interactions/mo', 'Multilingual', 'Priority support'] },
-            { name: 'Pro',        price: '€950',  unit: '/mo', forWho: 'For growing volume without losing the details.',        features: ['All agents', 'Advanced governance', '~2,000 interactions/mo', 'Voice tuned to your brand', 'Monthly review call'] },
-            { name: 'Enterprise', price: 'Custom', unit: '',   forWho: 'For regulated fields where governance matters.',        features: ['Custom volume', 'White-label option', 'Custom agent development', 'SLA', 'Quarterly compliance audit'] },
+            { name: 'Starter',    price: '€250',  unit: '/mo', forWho: 'For when you are just starting to systemize.',           features: ['1 AI agent', 'Governance essentials', '~150 AI actions/month', 'Dutch or English', 'Email support'] },
+            { name: 'Basis',      price: '€450',  unit: '/mo', forWho: 'For steady client work with a real admin load.',        features: ['3 AI agents', 'Full governance module', '~600 AI actions/month', 'Multilingual', 'Priority support'] },
+            { name: 'Pro',        price: '€950',  unit: '/mo', forWho: 'For growing volume without losing the details.',        features: ['All agents', 'Advanced governance', '~2,000 AI actions/month', 'Voice tuned to your brand', 'Monthly review call'] },
+            { name: 'Enterprise', price: 'Custom', unit: '',   forWho: 'For regulated fields where governance matters.',        features: ['Custom volume', 'Deployed on your own infrastructure', 'Custom agent development', 'SLA', 'Quarterly compliance audit'] },
           ].map((tier, i) => (
             <Reveal key={tier.name} delay={i * 80}>
               <div style={{
@@ -577,8 +577,9 @@ export default function CoreDeskPage() {
           }}>
             Founding pricing available for select clients who join in the current
             window. Annual billing available with a discount for those who prefer
-            it. Custom deployments (your own infrastructure, private tenant)
-            available for enterprise engagements.
+            it. For enterprise engagements, CoreDesk can be deployed on your own
+            servers as a dedicated setup, so your data stays fully under your
+            control.
           </p>
         </Reveal>
       </section>
