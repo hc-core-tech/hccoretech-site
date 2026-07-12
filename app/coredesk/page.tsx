@@ -115,14 +115,13 @@ export default function CoreDeskPage() {
         </Reveal>
 
         <Reveal delay={200}>
-          <p style={{
+          <div style={{
             fontFamily: FONTS.ui, fontSize: '18px', lineHeight: 1.65,
             color: T.softText, maxWidth: '680px',
           }}>
-            Invoicing, CRM, meetings, agents, and governance in one workspace.
-            Every feature earned its place by solving a real problem a founder
-            was already having, not because a roadmap said it should exist.
-          </p>
+            <p style={{ marginBottom: '10px' }}>Invoicing, CRM, meetings, agents, and governance in one workspace.</p>
+            <p style={{ marginBottom: '0' }}>Every feature earned its place by solving a real problem a founder was already having, not because a roadmap said it should exist.</p>
+          </div>
         </Reveal>
 
         <Reveal delay={280}>
@@ -570,17 +569,15 @@ export default function CoreDeskPage() {
         </div>
 
         <Reveal delay={400}>
-          <p style={{
+          <div style={{
             marginTop: '32px',
             fontFamily: FONTS.ui, fontSize: '13.5px', lineHeight: 1.6,
             color: T.muted, textAlign: 'center' as const,
           }}>
-            Founding pricing available for select clients who join in the current
-            window. Annual billing available with a discount for those who prefer
-            it. If you need a fully bespoke AI system deployed on your own
-            infrastructure, that lives as a separate AI Engineering engagement,
-            happy to discuss.
-          </p>
+            <p style={{ marginBottom: '10px' }}>Founding pricing available for select clients who join in the current window.</p>
+            <p style={{ marginBottom: '10px' }}>Annual billing available with a discount for those who prefer it.</p>
+            <p style={{ marginBottom: '0' }}>If you need a fully bespoke AI system deployed on your own infrastructure, that lives as a separate AI Engineering engagement, happy to discuss.</p>
+          </div>
         </Reveal>
       </section>
 
