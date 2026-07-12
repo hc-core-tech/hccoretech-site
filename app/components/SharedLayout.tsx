@@ -276,8 +276,8 @@ function Nav() {
               onMouseEnter={e => { e.currentTarget.style.color = T.gold }}
               onMouseLeave={e => { e.currentTarget.style.color = T.platinum }}
               style={{
-                fontFamily: FONTS.ui, fontSize: '14px', fontWeight: 500,
-                color: T.platinum, padding: '12px 0',
+                fontFamily: FONTS.ui, fontSize: '12px', fontWeight: 500,
+                color: T.platinum, padding: '14px 0',
                 borderBottom: `1px solid ${T.hairline}`,
                 textDecoration: 'none',
                 letterSpacing: '0.14em',
