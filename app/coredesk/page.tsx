@@ -44,8 +44,8 @@ const CAPABILITIES = [
 const FOR_LIST = [
   'Independent practitioners running a small book of clients',
   "ZZP'ers (Dutch sole proprietors) needing more than a spreadsheet",
-  'Care practices, consultancies, coaches, agencies',
-  'Small teams up to about 20 people',
+  'Care practices, consultancies, coaches, boutique agencies',
+  'Founder-led practices with a small team supporting the work',
   'Anyone tired of stitching invoicing, CRM, and meetings together',
 ]
 
@@ -53,7 +53,7 @@ const NOT_FOR_LIST = [
   'Large enterprises with dedicated procurement and IT teams (a custom build is often the better route)',
   'Teams needing turnkey vendor SLAs and lift-and-shift compliance',
   'Setups that need full self-service without engineer contact',
-  'Timelines that require me to onboard more customers than I can give real attention to',
+  'Timelines that require me to onboard more clients than I can give real attention to',
 ]
 
 const ONBOARDING = [
@@ -183,7 +183,7 @@ export default function CoreDeskPage() {
               }}>
                 CoreDesk began as a tool for assessing AI governance across
                 businesses. Working with Jiska (JS Zorg en Advies | Seraph
-                Zorg, the founding customer) on her workspace made a
+                Zorg, the founding client) on her workspace made a
                 different gap clear: no back office was built around how a
                 hands-on founder actually runs their day. The platform grew
                 from there. Every workspace since is shaped to the founder
@@ -210,9 +210,9 @@ export default function CoreDeskPage() {
               lineHeight: 1.1, letterSpacing: '-0.015em',
               color: T.platinum, maxWidth: '720px',
             }}>
-              Six things you are already doing.
+              The operational stack your practice runs on.
               <br />
-              <span style={{ fontStyle: 'italic', color: T.gold, fontWeight: 500 }}>Now in one workspace, all connected.</span>
+              <span style={{ fontStyle: 'italic', color: T.gold, fontWeight: 500 }}>Six functions. One workspace. None of them siloed.</span>
             </h2>
           </div>
         </Reveal>
@@ -271,7 +271,7 @@ export default function CoreDeskPage() {
               lineHeight: 1.1, letterSpacing: '-0.015em',
               color: T.platinum, maxWidth: '620px',
             }}>
-              Not bolt-ons. Not experiments. <span style={{ fontStyle: 'italic', color: T.gold }}>Woven through the workspace.</span>
+              Native to the workspace. <span style={{ fontStyle: 'italic', color: T.gold }}>Not stitched on top.</span>
             </h2>
           </div>
         </Reveal>
@@ -282,7 +282,7 @@ export default function CoreDeskPage() {
           gap: '16px',
         }}>
           {[
-            { Icon: Mail,         name: 'Email Agent',        role: 'Drafts your replies. Translates when a client writes in another language. Sorts what needs your attention. You always click send.' },
+            { Icon: Mail,         name: 'Email Agent',        role: 'Drafts your replies, translates when a client writes in another language, and flags what needs your attention. Nothing goes out until you click send.' },
             { Icon: Receipt,      name: 'Invoice Agent',      role: 'Watches the finance side for invoices, receipts, and follow-ups you might have missed. Aware of multiple currencies and multiple issuer identities.' },
             { Icon: Sparkles,     name: 'Content Agent',      role: 'Drafts LinkedIn, Instagram, and Facebook posts in your voice. You review, edit, and post from your own accounts.' },
             { Icon: ShieldAlert,  name: 'Governance Auditor', role: 'Scores your AI use out of 100, maps every score to real frameworks (EU AI Act, NIST, ISO 42001, GDPR, OECD AI), and drafts the policies you would otherwise pay a consultant to write.' },
@@ -334,7 +334,7 @@ export default function CoreDeskPage() {
               lineHeight: 1.1, letterSpacing: '-0.015em',
               color: T.platinum, maxWidth: '720px',
             }}>
-              A small book of customers,
+              A small book of clients,
               <span style={{ fontStyle: 'italic', color: T.gold }}> by invitation.</span>
             </h2>
           </div>
@@ -575,7 +575,7 @@ export default function CoreDeskPage() {
             fontFamily: FONTS.ui, fontSize: '13.5px', lineHeight: 1.6,
             color: T.muted, textAlign: 'center' as const,
           }}>
-            Founding pricing available for select customers who join in the current
+            Founding pricing available for select clients who join in the current
             window. Custom deployments (your own infrastructure, private tenant)
             available for enterprise engagements.
           </p>
