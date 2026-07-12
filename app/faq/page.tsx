@@ -7,8 +7,8 @@ import SharedLayout, { T, FONTS, Reveal } from '../components/SharedLayout'
 
 const FAQ = [
   {
-    q: 'Why work with a one-person practice instead of an agency?',
-    a: 'Because the person you talk to is the person doing the work. Agencies buffer your engineering team from you through account managers and project coordinators, which introduces latency and translation errors. A solo practice trades away scale for depth. If your project genuinely needs 30 engineers, an agency will serve you well. If it needs one great one who owns the outcome, this practice is built for that.',
+    q: 'Why work with you instead of an agency?',
+    a: 'Because the person you talk to is the person doing the work. Agencies buffer your engineering team from you through account managers and project coordinators, which introduces latency and translation errors. My practice trades scale for depth. If your project genuinely needs a full team of thirty engineers, an agency will serve you well. If it needs one great engineer who owns the outcome, my practice is built for that.',
   },
   {
     q: 'What if you get sick, take vacation, or get hit by a bus?',
@@ -16,35 +16,35 @@ const FAQ = [
   },
   {
     q: 'How do you handle projects that need more hands than you have?',
-    a: 'This is where I usually recommend we talk more before starting. I do not white-label freelancers or subcontract under my name, so if a project needs three engineers full-time for six months, I am probably not the right fit and I will be upfront about that on the discovery call. For projects that need occasional specialist input (a specific security review, a specific model evaluation), I bring in named collaborators with your explicit approval.',
+    a: "Honestly, and up front. I don't white-label freelancers or subcontract under my name, and I don't take on work I can't deliver at my standard. If the scope needs a bigger team than I can properly stand behind, I'll say so on the discovery call. For projects that need occasional specialist input, a specific security review or a specific model evaluation for example, I bring in named collaborators with your explicit approval.",
   },
   {
     q: 'What does "clean walk-away" actually mean?',
-    a: 'Every custom build ships to your infrastructure. Every credential is registered in your name. Every repository lives in your GitHub organisation. If we finish an engagement and never speak again, you should be able to hire any competent engineer to keep working on the codebase without needing to reach me. That is the test I hold myself to.',
+    a: 'Every custom build ships to your infrastructure. Every credential is registered in your name. Every repository lives in your GitHub organisation. Any competent engineer should be able to pick up the codebase and keep going without missing a beat. That is the test I hold myself to.',
   },
   {
     q: 'Do you sign NDAs?',
-    a: 'Yes, gladly. I use a standard mutual NDA I can share, or I will sign yours provided it does not include punitive terms or non-competes that would prevent me working with other clients in the same broad industry.',
+    a: 'Yes, gladly. I use a standard mutual NDA I can share, or I will sign yours provided it is reasonable and mutual, and does not include non-competes that would prevent me working with other clients in the same broad industry.',
   },
   {
-    q: 'What is CoreDesk and how is it different from the services?',
-    a: 'CoreDesk is a subscription platform I build and operate: an AI back office for hands-on founders. It handles invoicing, proposals, receipts, CRM, meetings, agents, and governance in one workspace. Services are custom engagements I deliver to individual clients. CoreDesk is a monthly subscription. Services are projects with a fixed scope.',
+    q: 'What is CoreDesk?',
+    a: 'CoreDesk is a subscription platform I build and operate. Think of it as what a hands-on founder would build if they had an in-house AI team: agents handling client operations, automating the paperwork, and keeping every action audit-ready, so the founder gets to be more than the business, by redeeming their time.',
   },
   {
     q: 'Can you work with clients outside the EU?',
-    a: 'Yes. Current clients are in the Netherlands and Canada. I have delivered work to Swiss clients as well. Time zones are workable as long as we can find a couple of overlap hours per week for calls. Payment in EUR, USD, GBP, or CHF.',
+    a: 'Yes. Current and past clients are in the Netherlands, Canada, the United States, Switzerland, and Singapore. Time zones are workable as long as we can find a couple of overlap hours per week for calls. Pricing is in EUR, and payment is accepted in most major currencies.',
   },
   {
     q: 'What is your response time?',
-    a: 'For new enquiries: within 48 hours by email. For active engagements: same-day response to messages during weekday working hours (Central European Time), and structured weekly written updates.',
+    a: 'New enquiries get a reply within 48 hours. Active engagements get a same-day response during weekday working hours in Central European Time, alongside a written weekly or biweekly update on progress, depending on scope.',
   },
   {
     q: 'Do you offer discounts or "starter packages"?',
-    a: 'The prices are the prices, but the scoping conversation is very much on the table. If a smaller project would actually solve your problem, I will scope the smaller project so we start where you actually need. I would rather deliver a great small thing than an underwater bigger one.',
+    a: "Not by default, though timing and scope sometimes shift the conversation. If a smaller project would actually solve your problem, I'll scope the smaller project, so we start where you actually need. I'd rather deliver a great small thing than an oversized one that never quite lands.",
   },
   {
     q: 'Where do I start if I want to work with you?',
-    a: 'Two options. Either book a discovery call (30 minutes, no cost, no obligation), or send a written brief through the request-a-quote form on the homepage. Either way, I respond within 48 hours with a written next step: a scoping document, more questions, or a referral if we are not a fit.',
+    a: "Two ways in. You can book a 30-minute discovery call at no cost and no obligation, or send a written brief through the enquiry form. Either way, I'll reply within 48 hours with a written next step: a scoping document, more questions, or a referral if we're not the right fit.",
   },
 ]
 
@@ -81,13 +81,13 @@ export default function FAQPage() {
           fontFamily: FONTS.ui, fontSize: '18px', lineHeight: 1.65,
           color: T.softText, maxWidth: '640px',
         }}>
-          The questions I get most often on discovery calls, answered here so you
-          have them before we speak. If yours is not on the list,
+          The questions I get most often, answered here so you have them
+          before we speak. If yours is not on the list,
           {' '}
           <a href="mailto:hc@hccoretech.com" style={{ color: T.gold, textDecoration: 'none' }}>
-            ask me directly
+            feel free to ask directly
           </a>
-          {' '}and I will answer.
+          .
         </p>
       </section>
 
