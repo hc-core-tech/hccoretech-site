@@ -80,7 +80,7 @@ export default function AboutPage() {
             I&apos;m Hilary Azimoh.
             <br />
             <span style={{ fontStyle: 'italic', color: T.gold, fontWeight: 500 }}>
-              Applied AI Engineer.
+              AI. Governance. Web Development.
             </span>
           </h1>
         </Reveal>
