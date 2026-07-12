@@ -2640,7 +2640,7 @@ function Footer() {
               { label: 'Contact page',       href: '/contact' },
               { label: 'Request a quote',    href: '/#quote' },
               { label: 'hc@hccoretech.com',  href: 'mailto:hc@hccoretech.com' },
-              { label: 'LinkedIn',           href: 'https://www.linkedin.com/in/hilary-azimoh' },
+              { label: 'LinkedIn',           href: 'https://www.linkedin.com/in/hilary-azimoh-a32b81231/' },
             ]},
             { title: 'Legal',    items: [
               { label: 'Terms of service',   href: '/legal#terms' },

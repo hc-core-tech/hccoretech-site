@@ -6,7 +6,7 @@ import SharedLayout, { T, FONTS, Reveal } from '../components/SharedLayout'
 
 const CALENDLY = 'https://calendly.com/hc-hccoretech/30min'
 const EMAIL = 'hc@hccoretech.com'
-const LINKEDIN = 'https://www.linkedin.com/in/hilary-azimoh'
+const LINKEDIN = 'https://www.linkedin.com/in/hilary-azimoh-a32b81231/'
 
 export default function ContactPage() {
   return (
