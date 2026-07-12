@@ -39,6 +39,7 @@ const NAV_ITEMS = [
   { label: 'Work',     href: '/work' },
   { label: 'About',    href: '/about' },
   { label: 'FAQ',      href: '/faq' },
+  { label: 'Contact',  href: '/contact' },
 ]
 
 const CALENDLY = 'https://calendly.com/hc-hccoretech/30min'
@@ -350,6 +351,7 @@ function Footer() {
               { label: 'Work',     href: '/work' },
               { label: 'About',    href: '/about' },
               { label: 'FAQ',      href: '/faq' },
+              { label: 'Contact',  href: '/contact' },
             ].map(l => (
               <Link key={l.href} href={l.href} style={{
                 display: 'block', fontFamily: FONTS.ui, fontSize: '13px',
@@ -364,6 +366,10 @@ function Footer() {
               letterSpacing: '0.18em', color: T.gold,
               textTransform: 'uppercase', marginBottom: '16px',
             }}>Contact</div>
+            <Link href="/contact" style={{
+              display: 'block', fontFamily: FONTS.ui, fontSize: '13px',
+              color: T.softText, padding: '5px 0', textDecoration: 'none',
+            }}>Contact page</Link>
             <a href="mailto:hc@hccoretech.com" style={{
               display: 'block', fontFamily: FONTS.ui, fontSize: '13px',
               color: T.softText, padding: '5px 0', textDecoration: 'none',

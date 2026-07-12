@@ -393,6 +393,7 @@ function Nav() {
     { label: 'Reviews',  href: '/#reviews' },
     { label: 'About',    href: '/about' },
     { label: 'FAQ',      href: '/faq' },
+    { label: 'Contact',  href: '/contact' },
   ];
 
   return (
@@ -2633,6 +2634,7 @@ function Footer() {
               { label: 'How I work',    href: '/#how-i-work' },
             ]},
             { title: 'Contact',  items: [
+              { label: 'Contact page',       href: '/contact' },
               { label: 'Request a quote',    href: '/#quote' },
               { label: 'hc@hccoretech.com',  href: 'mailto:hc@hccoretech.com' },
             ]},
