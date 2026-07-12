@@ -121,31 +121,39 @@ export default function AboutPage() {
                 fontFamily: FONTS.ui, fontSize: '17px', lineHeight: 1.7,
                 color: T.platinum, marginBottom: '18px',
               }}>
-                I run HC Core Tech as a one-person practice covering AI
-                engineering, web development, and AI governance. Every line
-                of code, every website, every client conversation, every
-                invoice, every governance assessment goes through me.
+                HC Core Tech is my practice, covering AI engineering, web
+                development, and AI governance. Every engagement runs
+                through me, from the code to the site, the client
+                conversation, and the governance report. Whether or not the
+                delivery involves collaborators, the accountability and the
+                engineering stay with me from first brief to production.
               </p>
               <p style={{
                 fontFamily: FONTS.ui, fontSize: '17px', lineHeight: 1.7,
                 color: T.softText, marginBottom: '18px',
               }}>
-                One person. No outsourcing, no hidden hand-offs. Whether the
-                engagement is an AI system, a full website, or a governance
-                programme, the work stays with me from first brief to
-                production.
+                On the engineering side, agentic backends in Python and
+                FastAPI, Next.js and TypeScript frontends, RAG and
+                multi-agent orchestration, and full production websites
+                across WordPress, Next.js, and headless setups, matched to
+                the right stack for the project.
+              </p>
+              <p style={{
+                fontFamily: FONTS.ui, fontSize: '17px', lineHeight: 1.7,
+                color: T.softText, marginBottom: '18px',
+              }}>
+                On the governance side, AI registers, audit trails,
+                framework mapping, and human-in-the-loop review layers,
+                built to hold up under real regulatory scrutiny.
               </p>
               <p style={{
                 fontFamily: FONTS.ui, fontSize: '17px', lineHeight: 1.7,
                 color: T.softText,
               }}>
-                On the technical side: agentic backends in Python and
-                FastAPI, Next.js and TypeScript frontends, RAG and
-                multi-agent orchestration, full production websites and brand
-                systems, and the AI governance paperwork underneath.
-                Registers, audit trails, framework mapping, and
-                human-in-the-loop review layers, built to hold up under real
-                regulatory scrutiny.
+                Alongside the AI work, I build websites end to end. Every
+                build includes brand systems and design tokens,
+                conversion-led writing, SEO setup, and lead-capture
+                automation.
               </p>
             </div>
           </div>
