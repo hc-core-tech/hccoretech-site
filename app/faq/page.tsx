@@ -8,7 +8,7 @@ import SharedLayout, { T, FONTS, Reveal } from '../components/SharedLayout'
 const FAQ = [
   {
     q: 'Why work with you instead of an agency?',
-    a: 'Because the person you talk to is the person doing the work. Agencies buffer your engineering team from you through account managers and project coordinators, which introduces latency and translation errors. My practice trades scale for depth. If your project genuinely needs a full team of thirty engineers, an agency will serve you well. If it needs one great engineer who owns the outcome, my practice is built for that.',
+    a: 'With most agencies, layers sit between the client and the engineer, which introduces latency and translation errors. With this practice, the person you talk to is the person doing the work, from first brief to production. Scale traded for depth. If your project genuinely needs a large team working in parallel, an agency will serve you well. If it needs one accountable engineer who owns the outcome, this practice is built for that.',
   },
   {
     q: 'What if you get sick, take vacation, or get hit by a bus?',
