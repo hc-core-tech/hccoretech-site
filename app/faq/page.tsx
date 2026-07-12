@@ -81,7 +81,7 @@ export default function FAQPage() {
           fontFamily: FONTS.ui, fontSize: '18px', lineHeight: 1.65,
           color: T.softText, maxWidth: '640px',
         }}>
-          The questions I get most often, answered here so you have them
+          The questions I get most often are answered here so you have them
           before we speak. If yours is not on the list,
           {' '}
           <a href="mailto:hc@hccoretech.com" style={{ color: T.gold, textDecoration: 'none' }}>
