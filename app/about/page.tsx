@@ -7,8 +7,8 @@ import SharedLayout, { T, FONTS, CALENDLY, Reveal } from '../components/SharedLa
 const VALUES = [
   {
     num: '01',
-    title: 'Engineering and governance, one hand',
-    body: 'I engineer AI systems and lead the governance that keeps them accountable. Most people building AI agents in the Netherlands do not also understand the EU AI Act. Most governance specialists cannot ship a working system. I do both, for the same client, on the same project.',
+    title: 'Engineering, governance, and web, one hand',
+    body: 'I engineer AI systems, lead the governance that keeps them accountable, and build the websites that carry a practice online. Rare to find all three in one person, for the same client, on the same project.',
   },
   {
     num: '02',
@@ -30,14 +30,14 @@ const VALUES = [
 const WHO_I_WORK_WITH = [
   { fit: true,  label: 'Founders and practitioners who want serious AI capability without enterprise overhead' },
   { fit: true,  label: "Dutch and EU SMEs and ZZP'ers, especially care practices, consultancies, and coaches" },
-  { fit: true,  label: 'Small teams up to about twenty people, building something they care about' },
+  { fit: true,  label: 'Small founder-led teams building something they care about' },
   { fit: true,  label: 'Vendors scaling into regulated procurement (health, finance, public sector)' },
   { fit: false, label: 'Clients whose primary constraint is price or a very urgent turnaround. The depth I bring takes time and a small caseload.' },
   { fit: false, label: 'Projects that genuinely need a team of engineers on-site day to day, rather than one specialist working closely with you.' },
 ]
 
 const CREDENTIALS = [
-  { label: 'BSc (Hons) Computer Science', detail: 'Open Institute of Technology (OPIT), Malta' },
+  { label: 'BSc (Hons) Computer Science', detail: 'Open Institute of Technology (OPIT), Malta · 2024–2026' },
   { label: 'Google Cybersecurity Professional Certificate', detail: 'Coursera' },
   { label: 'IBM AI Engineering', detail: 'Professional certificate' },
   { label: 'AWS Academy Graduate', detail: 'Cloud Foundations' },
@@ -90,9 +90,10 @@ export default function AboutPage() {
             color: T.softText, maxWidth: '780px',
             letterSpacing: '-0.005em',
           }}>
-            I engineer AI systems and lead the governance that keeps them accountable.
-            That combination, engineering plus governance in one person, is the core of
-            what I offer, and that's rare in the market.
+            I engineer AI systems, lead the governance that keeps them
+            accountable, and build the websites that carry a practice
+            online. That combination, three deep service lines in one
+            person, is rare in this market.
           </p>
         </Reveal>
       </section>
@@ -127,7 +128,7 @@ export default function AboutPage() {
                 fontFamily: FONTS.ui, fontSize: '17px', lineHeight: 1.7,
                 color: T.softText, marginBottom: '18px',
               }}>
-                The trade is deliberate: small footprint, high trust, no outsourcing,
+                The trade is deliberate: small footprint, deep involvement, no outsourcing,
                 no hidden hand-offs. My work sits at the point where an AI system stops
                 being a demo and starts being something a business actually depends on.
               </p>
@@ -248,8 +249,8 @@ export default function AboutPage() {
                 fontFamily: FONTS.ui, fontSize: '17px', lineHeight: 1.7,
                 color: T.softText, marginBottom: '18px',
               }}>
-                In early 2026, I led AI Development on the AVC platform. A nine-agent
-                content production system, delivered on time.
+                In early 2026, I led AI development on the AVC platform, a
+                nine-agent content production system for enterprise clients.
               </p>
               <p style={{
                 fontFamily: FONTS.ui, fontSize: '17px', lineHeight: 1.7,
