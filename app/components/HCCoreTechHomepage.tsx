@@ -2636,9 +2636,8 @@ function Footer() {
               { label: 'Reviews',       href: '/#reviews' },
               { label: 'How I work',    href: '/#how-i-work' },
             ]},
-            { title: 'Contact',  items: [
-              { label: 'Contact page',       href: '/contact' },
-              { label: 'Request a quote',    href: '/#quote' },
+            { title: 'Get in touch',  items: [
+              { label: 'Contact',            href: '/contact' },
               { label: 'hc@hccoretech.com',  href: 'mailto:hc@hccoretech.com' },
               { label: 'LinkedIn',           href: 'https://www.linkedin.com/in/hilary-azimoh-a32b81231/' },
             ]},

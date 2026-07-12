@@ -368,31 +368,19 @@ function Footer() {
               fontFamily: FONTS.mono, fontSize: '11px',
               letterSpacing: '0.18em', color: T.gold,
               textTransform: 'uppercase', marginBottom: '16px',
-            }}>Contact</div>
+            }}>Get in touch</div>
             <Link href="/contact" style={{
               display: 'block', fontFamily: FONTS.ui, fontSize: '13px',
               color: T.softText, padding: '5px 0', textDecoration: 'none',
-            }}>Contact page</Link>
+            }}>Contact</Link>
             <a href="mailto:hc@hccoretech.com" style={{
               display: 'block', fontFamily: FONTS.ui, fontSize: '13px',
               color: T.softText, padding: '5px 0', textDecoration: 'none',
             }}>hc@hccoretech.com</a>
-            <a href={CALENDLY} target="_blank" rel="noopener noreferrer" style={{
-              display: 'block', fontFamily: FONTS.ui, fontSize: '13px',
-              color: T.softText, padding: '5px 0', textDecoration: 'none',
-            }}>Book a call</a>
-            <Link href="/#quote" style={{
-              display: 'block', fontFamily: FONTS.ui, fontSize: '13px',
-              color: T.softText, padding: '5px 0', textDecoration: 'none',
-            }}>Request a quote</Link>
             <a href="https://www.linkedin.com/in/hilary-azimoh-a32b81231/" target="_blank" rel="noopener noreferrer" style={{
               display: 'block', fontFamily: FONTS.ui, fontSize: '13px',
               color: T.softText, padding: '5px 0', textDecoration: 'none',
             }}>LinkedIn</a>
-            <span style={{
-              display: 'block', fontFamily: FONTS.ui, fontSize: '13px',
-              color: T.softText, padding: '5px 0',
-            }}>Netherlands</span>
           </div>
 
           <div>
