@@ -506,7 +506,7 @@ export default function CoreDeskPage() {
             { name: 'Starter',    price: '€250',  unit: '/mo', forWho: 'For when you are just starting to systemize.',           features: ['1 AI agent', 'Governance essentials', '~150 AI actions/month', 'Dutch or English', 'Email support'] },
             { name: 'Basis',      price: '€450',  unit: '/mo', forWho: 'For steady client work with a real admin load.',        features: ['3 AI agents', 'Full governance module', '~600 AI actions/month', 'Multilingual', 'Priority support'] },
             { name: 'Pro',        price: '€950',  unit: '/mo', forWho: 'For growing volume without losing the details.',        features: ['All agents', 'Advanced governance', '~2,000 AI actions/month', 'Voice tuned to your brand', 'Monthly review call'] },
-            { name: 'Enterprise', price: 'Custom', unit: '',   forWho: 'For regulated fields where governance matters.',        features: ['Custom volume', 'Deployed on your own infrastructure', 'Custom agent development', 'SLA', 'Quarterly compliance audit'] },
+            { name: 'Enterprise', price: 'Custom', unit: '',   forWho: 'For regulated fields where governance matters.',        features: ['Custom volume', 'Custom agent development', 'Quarterly compliance audit', 'Custom integrations with your existing tools', 'Priority engineer contact'] },
           ].map((tier, i) => (
             <Reveal key={tier.name} delay={i * 80}>
               <div style={{
@@ -577,9 +577,9 @@ export default function CoreDeskPage() {
           }}>
             Founding pricing available for select clients who join in the current
             window. Annual billing available with a discount for those who prefer
-            it. For enterprise engagements, CoreDesk can be deployed on your own
-            servers as a dedicated setup, so your data stays fully under your
-            control.
+            it. If you need a fully bespoke AI system deployed on your own
+            infrastructure, that lives as a separate AI Engineering engagement,
+            happy to discuss.
           </p>
         </Reveal>
       </section>
