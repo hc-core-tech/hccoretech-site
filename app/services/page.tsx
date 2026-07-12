@@ -108,13 +108,13 @@ const SERVICES = [
     title: 'CoreDesk Platform',
     tagline: 'The AI workspace, built around a real practitioner.',
     whoFor: [
-      "A quick tour, because 'AI-first back office' means nothing until you see what one actually does for you.",
+      "A quick tour, because 'AI back office' is just words until you see what one actually does for you.",
       "You log in, and CoreDesk has already done most of the work:",
       "The invoice for last week's engagement is drafted and waiting for your approval. The prep notes for your ten o'clock meeting are ready in the meeting card. The receipt from Wednesday has been matched against the right invoice.",
       "You review, adjust if you want to, and approve. The agent takes it from there.",
       "Nothing has slipped, because CoreDesk did not wait for anything to slip.",
       "Your job is oversight and judgment. The workspace handles the 80 percent that does not need you, and hands you the 20 percent that does.",
-      "Every module was built against a real practitioner's daily work before I generalised it for anyone else.",
+      "Every module was built with a real founder's daily work in mind before I opened it to anyone else.",
     ],
     deliverables: [
       'Invoicing, proposals, and receipts, with support for multiple business entities and multiple currencies',
@@ -125,14 +125,14 @@ const SERVICES = [
       'An onboarding session and direct engineer access for the life of your subscription',
     ],
     timeline: 'Onboarding 1 to 2 weeks. Ongoing subscription.',
-    investment: 'Starter €250/mo, Basis €450/mo, Pro €950/mo. Enterprise pricing on request. Founding pricing available for select customers.',
+    investment: 'Starter €250/mo, Basis €450/mo, Pro €950/mo. Enterprise pricing on request. Founding pricing available for select clients.',
     flow: [
       { step: 'Discovery call', body: 'We meet on a mutual-fit call to understand your practice, your day-to-day, and what you need CoreDesk to hold for you. I am selective about who I take on so every user gets the direct attention the product promises.' },
       { step: 'Setup', body: "I provision your workspace, apply your brand, and bring in the invoices, clients, and receipts you already have from wherever they live now, so you are not starting with an empty workspace." },
       { step: 'Onboarding', body: 'We meet for a working session that walks you through the daily flow: invoicing, meetings, the CRM, and how the agents behave. The session is recorded so you can revisit it any time.' },
-      { step: 'Ongoing', body: 'You have direct engineer access for questions, feature requests, and iterations. Not a ticket queue routing you to a stranger. You reach me, and I handle it.' },
+      { step: 'Ongoing', body: 'You have direct engineer access for questions, feature requests, and iterations. Not a ticket queue routing you to a stranger. A direct line to me, no middleman.' },
     ],
-    example: 'A recent example: JS Zorg en Advies | Seraph Zorg. Founding customer since May 2026, running their full back office on CoreDesk every day.',
+    example: 'A recent example: JS Zorg en Advies | Seraph Zorg. Founding client since May 2026, running their full back office on CoreDesk every day.',
   },
   {
     num: '05',

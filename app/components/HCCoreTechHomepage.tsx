@@ -992,17 +992,16 @@ function CoreDeskCallout() {
   const tasksVal    = useAnimateOnView(128,  mockupVisible, 1500);
 
   const forItems = [
-    'Independent practitioners',
-    "ZZP'ers (Dutch sole prop.)",
-    'Small teams, up to ~20 people',
-    'Hands-on founders running client-facing businesses',
-    'Care practices, consultancies, coaches, creatives',
+    'Independent practitioners with a small book of clients',
+    "ZZP'ers (Dutch sole prop.) tired of spreadsheets",
+    'Founder-led practices with a small team supporting the work',
+    'Care practices, consultancies, coaches, boutique agencies',
   ];
   const notForItems = [
-    'Large enterprises',
-    'Highly regulated industries (healthcare, finance, gov) needing bespoke compliance builds',
-    'Self-service without engineer contact',
-    'Teams that need managed-service SLAs',
+    'Large enterprises with dedicated procurement + IT teams',
+    'Setups needing a bespoke compliance system built from scratch',
+    'Full self-service without engineer contact',
+    'Teams needing managed-service SLAs',
   ];
 
   return (
@@ -1335,7 +1334,7 @@ function CoreDeskCallout() {
                       fontSize: '11px', lineHeight: 1.5,
                       color: T.gold,
                     }}>
-                      Advisory, AI engineering, and AI governance engagements are available for these categories as separate projects.
+                      Web development, AI engineering, AI governance, and advisory engagements are available for these categories as separate projects.
                     </div>
                   </div>
                 </div>
