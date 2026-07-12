@@ -12,7 +12,7 @@ const CAPABILITIES = [
   {
     Icon: FileText,
     title: 'Invoicing, proposals, receipts',
-    body: 'Multi-issuer invoicing with three profiles (HCT, CoreDesk, Personal), each with distinct branding and numbering. Multi-currency with live exchange rates. Proposal PDFs rendered via Playwright, always in your brand. Receipts wired to invoices with a prompted flow so nothing is auto-generated.',
+    body: 'Invoices, proposals, and receipts, all sent from one workspace, all in your brand. Multi-currency with live exchange rates. Multi-issuer support if you operate under more than one entity. Receipts prompted from your side, never auto-generated behind your back.',
   },
   {
     Icon: Users,
@@ -57,8 +57,8 @@ const NOT_FOR_LIST = [
 ]
 
 const ONBOARDING = [
-  { step: 'Discovery call', body: 'A 30-minute call to make sure CoreDesk fits your practice. Not everyone is a fit, and that is deliberate.' },
-  { step: 'Setup',          body: 'I provision your workspace, set your brand, and migrate the first month of your data. Ready before onboarding.' },
+  { step: 'Discovery call', body: 'A 30-minute call to see if CoreDesk is right for your practice. I would rather we find that out together than either of us guess.' },
+  { step: 'Setup',          body: 'Your workspace is set up in your brand, configured and ready to receive your work. If you want your existing invoices, receipts, or clients migrated in from wherever they live now, we can make it happen.' },
   { step: 'Onboarding',     body: 'A working session (recorded) walking through daily flow: invoicing, meetings, CRM, agents. You leave using the platform.' },
   { step: 'Ongoing',        body: 'Direct engineer contact for questions, feature requests, and iterations. Not a ticket queue routing you to a stranger. You reach me, and I handle it.' },
 ]
@@ -108,9 +108,9 @@ export default function CoreDeskPage() {
           }}>
             <span style={{ fontStyle: 'italic', color: T.gold, fontWeight: 500 }}>CoreDesk.</span>
             <br />
-            The AI back office for
+            A back office that runs itself,
             <br />
-            independent practitioners.
+            for founders who still do the work.
           </h1>
         </Reveal>
 
@@ -120,8 +120,8 @@ export default function CoreDeskPage() {
             color: T.softText, maxWidth: '680px',
           }}>
             Invoicing, CRM, meetings, agents, and governance in one workspace.
-            Built around a real practitioner from day one. Every feature shipped
-            because a live customer needed it, not because a roadmap said so.
+            Every feature earned its place by solving a real problem a founder
+            was already having, not because a roadmap said it should exist.
           </p>
         </Reveal>
 
@@ -169,20 +169,26 @@ export default function CoreDeskPage() {
                 fontFamily: FONTS.ui, fontSize: '17px', lineHeight: 1.75,
                 color: T.platinum, marginBottom: '20px',
               }}>
-                CoreDesk is an AI workspace for small businesses. It handles
-                the operational plumbing (invoicing, proposals, receipts, CRM, meetings)
-                while giving you AI agents and a governance dashboard that lets you
+                CoreDesk is an AI workspace for founders who are hands-on in
+                the work of their own business, the ones running client
+                relationships themselves, sending their own invoices, and
+                holding every thread. It handles the daily operational load
+                (invoicing, proposals, receipts, CRM, meetings) while giving
+                you AI agents and a governance dashboard that lets you
                 actually defend how your business uses AI.
               </p>
               <p style={{
                 fontFamily: FONTS.ui, fontSize: '17px', lineHeight: 1.75,
                 color: T.softText,
               }}>
-                It exists because Jiska (founder of JS Zorg en Advies | Seraph Zorg,
-                the founding customer) needed a back office built around how a real
-                practice actually runs, not around how a product manager imagined one
-                would. Every feature you see was shipped against a live practitioner
-                first.
+                CoreDesk began as a tool for assessing AI governance across
+                businesses. Working with Jiska (JS Zorg en Advies | Seraph
+                Zorg, the founding customer) on her workspace made a
+                different gap clear: no back office was built around how a
+                hands-on founder actually runs their day. The platform grew
+                from there. Every workspace since is shaped to the founder
+                using it, because the tools you need depend on how you
+                actually work.
               </p>
             </div>
           </div>
@@ -204,9 +210,9 @@ export default function CoreDeskPage() {
               lineHeight: 1.1, letterSpacing: '-0.015em',
               color: T.platinum, maxWidth: '720px',
             }}>
-              Six things every small business
+              Six things you are already doing.
               <br />
-              <span style={{ fontStyle: 'italic', color: T.gold, fontWeight: 500 }}>needs and none of them siloed.</span>
+              <span style={{ fontStyle: 'italic', color: T.gold, fontWeight: 500 }}>Now in one workspace, all connected.</span>
             </h2>
           </div>
         </Reveal>
@@ -276,10 +282,10 @@ export default function CoreDeskPage() {
           gap: '16px',
         }}>
           {[
-            { Icon: Mail,         name: 'Email Agent',        role: 'Drafts, translates, and triages email. Human-in-the-loop by design. Human always sends.' },
-            { Icon: Receipt,      name: 'Invoice Agent',      role: 'Automates invoice-side workflows in the finance module. Multi-currency, multi-issuer aware.' },
-            { Icon: Sparkles,     name: 'Content Agent',      role: 'Marketing and social drafts in your brand voice. Advisory-only. LinkedIn, Instagram, Facebook.' },
-            { Icon: ShieldAlert,  name: 'Governance Auditor', role: 'Scores your workspace out of 100. Maps to EU AI Act, NIST, ISO 42001, GDPR, OECD AI. Generates policies.' },
+            { Icon: Mail,         name: 'Email Agent',        role: 'Drafts your replies. Translates when a client writes in another language. Sorts what needs your attention. You always click send.' },
+            { Icon: Receipt,      name: 'Invoice Agent',      role: 'Watches the finance side for invoices, receipts, and follow-ups you might have missed. Aware of multiple currencies and multiple issuer identities.' },
+            { Icon: Sparkles,     name: 'Content Agent',      role: 'Drafts LinkedIn, Instagram, and Facebook posts in your voice. You review, edit, and post from your own accounts.' },
+            { Icon: ShieldAlert,  name: 'Governance Auditor', role: 'Scores your AI use out of 100, maps every score to real frameworks (EU AI Act, NIST, ISO 42001, GDPR, OECD AI), and drafts the policies you would otherwise pay a consultant to write.' },
           ].map((a, i) => (
             <Reveal key={a.name} delay={i * 70}>
               <div data-card="true" style={{
@@ -402,6 +408,18 @@ export default function CoreDeskPage() {
                   <span>{it}</span>
                 </div>
               ))}
+              <div style={{
+                marginTop: '18px',
+                paddingTop: '18px',
+                borderTop: `1px solid ${T.hairline}`,
+                fontFamily: FONTS.serif, fontStyle: 'italic',
+                fontSize: '13.5px', lineHeight: 1.6,
+                color: T.gold,
+              }}>
+                Even if CoreDesk isn&apos;t the right fit, my web development,
+                AI engineering, AI governance, and advisory services are
+                available as separate engagements.
+              </div>
             </div>
           </Reveal>
         </div>
@@ -474,7 +492,7 @@ export default function CoreDeskPage() {
               lineHeight: 1.1, letterSpacing: '-0.015em',
               color: T.platinum, maxWidth: '620px',
             }}>
-              Four tiers. Priced in <span style={{ fontStyle: 'italic', color: T.gold }}>plain euros.</span>
+              Four tiers. <span style={{ fontStyle: 'italic', color: T.gold }}>Every price up front.</span>
             </h2>
           </div>
         </Reveal>
@@ -485,10 +503,10 @@ export default function CoreDeskPage() {
           gap: '16px',
         }}>
           {[
-            { name: 'Starter',    price: '€250',  unit: '/mo', features: ['1 AI agent', 'Governance lite', '~150 interactions/mo', 'Dutch or English', 'Email support'] },
-            { name: 'Basis',      price: '€450',  unit: '/mo', features: ['3 AI agents', 'Full governance module', '~600 interactions/mo', 'Multilingual', 'Priority support'] },
-            { name: 'Pro',        price: '€950',  unit: '/mo', features: ['All agents', 'Advanced governance', '~2,000 interactions/mo', 'Brand voice tuning', 'Monthly review call'] },
-            { name: 'Enterprise', price: 'Custom', unit: '',   features: ['Custom volume', 'White-label option', 'Custom agent development', 'SLA', 'Quarterly compliance audit'] },
+            { name: 'Starter',    price: '€250',  unit: '/mo', forWho: 'For when you are just starting to systemize.',           features: ['1 AI agent', 'Governance essentials', '~150 interactions/mo', 'Dutch or English', 'Email support'] },
+            { name: 'Basis',      price: '€450',  unit: '/mo', forWho: 'For steady client work with a real admin load.',        features: ['3 AI agents', 'Full governance module', '~600 interactions/mo', 'Multilingual', 'Priority support'] },
+            { name: 'Pro',        price: '€950',  unit: '/mo', forWho: 'For growing volume without losing the details.',        features: ['All agents', 'Advanced governance', '~2,000 interactions/mo', 'Voice tuned to your brand', 'Monthly review call'] },
+            { name: 'Enterprise', price: 'Custom', unit: '',   forWho: 'For regulated fields where governance matters.',        features: ['Custom volume', 'White-label option', 'Custom agent development', 'SLA', 'Quarterly compliance audit'] },
           ].map((tier, i) => (
             <Reveal key={tier.name} delay={i * 80}>
               <div style={{
@@ -526,6 +544,11 @@ export default function CoreDeskPage() {
                     marginLeft: '4px',
                   }}>{tier.unit}</span>
                 </div>
+                <div style={{
+                  fontFamily: FONTS.ui, fontSize: '12.5px', lineHeight: 1.5,
+                  color: T.softText, fontStyle: 'italic',
+                  marginTop: '10px', marginBottom: '4px',
+                }}>{tier.forWho}</div>
                 <div style={{
                   width: '30px', height: '1px', background: T.gold,
                   margin: '16px 0 14px',
