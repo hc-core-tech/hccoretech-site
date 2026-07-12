@@ -12,7 +12,7 @@ const CAPABILITIES = [
   {
     Icon: FileText,
     title: 'Invoicing, proposals, receipts',
-    body: 'Invoices, proposals, and receipts, all sent from one workspace, all in your brand. Multi-currency with live exchange rates. Multi-issuer support if you operate under more than one entity. Receipts prompted from your side, never auto-generated behind your back.',
+    body: 'Invoices, proposals, and receipts, all sent from one workspace, all in your brand. Send invoices in any currency, with live exchange rates tracked for your records. Multi-issuer support if you operate under more than one entity. Receipts prompted from your side, never auto-generated behind your back.',
   },
   {
     Icon: Users,
@@ -60,7 +60,7 @@ const ONBOARDING = [
   { step: 'Discovery call', body: 'A 30-minute call to see if CoreDesk is right for your practice. I would rather we find that out together than either of us guess.' },
   { step: 'Setup',          body: 'Your workspace is set up in your brand, configured and ready to receive your work. If you want your existing invoices, receipts, or clients migrated in from wherever they live now, we can make it happen.' },
   { step: 'Onboarding',     body: 'A working session (recorded) walking through daily flow: invoicing, meetings, CRM, agents. You leave using the platform.' },
-  { step: 'Ongoing',        body: 'Direct engineer contact for questions, feature requests, and iterations. Not a ticket queue routing you to a stranger. You reach me, and I handle it.' },
+  { step: 'Ongoing',        body: 'Direct engineer contact for questions, feature requests, and iterations. Not a ticket queue routing you to a stranger. One click reaches me directly.' },
 ]
 
 export default function CoreDeskPage() {
@@ -212,7 +212,7 @@ export default function CoreDeskPage() {
             }}>
               The operational stack your practice runs on.
               <br />
-              <span style={{ fontStyle: 'italic', color: T.gold, fontWeight: 500 }}>Six functions. One workspace. None of them siloed.</span>
+              <span style={{ fontStyle: 'italic', color: T.gold, fontWeight: 500 }}>Six functions. One workspace. All connected.</span>
             </h2>
           </div>
         </Reveal>
@@ -271,7 +271,7 @@ export default function CoreDeskPage() {
               lineHeight: 1.1, letterSpacing: '-0.015em',
               color: T.platinum, maxWidth: '620px',
             }}>
-              Native to the workspace. <span style={{ fontStyle: 'italic', color: T.gold }}>Not stitched on top.</span>
+              Native to the workspace. <span style={{ fontStyle: 'italic', color: T.gold }}>Not an afterthought.</span>
             </h2>
           </div>
         </Reveal>
@@ -576,7 +576,8 @@ export default function CoreDeskPage() {
             color: T.muted, textAlign: 'center' as const,
           }}>
             Founding pricing available for select clients who join in the current
-            window. Custom deployments (your own infrastructure, private tenant)
+            window. Annual billing available with a discount for those who prefer
+            it. Custom deployments (your own infrastructure, private tenant)
             available for enterprise engagements.
           </p>
         </Reveal>
