@@ -15,7 +15,7 @@ import SharedLayout, { T, FONTS, Reveal } from '../components/SharedLayout'
  * lawyer before HC Core Tech reaches its first large enterprise client.
  */
 
-const LAST_UPDATED = '5 July 2026'
+const LAST_UPDATED = '12 July 2026'
 
 export default function LegalPage() {
   return (
@@ -54,9 +54,8 @@ export default function LegalPage() {
             fontFamily: FONTS.ui, fontSize: '16px', lineHeight: 1.7,
             color: T.softText, marginBottom: '32px', maxWidth: '640px',
           }}>
-            Three documents that govern how HC Core Tech works with clients and how
-            we handle data. Written by me directly, not copied from a template. Last
-            updated {LAST_UPDATED}.
+            Three documents that govern how HC Core Tech works with clients and
+            how personal data is handled. Last updated {LAST_UPDATED}.
           </p>
         </Reveal>
 
@@ -76,8 +75,8 @@ export default function LegalPage() {
       {/* Terms of Service */}
       <LegalSection id="terms" title="Terms of Service">
         <Paragraph lead>
-          These Terms of Service govern engagements between HC Core Tech
-          (an independent Dutch practice by Hilary Azimoh) and
+          These Terms of Service govern engagements between HC Core Tech,
+          an independent Dutch practice operated by Hilary Azimoh, and
           clients who commission work through this website, a written scoping
           document, or a signed proposal.
         </Paragraph>
@@ -85,17 +84,17 @@ export default function LegalPage() {
         <SubHead>1. Engagements are contract-based</SubHead>
         <Paragraph>
           Every engagement begins with a written scoping document that
-          defines; the work in scope, the work out of scope, the fixed price
+          defines: the work in scope, the work out of scope, the fixed price
           or hourly rate, the timeline, the milestones, the deliverables, and
-          the payment schedule. Nothing is agreed by chat or verbal
-          understanding. If it is not in the written scope, it is not in the
+          the payment schedule. Nothing is binding until captured in the
+          written scope. If it is not in the written scope, it is not in the
           engagement.
         </Paragraph>
 
         <SubHead>2. Payment</SubHead>
         <Paragraph>
           Payment terms are stated in the scoping document. Standard terms are
-          50 percent upfront (before work begins) and 50 percent on completion,
+          50 percent upfront and 50 percent on completion,
           unless otherwise agreed. Invoices are payable within 14 days of
           issue. Late payment may incur statutory interest as permitted under
           Dutch law (Article 6:119a BW).
@@ -103,6 +102,11 @@ export default function LegalPage() {
         <Paragraph>
           For engagements longer than six weeks, milestone-based invoicing is
           used, with each milestone invoiced on delivery.
+        </Paragraph>
+        <Paragraph>
+          Pricing is in EUR, and payment is accepted in most major currencies
+          through international payment providers. Any currency conversion is
+          handled at prevailing market rates and reflected on the invoice.
         </Paragraph>
 
         <SubHead>3. Intellectual property</SubHead>
@@ -113,13 +117,13 @@ export default function LegalPage() {
           commissioned work once paid for.
         </Paragraph>
         <Paragraph>
-          HC Core Tech may reuse generic techniques, patterns, and skills
-          developed during the engagement in other client work. This does not
-          include client-specific code, data, brand assets, or confidential
-          information.
+          HC Core Tech may reuse non-client-specific techniques, patterns, and
+          know-how developed during the engagement in other client work. This
+          does not include client-specific code, data, brand assets, or
+          confidential information.
         </Paragraph>
         <Paragraph>
-          Third-party components (open source libraries, paid software,
+          Third-party components (open-source libraries, paid software,
           fonts, stock imagery) remain licensed under their respective
           licences. HC Core Tech will disclose all such components in the
           handover documentation.
@@ -131,14 +135,15 @@ export default function LegalPage() {
           be confidential, will be treated as such indefinitely. HC Core Tech
           will not disclose, publish, or reuse confidential client information
           outside of the engagement. A mutual non-disclosure agreement is
-          available on request.
+          available on request, and HC Core Tech is open to signing the
+          client&apos;s own NDA where the terms are reasonable and mutual.
         </Paragraph>
 
         <SubHead>5. Warranties and limitation of liability</SubHead>
         <Paragraph>
           HC Core Tech warrants that work will be performed with professional
           competence and reasonable care. HC Core Tech makes no other
-          warranties, express or implied, including warranties of
+          warranties, express or implied. This includes any warranty of
           merchantability or fitness for a particular purpose beyond what is
           specified in the scoping document.
         </Paragraph>
@@ -158,15 +163,29 @@ export default function LegalPage() {
           documentation delivered before termination remain the client&apos;s
           property.
         </Paragraph>
+        <Paragraph>
+          If the client is unresponsive or fails to provide inputs required
+          to proceed for more than 30 consecutive days, HC Core Tech reserves
+          the right to invoice for work completed and pause the engagement
+          until inputs are received.
+        </Paragraph>
 
         <SubHead>7. Handover and post-engagement</SubHead>
         <Paragraph>
           On completion of an engagement, HC Core Tech provides a written
           handover document listing all deliverables, credentials, code
-          repositories, and any third-party services used. HC Core Tech
-          provides one round of post-launch clarifications at no charge
-          within 30 days of completion. Ongoing support is available under a
-          separately quoted retainer.
+          repositories, and any third-party services used. Custom builds
+          ship to the client&apos;s own infrastructure, credentials are
+          registered in the client&apos;s name, and repositories live in the
+          client&apos;s own version control account, so any competent
+          engineer can pick up the codebase and continue the work without
+          missing a beat.
+        </Paragraph>
+        <Paragraph>
+          HC Core Tech provides one round of post-launch clarifications (up
+          to two hours of consultation) at no charge within 30 days of
+          completion. Ongoing support is available under a separately quoted
+          retainer.
         </Paragraph>
 
         <SubHead>8. Governing law and jurisdiction</SubHead>
@@ -179,10 +198,10 @@ export default function LegalPage() {
 
         <SubHead>9. Changes to these Terms</SubHead>
         <Paragraph>
-          These terms may be updated from time to time and will be posted on
+          These Terms may be updated from time to time and will be posted on
           this page with a last updated date. Changes do not apply
           retrospectively to engagements already in progress under an executed
-          scoping contract.
+          scoping document.
         </Paragraph>
       </LegalSection>
 
@@ -190,10 +209,22 @@ export default function LegalPage() {
       <LegalSection id="privacy" title="Privacy Policy">
         <Paragraph lead>
           HC Core Tech takes data protection seriously. This policy explains
-          what personal data we collect, why, how we use it, how long we keep
-          it, and your rights under the General Data Protection Regulation
-          (GDPR).
+          what personal data is collected, why, how it is used, how long it
+          is kept, and the rights of the individual under the General Data
+          Protection Regulation (GDPR).
         </Paragraph>
+        <p style={{
+          fontFamily: FONTS.serif, fontStyle: 'italic',
+          fontSize: '15px', lineHeight: 1.65,
+          color: T.softText, letterSpacing: '-0.005em',
+          marginBottom: '32px',
+          paddingLeft: '16px',
+          borderLeft: `2px solid ${T.goldDeep}66`,
+        }}>
+          This policy applies to hccoretech.com and to enquiries and
+          engagements initiated through this site. The CoreDesk platform
+          has a separate privacy policy at hccoredesk.com.
+        </p>
 
         <SubHead>1. Who is responsible</SubHead>
         <Paragraph>
@@ -203,83 +234,84 @@ export default function LegalPage() {
           email <ExternalLink href="mailto:hc@hccoretech.com">hc@hccoretech.com</ExternalLink>.
         </Paragraph>
 
-        <SubHead>2. What we collect on the website</SubHead>
+        <SubHead>2. What is collected on the website</SubHead>
         <Paragraph>
-          When you submit the quote form on this website, we collect the
-          information you provide: name, email address, company (optional),
-          services requested, budget, timeline, and project brief. That data
-          is used only to respond to your inquiry.
+          When you submit the enquiry form on this website, HC Core Tech
+          collects the information you provide. This typically includes name,
+          email address, company (optional), services requested, budget,
+          timeline, and project brief. This data is used only to respond to
+          your enquiry.
         </Paragraph>
         <Paragraph>
-          When you visit this website, our hosting provider (Vercel) collects
-          minimal technical logs (IP address, browser type, referring page).
-          These are used to prevent abuse and are retained for a maximum of
-          30 days.
+          When you visit this website, the hosting provider collects minimal
+          technical logs (IP address, browser type, referring page). These
+          are used to prevent abuse and are retained for a maximum of 30 days.
         </Paragraph>
         <Paragraph>
-          We use Vercel Analytics to understand aggregate website traffic (page
-          views, top pages, referring sources, country-level location). Vercel
-          Analytics is <strong>cookieless</strong> and does not track
-          individual visitors across sessions. No personal data is collected
-          through analytics.
+          HC Core Tech uses cookieless analytics to understand aggregate
+          website traffic (page views, top pages, referring sources,
+          country-level location). No personal data is collected through
+          analytics, and no individual visitor is tracked across sessions.
         </Paragraph>
         <Paragraph>
-          <strong>We do not use Google Analytics, Facebook Pixel, LinkedIn
-          Insight Tag, or any other tracking service that would send visitor
-          data outside the EU.</strong> We do not use tracking cookies. You do
-          not need to give cookie consent because we are not doing anything
-          that requires it.
+          <strong>HC Core Tech does not use Google Analytics, Facebook Pixel,
+          LinkedIn Insight Tag, or any other tracking service that would send
+          visitor data outside the EU.</strong> Tracking cookies are not
+          used. No cookie consent is required because nothing is done that
+          would require it.
         </Paragraph>
 
-        <SubHead>3. What we collect during engagements</SubHead>
+        <SubHead>3. What is collected during engagements</SubHead>
         <Paragraph>
-          During a client engagement, we may process personal data provided
-          by the client. This may include: contact information for the
-          client&apos;s team, credentials for shared services, business
+          During a client engagement, HC Core Tech may process personal data
+          provided by the client. This may include contact information for
+          the client&apos;s team, credentials for shared services, business
           information necessary to deliver the work, and any data the client
-          shares with us for processing (which is governed by a separate Data
+          shares for processing (which is governed by a separate Data
           Processing Agreement, see below).
         </Paragraph>
 
         <SubHead>4. Legal basis</SubHead>
         <Paragraph>
-          Under GDPR Article 6, we process personal data on the following legal bases:
+          Under GDPR Article 6, personal data is processed on the following
+          legal bases:
         </Paragraph>
         <BulletList items={[
           'Contract performance (Article 6(1)(b)) for all engagement-related processing',
-          'Legitimate interest (Article 6(1)(f)) for quote form submissions, technical logs, and cookieless analytics',
+          'Legitimate interest (Article 6(1)(f)) for enquiry form submissions, technical logs, and cookieless analytics',
           'Legal obligation (Article 6(1)(c)) for retention required under Dutch tax law',
         ]} />
 
-        <SubHead>5. Who we share data with</SubHead>
+        <SubHead>5. Who data is shared with</SubHead>
         <Paragraph>
-          We use the following processors to operate this website and respond
-          to inquiries:
+          HC Core Tech uses the following processors to operate this website
+          and respond to enquiries:
         </Paragraph>
         <BulletList items={[
-          'Vercel (hosting and analytics): EU region where configurable',
-          'Resend (email delivery for quote form responses): EU region (Ireland)',
-          'Zoho Mail (for our email inbox): EU region',
+          'Vercel (hosting and cookieless analytics): EU region where configurable',
+          'Resend (transactional email delivery for enquiry form responses): EU region (Ireland)',
+          'Zoho Mail (operational email inbox): EU region',
         ]} />
         <Paragraph>
-          We do not sell, rent, or share personal data with third parties for
-          marketing purposes.
+          HC Core Tech does not sell, rent, or share personal data with third
+          parties for marketing purposes.
         </Paragraph>
 
-        <SubHead>6. How long we keep data</SubHead>
+        <SubHead>6. How long data is kept</SubHead>
         <BulletList items={[
-          'Quote form submissions: 24 months, then deleted unless we have an active engagement with you',
-          'Engagement records (contracts, invoices, correspondence): 7 years, as required by Dutch tax law (Article 52 AWR)',
+          'Enquiry form submissions: 24 months from receipt, then deleted unless an active engagement follows',
+          'Contracts and invoices: 7 years, as required by Dutch tax law (Article 52 AWR)',
+          'Engagement correspondence not tax-relevant: 24 months after engagement completion',
           'Website server logs: 30 days maximum',
-          'Analytics data: retained by Vercel per their policy, no personal identifiers',
+          'Analytics data: retained by the analytics provider per their policy, with no personal identifiers',
         ]} />
 
         <SubHead>7. Your rights</SubHead>
         <Paragraph>Under GDPR, you have the right to:</Paragraph>
         <BulletList items={[
-          'Access your personal data we hold',
+          'Access the personal data held about you',
           'Correct inaccurate data',
-          'Request deletion (subject to our legal retention obligations)',
+          'Request deletion, subject to legal retention obligations',
           'Restrict processing',
           'Data portability',
           'Object to processing based on legitimate interest',
@@ -288,12 +320,12 @@ export default function LegalPage() {
         <Paragraph>
           To exercise any of these rights, email
           {' '}<ExternalLink href="mailto:hc@hccoretech.com">hc@hccoretech.com</ExternalLink>.
-          {' '}We respond within 30 days.
+          {' '}HC Core Tech responds within 30 days.
         </Paragraph>
         <Paragraph>
           If you believe your data has been mishandled, you have the right to
-          lodge a complaint with the Dutch Data Protection Authority
-          (Autoriteit Persoonsgegevens):
+          lodge a complaint with the Autoriteit Persoonsgegevens (Dutch Data
+          Protection Authority):
           {' '}<ExternalLink href="https://autoriteitpersoonsgegevens.nl">autoriteitpersoonsgegevens.nl</ExternalLink>.
         </Paragraph>
 
@@ -301,15 +333,15 @@ export default function LegalPage() {
         <Paragraph>
           All processors listed above are configured to process data within
           the European Economic Area where possible. Where a processor
-          operates from a third country, we rely on Standard Contractual
-          Clauses (SCCs) approved by the European Commission.
+          operates from a third country, HC Core Tech relies on Standard
+          Contractual Clauses (SCCs) approved by the European Commission.
         </Paragraph>
 
         <SubHead>9. Changes to this policy</SubHead>
         <Paragraph>
-          We may update this policy. Material changes will be communicated to
-          active clients by email. The updated policy will be posted on this
-          page with a new &quot;Last updated&quot; date.
+          This policy may be updated from time to time. Material changes will
+          be communicated to active clients by email. The updated policy will
+          be posted on this page with a new last updated date.
         </Paragraph>
       </LegalSection>
 
@@ -325,7 +357,7 @@ export default function LegalPage() {
             fontFamily: FONTS.mono, fontSize: '10px',
             letterSpacing: '0.22em', color: T.gold,
             textTransform: 'uppercase', marginBottom: '10px',
-          }}>Draft . pending legal review</div>
+          }}>Draft · pending legal review</div>
           <div style={{
             fontFamily: FONTS.ui, fontSize: '14px', lineHeight: 1.7,
             color: T.softText,
@@ -336,7 +368,7 @@ export default function LegalPage() {
             client, it should be reviewed and approved by a Dutch privacy
             lawyer. Contact
             {' '}<ExternalLink href="mailto:hc@hccoretech.com">hc@hccoretech.com</ExternalLink>
-            {' '}to request a bespoke DPA for your engagement.
+            {' '}to request a bespoke DPA for a specific engagement.
           </div>
         </div>
 
@@ -358,7 +390,7 @@ export default function LegalPage() {
 
         <SubHead>2. Nature and purpose of processing</SubHead>
         <Paragraph>
-          Processing includes: storage, access, transformation, deletion, and
+          Processing includes storage, access, transformation, deletion, and
           any other operations necessary to deliver the agreed services.
           Processing purposes are limited to those necessary to fulfil the
           engagement.
@@ -367,15 +399,14 @@ export default function LegalPage() {
         <SubHead>3. Categories of data subjects and personal data</SubHead>
         <Paragraph>
           The specific categories are defined per engagement in the scoping
-          document. Common categories include: the Controller&apos;s
+          document. Common categories include the Controller&apos;s
           employees, the Controller&apos;s clients or customers, and any
-          other individuals whose data the Controller shares with us for
-          processing.
+          other individuals whose data the Controller shares for processing.
         </Paragraph>
 
         <SubHead>4. Controller obligations</SubHead>
         <Paragraph>
-          The Controller warrants that: personal data shared with HC Core
+          The Controller warrants that personal data shared with HC Core
           Tech has been collected lawfully, with the necessary legal basis
           under GDPR Article 6, and that the Controller has provided all
           required notices to data subjects. The Controller is responsible
@@ -386,7 +417,7 @@ export default function LegalPage() {
         <Paragraph>HC Core Tech will:</Paragraph>
         <BulletList items={[
           'Process personal data only on documented instructions from the Controller',
-          'Ensure persons authorised to process the data have committed themselves to confidentiality',
+          'Ensure persons authorised to process the data (currently only the founder) have committed themselves to confidentiality in writing',
           'Implement appropriate technical and organisational measures to secure the data (see Section 7)',
           'Assist the Controller in responding to data subject requests',
           'Notify the Controller without undue delay upon becoming aware of a personal data breach',
@@ -399,11 +430,12 @@ export default function LegalPage() {
           engagement. Current standing sub-processors are:
         </Paragraph>
         <BulletList items={[
-          'Vercel Inc. (hosting for HC Core Tech infrastructure)',
+          'Vercel Inc. (hosting for HC Core Tech website infrastructure)',
           'Resend (transactional email)',
-          'Hetzner Online GmbH (hosting for CoreDesk platform, if used)',
-          'Supabase Inc. (database for CoreDesk platform, if used)',
-          'Anthropic PBC and/or OpenAI (LLM providers, if the engagement uses AI)',
+          'Hetzner Online GmbH (hosting for CoreDesk platform, where the engagement uses CoreDesk)',
+          'Supabase Inc. (database for CoreDesk platform, where the engagement uses CoreDesk)',
+          'Anthropic PBC and/or OpenAI (LLM providers, where the engagement uses AI; the specific provider is disclosed in the scoping document)',
+          'Additional infrastructure (any Azure, ChromaDB, or similar deployment used to deliver a specific engagement, disclosed in the scoping document)',
         ]} />
         <Paragraph>
           Additional or replacement sub-processors will be communicated to
@@ -429,11 +461,13 @@ export default function LegalPage() {
         <SubHead>8. Personal data breaches</SubHead>
         <Paragraph>
           HC Core Tech will notify the Controller in writing without undue
-          delay (and in any event within 72 hours) upon becoming aware of a
-          personal data breach involving Controller data. Notification will
-          include the nature of the breach, categories and approximate number
-          of data subjects affected, likely consequences, and measures taken
-          or proposed.
+          delay, and in any event within 24 hours of becoming aware of a
+          personal data breach involving Controller data. This is designed
+          to give the Controller sufficient time to fulfil its own 72-hour
+          notification obligation under GDPR Article 33. Notification will
+          include the nature of the breach, categories and approximate
+          number of data subjects affected, likely consequences, and
+          measures taken or proposed.
         </Paragraph>
 
         <SubHead>9. International transfers</SubHead>
@@ -448,7 +482,7 @@ export default function LegalPage() {
         <Paragraph>
           On written request with reasonable notice (typically 30 days), HC
           Core Tech will provide the Controller with information reasonably
-          necessary to demonstrate compliance with this DPA. On-website audits
+          necessary to demonstrate compliance with this DPA. On-site audits
           are available for engagements exceeding a value threshold agreed in
           the scoping document.
         </Paragraph>
