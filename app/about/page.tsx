@@ -7,13 +7,13 @@ import SharedLayout, { T, FONTS, CALENDLY, Reveal } from '../components/SharedLa
 const VALUES = [
   {
     num: '01',
-    title: 'Engineering, governance, and web, one hand',
-    body: 'I engineer AI systems, lead the governance that keeps them accountable, and build the websites that carry a practice online. Rare to find all three in one person, for the same client, on the same project.',
+    title: 'AI engineering, governance, and web',
+    body: "I engineer AI systems, lead the governance that keeps them accountable, and build the websites where the brand meets the client. Most practices split those three across three vendors. I don't. Which means one accountable person from first brief to production.",
   },
   {
     num: '02',
-    title: 'Direct engineer access, always',
-    body: 'You talk to the engineer building the work. Not an account manager. Not a sales layer. Not a project coordinator. Slack, email, scheduled review calls, whichever works. The person answering your questions is the person writing the code and signing off the governance report.',
+    title: 'You get the engineer',
+    body: 'Every question you ask goes to the person doing the work. No triage, no relay, no waiting for someone to check with the technical team. Slack, email, or a scheduled review call, whichever fits how you already work. It keeps decisions fast and the details accurate.',
   },
   {
     num: '03',
@@ -28,12 +28,14 @@ const VALUES = [
 ]
 
 const WHO_I_WORK_WITH = [
-  { fit: true,  label: 'Founders and practitioners who want serious AI capability without enterprise overhead' },
-  { fit: true,  label: "Dutch and EU SMEs and ZZP'ers, especially care practices, consultancies, and coaches" },
-  { fit: true,  label: 'Small founder-led teams building something they care about' },
-  { fit: true,  label: 'Vendors scaling into regulated procurement (health, finance, public sector)' },
-  { fit: false, label: 'Clients whose primary constraint is price or a very urgent turnaround. The depth I bring takes time and a small caseload.' },
-  { fit: false, label: 'Projects that genuinely need a team of engineers on-site day to day, rather than one specialist working closely with you.' },
+  { fit: true,  label: 'Hands-on founders and independent practitioners' },
+  { fit: true,  label: 'Dutch and EU SMEs with real operational depth' },
+  { fit: true,  label: 'Small founder-led teams shipping something they care about' },
+  { fit: true,  label: 'AI vendors preparing for regulated procurement in health, finance, or public sector' },
+  { fit: true,  label: 'Care practices, boutique consultancies, coaches, and creatives ready for real infrastructure' },
+  { fit: false, label: 'Engagements where the priority is lowest price or fastest turnaround' },
+  { fit: false, label: 'Projects that need a full engineering team on-site day to day' },
+  { fit: false, label: 'Setups requiring managed-service SLAs or vendor-style procurement' },
 ]
 
 const CREDENTIALS = [
@@ -119,28 +121,31 @@ export default function AboutPage() {
                 fontFamily: FONTS.ui, fontSize: '17px', lineHeight: 1.7,
                 color: T.platinum, marginBottom: '18px',
               }}>
-                I run HC Core Tech as a one-person practice covering AI engineering,
-                web development, and governance. Every line of code, every website, every
-                client conversation, every invoice, every governance assessment goes
-                through me.
+                I run HC Core Tech as a one-person practice covering AI
+                engineering, web development, and AI governance. Every line
+                of code, every website, every client conversation, every
+                invoice, every governance assessment goes through me.
               </p>
               <p style={{
                 fontFamily: FONTS.ui, fontSize: '17px', lineHeight: 1.7,
                 color: T.softText, marginBottom: '18px',
               }}>
-                The trade is deliberate: small footprint, deep involvement, no outsourcing,
-                no hidden hand-offs. My work sits at the point where an AI system stops
-                being a demo and starts being something a business actually depends on.
+                One person. No outsourcing, no hidden hand-offs. Whether the
+                engagement is an AI system, a full website, or a governance
+                programme, the work stays with me from first brief to
+                production.
               </p>
               <p style={{
                 fontFamily: FONTS.ui, fontSize: '17px', lineHeight: 1.7,
                 color: T.softText,
               }}>
-                Agentic backends in Python and FastAPI. Next.js and TypeScript
-                frontends. RAG and multi-agent orchestration. Full production websites,
-                brand systems, and web builds. And the paperwork underneath, the AI
-                registers, audit trails, framework mapping, and human-in-the-loop review
-                layers that hold up under real regulatory scrutiny.
+                On the technical side: agentic backends in Python and
+                FastAPI, Next.js and TypeScript frontends, RAG and
+                multi-agent orchestration, full production websites and brand
+                systems, and the AI governance paperwork underneath.
+                Registers, audit trails, framework mapping, and
+                human-in-the-loop review layers, built to hold up under real
+                regulatory scrutiny.
               </p>
             </div>
           </div>
@@ -168,30 +173,35 @@ export default function AboutPage() {
                 fontFamily: FONTS.ui, fontSize: '17px', lineHeight: 1.75,
                 color: T.platinum, marginBottom: '18px',
               }}>
-                I grew up being told I could do anything I set my mind to. My first
-                pull was engineering, but my family thought medicine was the wiser
-                path for a girl. I knew I could thrive in any field I chose, so I
-                went to Ukraine to study medicine. And I thrived. If the war
-                hadn&apos;t happened, I&apos;d probably be a doctor today.
+                I grew up being told I could do anything I set my mind to.
+                My first pull was engineering, but given the circumstances,
+                medicine seemed the wiser choice at the time. I knew I could
+                thrive in any field I chose, so I went to Ukraine to study
+                medicine, and I thrived. If the war hadn&apos;t happened,
+                I&apos;d probably be a doctor today.
               </p>
               <p style={{
                 fontFamily: FONTS.ui, fontSize: '17px', lineHeight: 1.75,
                 color: T.softText, marginBottom: '18px',
               }}>
-                I was in my third year when the war started. I fled. I tried to
-                continue medicine in Europe, but the curriculum did not line up.
-                Picking up where I had left off meant starting from the beginning,
-                and the application deadlines had already passed. The next cycle
-                felt too far away to wait for.
+                I was in my third year when the war started, and I had to
+                leave. I tried to continue medicine in Europe, but the
+                curriculum did not line up. Picking up where I had left off
+                meant starting from the beginning, and the application
+                deadlines had already passed. On top of that, the fees were
+                unbelievably high.
               </p>
               <p style={{
                 fontFamily: FONTS.ui, fontSize: '17px', lineHeight: 1.75,
                 color: T.softText, marginBottom: '18px',
               }}>
-                I had always been drawn to programming, and had been working in the
-                field alongside medical school. So I started learning it properly.
-                Took courses. Kept going. Eventually enrolled at the Open Institute
-                of Technology.
+                With all this to weigh, a decision had to be made. How would
+                I proceed? How would I actually get there? It felt like the
+                closed doors would not budge. But programming had always
+                been a pull, and I had been working in it alongside medical
+                school. So I started learning it properly. Took courses.
+                Kept going. Eventually enrolled at the Open Institute of
+                Technology.
               </p>
               <p style={{
                 fontFamily: FONTS.serif, fontStyle: 'italic',
@@ -200,12 +210,23 @@ export default function AboutPage() {
                 paddingLeft: '20px',
                 borderLeft: `2px solid ${T.goldDeep}`,
                 marginTop: '24px',
+                marginBottom: '24px',
               }}>
                 I sometimes think about the doctor I would have been if the war
                 hadn&apos;t happened. But I believe everything happens for a reason.
                 This life, the engineering, HC Core Tech, the way I work now, feels
                 like it was mine to take. Maybe a blessing in disguise. Either way,
                 I don&apos;t regret it.
+              </p>
+              <p style={{
+                fontFamily: FONTS.ui, fontSize: '17px', lineHeight: 1.75,
+                color: T.softText,
+              }}>
+                Since then, my approach has been simple: create a path when
+                there is none. There is always a way. Failure is not a wall,
+                it is a chance to reassess and try again, strategically. If
+                a seat at the table you want is not offered, pull up a
+                chair. And anything worth doing is worth doing well.
               </p>
             </div>
           </div>
@@ -233,42 +254,58 @@ export default function AboutPage() {
                 fontFamily: FONTS.ui, fontSize: '17px', lineHeight: 1.7,
                 color: T.platinum, marginBottom: '18px',
               }}>
-                I trained in AI engineering with a foundation in cybersecurity. Google
-                Cybersecurity, IBM AI Engineering, AWS Cloud Foundations, and a BSc in
-                Computer Science with the Open Institute of Technology (Malta).
+                HC Core Tech is my own practice, running in parallel.
+                CoreDesk, the AI workspace platform I build and operate,
+                sits within it. It is live in production with clients using
+                it today. I run both from the Netherlands and work with
+                clients internationally.
+              </p>
+              <p style={{
+                fontFamily: FONTS.ui, fontSize: '17px', lineHeight: 1.7,
+                color: T.platinum, fontWeight: 600,
+                marginBottom: '14px',
+              }}>
+                Alongside the AI work, I build websites end to end using
+                production WordPress and headless Next.js. That includes
+                brand systems and design tokens, conversion-led writing,
+                SEO setup, and lead-capture automation.
+              </p>
+              <p style={{
+                fontFamily: FONTS.serif, fontStyle: 'italic',
+                fontSize: '16px', lineHeight: 1.65,
+                color: T.softText, marginBottom: '24px',
+                letterSpacing: '-0.005em',
+              }}>
+                Recent web work includes Seraph Zorg, Jiska&apos;s portfolio,
+                and the two-site Magnifying Children&apos;s Horizons build in
+                Canada.
               </p>
               <p style={{
                 fontFamily: FONTS.ui, fontSize: '17px', lineHeight: 1.7,
                 color: T.softText, marginBottom: '18px',
               }}>
-                Before HC Core Tech, I spent a year as Data and AI Governance Manager
-                with Voice4AI Governance, building risk assessment frameworks aligned
-                to EU AI Act, NIST AI RMF, and ISO/IEC 42001.
+                I trained in AI engineering with a foundation in
+                cybersecurity, across Google Cybersecurity, IBM AI
+                Engineering, AWS Cloud Foundations, and a BSc in Computer
+                Science with the Open Institute of Technology in Malta.
               </p>
               <p style={{
                 fontFamily: FONTS.ui, fontSize: '17px', lineHeight: 1.7,
                 color: T.softText, marginBottom: '18px',
               }}>
-                In early 2026, I led AI development on the AVC platform, a
-                nine-agent content production system for enterprise clients.
+                Before HC Core Tech, I spent a year as Data and AI
+                Governance Manager at Voice4AI Governance, where I built
+                risk assessment frameworks aligned to the EU AI Act, NIST
+                AI RMF, and ISO/IEC 42001.
               </p>
               <p style={{
                 fontFamily: FONTS.ui, fontSize: '17px', lineHeight: 1.7,
                 color: T.softText,
               }}>
-                HC Core Tech is my own practice, running in parallel. CoreDesk, the
-                AI workspace platform I ship, is its flagship product. I run both
-                from the Netherlands, serving clients in the NL, EU, and beyond.
-              </p>
-              <p style={{
-                fontFamily: FONTS.ui, fontSize: '17px', lineHeight: 1.7,
-                color: T.softText,
-              }}>
-                Alongside the AI work, I build websites end to end. Production WordPress
-                and headless Next.js. Brand systems and design tokens, conversion-led writing,
-                SEO setup, lead-capture automation. Recent web work includes Seraph Zorg,
-                Jiska's portfolio, and the two-site Magnifying Children's Horizons build
-                in Canada.
+                In early 2026, I led AI development on a nine-agent content
+                production platform, architected end to end across intake,
+                scripting, quality control, and assembly, with humans in
+                the loop at every stage.
               </p>
             </div>
           </div>
@@ -351,23 +388,25 @@ export default function AboutPage() {
                 fontFamily: FONTS.ui, fontSize: '16px', lineHeight: 1.7,
                 color: T.platinum, marginBottom: '14px',
               }}>
-                Direct, warm, momentum-driven. Contractions over corporate prose.
-                Concise framing over formal business writing.
+                Direct, warm, and momentum-driven. Clear to both technical
+                and non-technical readers.
               </p>
               <p style={{
                 fontFamily: FONTS.ui, fontSize: '16px', lineHeight: 1.7,
                 color: T.softText, marginBottom: '14px',
               }}>
-                Comfortable coordinating across distributed teams. My most recent
-                engagement had three engineers across the Netherlands, Eastern Europe,
-                and South Korea.
+                Comfortable coordinating across distributed teams. My most
+                recent engagement ran three engineers across the
+                Netherlands, Eastern Europe, and South Korea, with
+                leadership in Singapore.
               </p>
               <p style={{
                 fontFamily: FONTS.ui, fontSize: '16px', lineHeight: 1.7,
                 color: T.softText,
               }}>
-                Christian faith is the foundation of how I work. Present in how
-                I show up. Never imposed on client output.
+                The foundation of my work ethic is my Christian faith. It
+                shapes how I show up, what I commit to, and the standard of
+                excellence I hold every deliverable to.
               </p>
             </div>
           </div>
