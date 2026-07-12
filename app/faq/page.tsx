@@ -28,7 +28,7 @@ const FAQ = [
   },
   {
     q: 'What is CoreDesk and how is it different from the services?',
-    a: 'CoreDesk is a subscription platform I built and operate: an AI-first back office for independent practitioners and small teams. It handles invoicing, proposals, CRM, meetings, agents, and governance in one workspace. Services are custom engagements I deliver to individual clients. CoreDesk is a product with a monthly price. Services are projects with a fixed scope.',
+    a: 'CoreDesk is a subscription platform I build and operate: an AI back office for hands-on founders. It handles invoicing, proposals, receipts, CRM, meetings, agents, and governance in one workspace. Services are custom engagements I deliver to individual clients. CoreDesk is a monthly subscription. Services are projects with a fixed scope.',
   },
   {
     q: 'Can you work with clients outside the EU?',
