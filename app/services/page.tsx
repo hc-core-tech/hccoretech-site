@@ -124,7 +124,7 @@ const SERVICES = [
       'A multi-language interface: Dutch, English, French, Russian, Spanish, and Portuguese',
       'An onboarding session and direct engineer access for the life of your subscription',
     ],
-    timeline: 'Onboarding 1 to 2 weeks. Ongoing subscription.',
+    timeline: 'Timeline scoped during the discovery call. Ongoing subscription.',
     investment: 'Starter €250/mo, Basis €450/mo, Pro €950/mo. Enterprise pricing on request. Founding pricing available for select clients.',
     flow: [
       { step: 'Discovery call', body: 'We meet on a mutual-fit call to understand your practice, your day-to-day, and what you need CoreDesk to hold for you. I am selective about who I take on so every user gets the direct attention the product promises.' },

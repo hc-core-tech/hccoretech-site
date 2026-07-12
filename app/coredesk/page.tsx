@@ -605,8 +605,9 @@ export default function CoreDeskPage() {
               fontFamily: FONTS.ui, fontSize: '15.5px', lineHeight: 1.6,
               color: T.softText, marginBottom: '32px',
             }}>
-              Book a 30-minute call. If it is a fit, we set up your workspace and
-              onboard you the same month.
+              Book a 30-minute call. If it is a fit, we scope the setup and
+              timeline together on that call, based on what your practice
+              actually needs.
             </p>
             <div style={{ display: 'inline-flex', gap: '12px', flexWrap: 'wrap', justifyContent: 'center' }}>
               <a data-btn="primary" href={CALENDLY} target="_blank" rel="noopener noreferrer" style={{
