@@ -34,7 +34,7 @@ export default function ContactPage() {
             Two ways to reach me.
             <br />
             <span style={{ fontStyle: 'italic', color: T.gold, fontWeight: 500 }}>
-              Both reach me directly.
+              Both get to me directly.
             </span>
           </h1>
         </Reveal>
@@ -45,7 +45,7 @@ export default function ContactPage() {
             color: T.softText, maxWidth: '680px',
             marginBottom: '20px',
           }}>
-            No account managers, no ticket queues, no relay. Whether you send a written brief or book a call, it lands with me, and I reply within 48 hours with a clear next step.
+            Whether you send a written brief or book a call, it lands with me, and I reply within 48 hours with a clear next step.
           </p>
         </Reveal>
       </section>
