@@ -385,6 +385,10 @@ function Footer() {
               display: 'block', fontFamily: FONTS.ui, fontSize: '13px',
               color: T.softText, padding: '5px 0', textDecoration: 'none',
             }}>Request a quote</Link>
+            <a href="https://www.linkedin.com/in/hilary-azimoh" target="_blank" rel="noopener noreferrer" style={{
+              display: 'block', fontFamily: FONTS.ui, fontSize: '13px',
+              color: T.softText, padding: '5px 0', textDecoration: 'none',
+            }}>LinkedIn</a>
             <span style={{
               display: 'block', fontFamily: FONTS.ui, fontSize: '13px',
               color: T.softText, padding: '5px 0',
