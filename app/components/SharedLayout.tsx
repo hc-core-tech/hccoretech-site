@@ -190,9 +190,10 @@ function Nav() {
                     onMouseEnter={e => { if (!active) e.currentTarget.style.color = T.gold }}
                     onMouseLeave={e => { if (!active) e.currentTarget.style.color = T.softText }}
                     style={{
-                      fontFamily: FONTS.ui, fontSize: '13px',
+                      fontFamily: FONTS.ui, fontSize: '12px',
                       color: active ? T.gold : T.softText, fontWeight: 500,
-                      letterSpacing: '0.02em', textDecoration: 'none',
+                      letterSpacing: '0.14em', textDecoration: 'none',
+                      textTransform: 'uppercase' as const,
                       transition: 'color 200ms',
                     }}
                   >{item.label}</Link>
@@ -275,10 +276,12 @@ function Nav() {
               onMouseEnter={e => { e.currentTarget.style.color = T.gold }}
               onMouseLeave={e => { e.currentTarget.style.color = T.platinum }}
               style={{
-                fontFamily: FONTS.ui, fontSize: '15px', fontWeight: 500,
+                fontFamily: FONTS.ui, fontSize: '14px', fontWeight: 500,
                 color: T.platinum, padding: '12px 0',
                 borderBottom: `1px solid ${T.hairline}`,
                 textDecoration: 'none',
+                letterSpacing: '0.14em',
+                textTransform: 'uppercase' as const,
                 transition: 'color 200ms ease',
               }}
             >{item.label}</Link>

@@ -435,9 +435,10 @@ function Nav() {
               {items.map(item => (
                 <a key={item.label} href={item.href}
                   style={{
-                    fontFamily: FONTS.ui, fontSize: '13px',
+                    fontFamily: FONTS.ui, fontSize: '12px',
                     color: T.softText, fontWeight: 500,
-                    letterSpacing: '0.02em',
+                    letterSpacing: '0.14em',
+                    textTransform: 'uppercase' as const,
                     transition: 'color 200ms',
                   }}
                   onMouseEnter={e => e.currentTarget.style.color = T.platinum}
@@ -529,9 +530,11 @@ function Nav() {
               onMouseEnter={e => { e.currentTarget.style.color = T.gold }}
               onMouseLeave={e => { e.currentTarget.style.color = T.platinum }}
               style={{
-                fontFamily: FONTS.ui, fontSize: '15px', fontWeight: 500,
+                fontFamily: FONTS.ui, fontSize: '14px', fontWeight: 500,
                 color: T.platinum, padding: '12px 0',
                 borderBottom: `1px solid ${T.hairline}`,
+                letterSpacing: '0.14em',
+                textTransform: 'uppercase' as const,
                 transition: 'color 200ms ease',
               }}>{item.label}</a>
           ))}
